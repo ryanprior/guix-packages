@@ -1,0 +1,7 @@
+#+title: Ryan Prior's Guix Packages
+
+** Proposed packages
+- [[proposed/visidata.scm][VisiData]], a terminal spreadsheet multitool for discovering and arranging data
+
+** Testing
+- [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
