@@ -1,7 +1,11 @@
 #+title: Ryan Prior's Guix Packages
 
 ** Contributed packages
-- [[contributed/visidata.scm][VisiData]], a terminal spreadsheet multitool for discovering and arranging data
+*** [[contributed/visidata.scm][VisiData]]
+Terminal spreadsheet multitool for discovering and arranging data.
+
+- Package :: https://guix.gnu.org/packages/visidata-1.5.2/
+- Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=40757
 
 ** Proposed packages
 
