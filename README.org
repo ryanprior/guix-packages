@@ -5,3 +5,5 @@
 
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
+- [[testing/elementary.scm][Granite]] is an extension to gtk+ used in elementary OS applications.
+- [[testing/elementary.scm][Sideload]] is an application for installing Flatpaks.
