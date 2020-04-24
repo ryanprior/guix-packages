@@ -7,11 +7,14 @@
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages package-management)
+  #:use-module (gnu packages databases)
+  #:use-module (gnu packages web)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages xml)
   #:use-module (gnu packages)
   #:use-module (guix build-system meson)
   #:use-module (guix download)
+  #:use-module (guix git-download)
   #:use-module (guix licenses)
   #:use-module (guix packages)
   #:use-module (guix utils))
@@ -91,4 +94,74 @@ on Flathub or another third-party website providing a Flatpak app for
 download.")
     (license gpl3)))
 
-sideload
+(define-public appstream
+  (package
+    (name "appstream")
+    (version "0.12.10")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/ximion/appstream.git")
+                    (commit (string-append "v" version))))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "1r4q7xi1xvpjcnyzkzb4pshhvd4agz7cc5nbb3kqb22054zab2qj"))))
+    (build-system meson-build-system)
+    (arguments
+     `(#:configure-flags
+       (list (string-append "-Dlmdb=" (assoc-ref %build-inputs "lmdb")))))
+    (native-inputs
+     `(("libxml2" ,libxml2)
+       ("glib2" ,glib)
+       ("pkg-config" ,pkg-config)
+       ("libsoup" ,libsoup)
+       ("gobject-introspection" ,gobject-introspection)
+       ("libyaml" ,libyaml)
+       ("vala" ,vala)
+       ("cmake" ,cmake)
+       ("lmdb" ,lmdb)))
+    (home-page "https://www.freedesktop.org/wiki/Distributions/AppStream/")
+    (synopsis "Provides the foundation to build software-center applications")
+    (description "AppStream is a cross-distribution effort for enhancing the way
+we interact with the software repositories provided by GNU/Linux distributions
+by standardizing software component metadata.")
+    (license gpl2)))
+
+(define-public pantheon-terminal
+  (package
+    (name "pantheon-terminal")
+    (version "5.5.1")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/elementary/terminal.git")
+                    (commit version)))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                ;; "119iwmzbpkj4nmxinqfsh73lx23g8gbl6ha6wc4mc4fq9hpnc9c2"))))
+                "1b8fzs9s7djhwp02l3fwjpwxylklpbnw7x46mv7c8ksbp0m75iyj"))))
+    (build-system meson-build-system)
+    (arguments `(#:glib-or-gtk? #t))
+    (inputs
+     `(("granite" ,granite)
+       ("gtk" ,gtk+)
+       ("libvte" ,vte)))
+    (native-inputs
+     `(("gettext" ,gettext-minimal)
+       ("glib" ,glib)
+       ("appstream" ,appstream)
+       ("libgee" ,libgee)
+       ("desktop-file-utils" ,desktop-file-utils) ; for update-desktop-database
+       ("glib:bin" ,glib "bin") ; for glib-compile-resources
+       ("pkg-config" ,pkg-config)
+       ("vala" ,vala)))
+    (home-page "https://github.com/elementary/terminal")
+    (synopsis "Graphical terminal with opinionated design and thoughtful touches")
+    (description "A lightweight, beautiful, and simple terminal application.
+Comes with sane defaults, browser-like tabs, sudo paste protection, smart
+copy/paste, and little to no configuration.")
+    (license lgpl3)))
+
+pantheon-terminal
