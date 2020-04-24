@@ -11,6 +11,7 @@
   #:use-module (gnu packages web)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages xml)
+  #:use-module (gnu packages gperf)
   #:use-module (gnu packages)
   #:use-module (guix build-system meson)
   #:use-module (guix download)
@@ -110,15 +111,29 @@ download.")
     (build-system meson-build-system)
     (arguments
      `(#:configure-flags
-       (list (string-append "-Dlmdb=" (assoc-ref %build-inputs "lmdb")))))
+       (list "-Dvapi=true" "-Dstemming=false" "-Dinstall-docs=false")
+       #:phases
+       (modify-phases %standard-phases
+         (add-after 'unpack 'disable-stemmer-inc-dirs
+           (lambda _
+             (substitute* "meson.build"
+               (("include_directories\\(\\['\\/usr\\/include'\\]\\)")
+                "''")
+               (("subdir\\('docs\\/'\\)")
+                ""))
+             #t)))))
     (native-inputs
      `(("libxml2" ,libxml2)
+       ("gettext" ,gettext-minimal)
+       ("libxslt" ,libxslt)
        ("glib2" ,glib)
+       ("glib:bin" ,glib "bin") ; for glib-compile-resources
        ("pkg-config" ,pkg-config)
        ("libsoup" ,libsoup)
        ("gobject-introspection" ,gobject-introspection)
        ("libyaml" ,libyaml)
        ("vala" ,vala)
+       ("gperf" ,gperf)
        ("cmake" ,cmake)
        ("lmdb" ,lmdb)))
     (home-page "https://www.freedesktop.org/wiki/Distributions/AppStream/")
