@@ -1,15 +1,15 @@
 (define-module (gnu packages harvey)
-  #:use-module (guix licenses)
-  #:use-module (guix packages)
-  #:use-module (guix download)
-  #:use-module (guix utils)
-  #:use-module (guix build-system meson)
-  #:use-module (gnu packages)
-  #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages gettext)
-  #:use-module (gnu packages gnome)
   #:use-module (gnu packages glib)
-  #:use-module (gnu packages gtk))
+  #:use-module (gnu packages gnome)
+  #:use-module (gnu packages gtk)
+  #:use-module (gnu packages pkg-config)
+  #:use-module (gnu packages)
+  #:use-module (guix build-system meson)
+  #:use-module (guix download)
+  #:use-module ((guix licenses) #:prefix license:)
+  #:use-module (guix packages)
+  #:use-module (guix utils))
 
 (define-public harvey
   (package
@@ -19,10 +19,13 @@
               (method url-fetch)
               (uri (string-append "https://github.com/danrabbit/harvey/archive/"
                                   version ".tar.gz"))
-              (sha256 (base32 "0n57h4541v2vdphwb87qzn3k2p7ppyzkbdnw2fkhbd7awvcfbn2i"))))
+              (sha256
+               (base32
+                "0n57h4541v2vdphwb87qzn3k2p7ppyzkbdnw2fkhbd7awvcfbn2i"))))
     (build-system meson-build-system)
     (arguments
-     `(#:phases
+     `(#:glib-or-gtk? #t
+       #:phases
        (modify-phases %standard-phases
          (add-after 'install 'install-symlinks
            (lambda* (#:key outputs #:allow-other-keys)
@@ -41,6 +44,6 @@
     (synopsis "Calculate and visualize color contrast")
     (description "Harvey calculates and visualizes color contrast.
 It checks a given set of colors for WCAG contrast compliance.")
-    (license gpl2+)))
+    (license license:gpl2+)))
 
 harvey
