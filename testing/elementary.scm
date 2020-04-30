@@ -16,7 +16,7 @@
   #:use-module (guix build-system meson)
   #:use-module (guix download)
   #:use-module (guix git-download)
-  #:use-module (guix licenses)
+  #:use-module ((guix licenses) :prefix license:)
   #:use-module (guix packages)
   #:use-module (guix utils))
 
@@ -45,7 +45,7 @@
     (description "Granite is a companion library for GTK+ and GLib. Among other
 things, it provides complex widgets and convenience functions designed for use
 in apps built for elementary OS.")
-    (license lgpl3+)))
+    (license license:lgpl3+)))
 
 (define-public sideload
   (package
@@ -93,7 +93,7 @@ in apps built for elementary OS.")
     (description "Sideload handles flatpakref files, like those you might find
 on Flathub or another third-party website providing a Flatpak app for
 download.")
-    (license gpl3)))
+    (license license:gpl3)))
 
 (define-public appstream
   (package
@@ -141,7 +141,7 @@ download.")
     (description "AppStream is a cross-distribution effort for enhancing the way
 we interact with the software repositories provided by GNU/Linux distributions
 by standardizing software component metadata.")
-    (license gpl2)))
+    (license license:gpl2)))
 
 (define-public pantheon-terminal
   (package
@@ -177,6 +177,6 @@ by standardizing software component metadata.")
     (description "A lightweight, beautiful, and simple terminal application.
 Comes with sane defaults, browser-like tabs, sudo paste protection, smart
 copy/paste, and little to no configuration.")
-    (license lgpl3)))
+    (license license:lgpl3)))
 
 pantheon-terminal
