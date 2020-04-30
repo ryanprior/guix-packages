@@ -111,17 +111,24 @@ download.")
     (build-system meson-build-system)
     (arguments
      `(#:configure-flags
-       (list "-Dvapi=true" "-Dstemming=false" "-Dinstall-docs=false")
+       (list "-Dvapi=true"
+             "-Dstemming=false"
+             "-Dapidocs=false"
+             "-Dinstall-docs=false")
        #:phases
        (modify-phases %standard-phases
          (add-after 'unpack 'disable-stemmer-inc-dirs
-           (lambda _
-             (substitute* "meson.build"
-               (("include_directories\\(\\['\\/usr\\/include'\\]\\)")
-                "''")
-               (("subdir\\('docs\\/'\\)")
-                ""))
-             #t)))))
+           (lambda* (#:key outputs #:allow-other-keys)
+             (let ((out (assoc-ref outputs "out")))
+               (substitute* "meson.build"
+                 (("include_directories\\(\\['\\/usr\\/include'\\]\\)")
+                  "''")
+                 (("subdir\\('docs\\/'\\)")
+                  ""))
+               (substitute* "data/meson.build"
+                 (("\\/etc")
+                   (string-append out "/etc")))
+               #t))))))
     (native-inputs
      `(("libxml2" ,libxml2)
        ("gettext" ,gettext-minimal)
