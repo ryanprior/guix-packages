@@ -8,9 +8,15 @@ Terminal spreadsheet multitool for discovering and arranging data.
 - Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=40757
 
 ** Proposed packages
+*** [[proposed/shells.scm][Oil]]
+A Unix shell and programming language. It's our upgrade path from Bash.
+
+- Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=41010
 
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/elementary.scm][Granite]] is an extension to gtk+ used in elementary OS applications.
 - [[testing/elementary.scm][Sideload]] is an application for installing Flatpaks.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
+- [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
+- [[testing/proton.scm][protonvpn-cli]] is a command-line clinet for ProtonVPN.

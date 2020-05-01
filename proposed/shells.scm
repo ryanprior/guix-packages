@@ -15,7 +15,10 @@
 (define-public oil
   (package
     (name "oil")
-    (version "0.8.pre4")
+    (version "0.8.pre4") ; "Despite the pre4 version qualifier, this is by far
+                         ; the best Oil release ever… I may change the version
+                         ; numbering scheme in the near future to reflect this."
+                         ; - upstream on whether to ship pre4 in Guix
     (source
      (origin
        (method url-fetch)
