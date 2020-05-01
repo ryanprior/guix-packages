@@ -26,7 +26,8 @@
          "0m2p8p5hi2r14xx9pphsa0ar56kqsa33gr2w2blc3jx07aqhjpzy"))))
     (build-system gnu-build-system)
     (arguments
-     `(#:phases
+     `(#:strip-binaries? #f ; Strip breaks the binary.
+       #:phases
        (modify-phases %standard-phases
          (replace 'configure
            (lambda* (#:key outputs #:allow-other-keys)
@@ -38,25 +39,23 @@
                 "./configure"
                 (string-append "--prefix=" out)
                 "--with-readline"))))
-         (replace 'check
+         (replace 'check ; The tests are not distributed in the tarballs but
+                         ; upstream recommends running this smoke test.
            (lambda* (#:key outputs #:allow-other-keys)
              (let* ((out (assoc-ref outputs "out"))
                     (oil "oil.ovm")
                     (osh "./_bin/osh"))
                (symlink oil osh)
                (invoke/quiet osh "-c" "echo hi")
-               (invoke/quiet osh "-n" "configure"))))
-         (delete 'strip)))) ; strip breaks the binary
+               (invoke/quiet osh "-n" "configure")))))))
     (native-inputs
-     `(("glib" ,glib)
-       ("python2" ,python-2.7)
-       ("libyajl" ,libyajl)
-       ("readline" ,readline)))
+     `(("readline" ,readline)))
     (home-page "https://www.oilshell.org")
     (synopsis "A Unix shell")
     (description "Oil is a Unix shell that takes itself seriously as a
 programming language, rather than treating it as a text-based UI that can be
 abused to write programs.")
-    (license license:asl2.0)))
+    (license (list license:psfl ; Oil vendors python2.7
+                   license:asl2.0))))
 
 osh
