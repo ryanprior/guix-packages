@@ -12,9 +12,9 @@
   #:use-module (guix packages)
   #:use-module (guix utils))
 
-(define-public osh
+(define-public oil
   (package
-    (name "osh")
+    (name "oil")
     (version "0.8.pre4")
     (source
      (origin
@@ -41,21 +41,17 @@
                 "--with-readline"))))
          (replace 'check ; The tests are not distributed in the tarballs but
                          ; upstream recommends running this smoke test.
-           (lambda* (#:key outputs #:allow-other-keys)
-             (let* ((out (assoc-ref outputs "out"))
-                    (oil "oil.ovm")
-                    (osh "./_bin/osh"))
-               (symlink oil osh)
-               (invoke/quiet osh "-c" "echo hi")
-               (invoke/quiet osh "-n" "configure")))))))
+           (lambda _
+             (let* ((oil "_bin/oil.ovm"))
+               (invoke/quiet oil "osh" "-c" "echo hi")
+               (invoke/quiet oil "osh" "-n" "configure")))))))
     (native-inputs
      `(("readline" ,readline)))
     (home-page "https://www.oilshell.org")
     (synopsis "A Unix shell")
-    (description "Oil is a Unix shell that takes itself seriously as a
-programming language, rather than treating it as a text-based UI that can be
-abused to write programs.")
-    (license (list license:psfl ; Oil vendors python2.7
+    (description "Oil is a Unix shell and programming language. It's our upgrade
+path from Bash.")
+    (license (list license:psfl ; Tarball vendors python2.7
                    license:asl2.0))))
 
-osh
+oil
