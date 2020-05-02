@@ -8,6 +8,11 @@ Terminal spreadsheet multitool for discovering and arranging data.
 - Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=40757
 
 ** Proposed packages
+*** [[proposed/ruby.scm][Ruby]]
+A programming language interpreter
+
+- Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=41036
+
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
 
