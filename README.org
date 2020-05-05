@@ -5,18 +5,18 @@
 Terminal spreadsheet multitool for discovering and arranging data.
 
 - Package :: https://guix.gnu.org/packages/visidata-1.5.2/
-- Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=40757
+- Issue tracker :: https://issues.guix.gnu.org/issue/40757
 
 ** Proposed packages
 *** [[proposed/ruby.scm][Ruby]]
 A programming language interpreter
 
-- Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=41036
+- Issue tracker :: https://issues.guix.gnu.org/issue/41036
 
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
 
-- Discussion in debbugs :: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=41010
+- Issue tracker :: https://issues.guix.gnu.org/issue/41010
 
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
