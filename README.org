@@ -25,3 +25,4 @@ A Unix shell and programming language. It's our upgrade path from Bash.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
 - [[testing/proton.scm][protonvpn-cli]] is a command-line clinet for ProtonVPN.
+- [[testing/ecere.scm][Ecere]] is an SDK with GUI, 2D/3D graphics, networking, and an IDE
