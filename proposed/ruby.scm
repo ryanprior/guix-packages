@@ -60,6 +60,10 @@
   #:use-module (guix build-system ruby)
   #:use-module ((srfi srfi-1) #:select (alist-delete)))
 
+;; TODO package jaro_winkler-1.5.4
+;; TODO package unf_ext-0.0.7.6
+;; irb wants these things >:3
+
 (define-public ruby-2.5
   (package
     (name "ruby")
