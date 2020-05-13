@@ -185,7 +185,7 @@ environment.")
 (define-public pantheon-terminal
   (package
     (name "pantheon-terminal")
-    (version "5.5.1")
+    (version "5.5.2")
     (source (origin
               (method git-fetch)
               (uri (git-reference
@@ -194,14 +194,13 @@ environment.")
               (file-name (git-file-name name version))
               (sha256
                (base32
-                ;; "119iwmzbpkj4nmxinqfsh73lx23g8gbl6ha6wc4mc4fq9hpnc9c2"))))
-                "1b8fzs9s7djhwp02l3fwjpwxylklpbnw7x46mv7c8ksbp0m75iyj"))))
+                "119iwmzbpkj4nmxinqfsh73lx23g8gbl6ha6wc4mc4fq9hpnc9c2"))))
     (build-system meson-build-system)
     (arguments `(#:glib-or-gtk? #t))
     (inputs
      `(("granite" ,granite)
        ("gtk" ,gtk+)
-       ("libvte" ,vte)))
+       ("vte" ,vte-ng)))
     (native-inputs
      `(("gettext" ,gettext-minimal)
        ("glib" ,glib)
@@ -210,6 +209,7 @@ environment.")
        ("desktop-file-utils" ,desktop-file-utils) ; for update-desktop-database
        ("glib:bin" ,glib "bin") ; for glib-compile-resources
        ("pkg-config" ,pkg-config)
+       ("gobject-introspection" ,gobject-introspection)
        ("vala" ,vala)))
     (home-page "https://github.com/elementary/terminal")
     (synopsis "Graphical terminal with opinionated design and thoughtful touches")
