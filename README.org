@@ -1,6 +1,12 @@
 #+title: Ryan Prior's Guix Packages
 
 ** Contributed packages
+*** [[contributed/ruby.scm][Ruby 2.7.1]]
+A programming language interpreter
+
+- Package :: https://guix.gnu.org/packages/ruby-2.7.1/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41036
+
 *** [[contributed/visidata.scm][VisiData]]
 Terminal spreadsheet multitool for discovering and arranging data.
 
@@ -8,11 +14,6 @@ Terminal spreadsheet multitool for discovering and arranging data.
 - Issue tracker :: https://issues.guix.gnu.org/issue/40757
 
 ** Proposed packages
-*** [[proposed/ruby.scm][Ruby]]
-A programming language interpreter
-
-- Issue tracker :: https://issues.guix.gnu.org/issue/41036
-
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
 
