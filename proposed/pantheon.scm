@@ -1,19 +1,19 @@
-(define-module (gnu packages elementary)
+(define-module (gnu packages pantheon)
   #:use-module (gnu packages cmake)
+  #:use-module (gnu packages databases)
   #:use-module (gnu packages freedesktop)
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages gnome)
+  #:use-module (gnu packages gperf)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages linux)
-  #:use-module (gnu packages tls)
-  #:use-module (gnu packages pcre)
   #:use-module (gnu packages package-management)
-  #:use-module (gnu packages databases)
-  #:use-module (gnu packages web)
+  #:use-module (gnu packages pcre)
   #:use-module (gnu packages pkg-config)
+  #:use-module (gnu packages tls)
+  #:use-module (gnu packages web)
   #:use-module (gnu packages xml)
-  #:use-module (gnu packages gperf)
   #:use-module (gnu packages)
   #:use-module (guix build-system meson)
   #:use-module (guix download)
@@ -34,7 +34,7 @@
     (build-system meson-build-system)
     (inputs
      `(("gtk" ,gtk+)
-       ("gtk+-bin" ,gtk+ "bin"))) ;; for gtk-update-icon-cache
+       ("gtk+-bin" ,gtk+ "bin"))) ; for gtk-update-icon-cache
     (native-inputs
      `(("gettext" ,gettext-minimal)
        ("glib" ,glib)
@@ -44,9 +44,9 @@
        ("vala" ,vala)))
     (home-page "https://github.com/elementary/granite")
     (synopsis "Library that extends GTK with common widgets and utilities")
-    (description "Granite is a companion library for GTK+ and GLib. Among other
+    (description "Granite is a companion library for GTK+ and GLib.  Among other
 things, it provides complex widgets and convenience functions designed for use
-in apps built for elementary OS.")
+in apps built for the Pantheon desktop.")
     (license license:lgpl3+)))
 
 (define-public sideload
@@ -182,8 +182,7 @@ by standardizing software component metadata.")
     (home-page "https://github.com/elementary/calculator")
     (synopsis "Desktop calculator")
     (description "Calculator is an application for performing simple arithmatic.
-It is the default calculator application in the Pantheon desktop
-environment.")
+It is the default calculator application in the Pantheon desktop.")
     (license license:gpl3)))
 
 (define-public vte

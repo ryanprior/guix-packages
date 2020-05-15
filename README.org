@@ -19,10 +19,20 @@ A Unix shell and programming language. It's our upgrade path from Bash.
 
 - Issue tracker :: https://issues.guix.gnu.org/issue/41010
 
+*** [[proposed/pantheon.scm][Granite]]
+An extension to gtk+ used in elementary OS applications.
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+*** [[proposed/pantheon.scm][Sideload]]
+An application for installing Flatpaks.
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+
+
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
-- [[testing/elementary.scm][Granite]] is an extension to gtk+ used in elementary OS applications.
-- [[testing/elementary.scm][Sideload]] is an application for installing Flatpaks.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
 - [[testing/proton.scm][protonvpn-cli]] is a command-line clinet for ProtonVPN.
