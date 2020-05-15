@@ -29,6 +29,25 @@ An application for installing Flatpaks.
 
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
+*** [[proposed/pantheon.scm][Appstream]]
+The foundation to build software-center applications.
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+*** [[proposed/pantheon.scm][vte 0.60.2]]
+A library implementing a terminal emulator widget.
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+*** [[proposed/pantheon.scm][Pantheon Calculator]]
+Desktop calculator.
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+*** [[proposed/pantheon.scm][Pantheon Terminal]]
+Graphical terminal with opinionated design and thoughtful touches.
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
 
 ** Testing
