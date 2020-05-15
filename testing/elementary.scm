@@ -174,6 +174,8 @@ by standardizing software component metadata.")
     (native-inputs
      `(("glib" ,glib)
        ("cmake" ,cmake)
+       ("libgee" ,libgee)
+       ("glib:bin" ,glib "bin") ; for glib-compile-schemas
        ("gettext" ,gettext-minimal)
        ("pkg-config" ,pkg-config)
        ("vala" ,vala)))
