@@ -6,6 +6,8 @@
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages linux)
+  #:use-module (gnu packages tls)
+  #:use-module (gnu packages pcre)
   #:use-module (gnu packages package-management)
   #:use-module (gnu packages databases)
   #:use-module (gnu packages web)
@@ -181,6 +183,44 @@ by standardizing software component metadata.")
 It is the default calculator application in the Pantheon desktop
 environment.")
     (license license:gpl3)))
+
+(define-public vte
+  (package
+    (name "vte")
+    (version "0.60.2")
+    (source (origin
+              (method url-fetch)
+              (uri (string-append "mirror://gnome/sources/vte/"
+                                  (version-major+minor version) "/"
+                                  "vte-" version ".tar.xz"))
+              (sha256
+               (base32
+                "19ccbw0yca78h5qcnm8claj4fg1pj68nj1fsjqqfpzhj7w72i81m"))))
+    (build-system meson-build-system)
+    (arguments
+     `(#:configure-flags
+       (list "-Dvapi=true"
+             "-D_systemd=false")))
+    (native-inputs
+     `(("pkg-config" ,pkg-config)
+       ("intltool" ,intltool)
+       ("vala" ,vala)
+       ("gobject-introspection" ,gobject-introspection)
+       ("glib" ,glib "bin")             ; for glib-genmarshal, etc.
+       ("gperf" ,gperf)
+       ("xmllint" ,libxml2)))
+    (propagated-inputs
+     `(("gtk+" ,gtk+)                   ; required by vte-2.91.pc
+       ("gnutls" ,gnutls)               ; ditto
+       ("pcre2" ,pcre2)))               ; ditto
+    (home-page "https://www.gnome.org/")
+    (synopsis "Virtual Terminal Emulator")
+    (description
+     "VTE is a library (libvte) implementing a terminal emulator widget for
+GTK+, and a minimal sample application (vte) using that.  Vte is mainly used in
+gnome-terminal, but can also be used to embed a console/terminal in games,
+editors, IDEs, etc.")
+    (license license:lgpl2.1+)))
 
 (define-public pantheon-terminal
   (package
