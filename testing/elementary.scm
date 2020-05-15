@@ -236,11 +236,20 @@ editors, IDEs, etc.")
                (base32
                 "119iwmzbpkj4nmxinqfsh73lx23g8gbl6ha6wc4mc4fq9hpnc9c2"))))
     (build-system meson-build-system)
-    (arguments `(#:glib-or-gtk? #t))
+    (arguments
+     `(#:glib-or-gtk? #t
+       #:phases
+       (modify-phases %standard-phases
+         (add-after 'install 'install-symlinks
+           (lambda* (#:key outputs #:allow-other-keys)
+             (let* ((out (assoc-ref outputs "out"))
+                    (bin (string-append out "/bin/io.elementary.terminal"))
+                    (link (string-append out "/bin/pantheon-terminal")))
+               (symlink bin link)))))))
     (inputs
      `(("granite" ,granite)
        ("gtk" ,gtk+)
-       ("vte" ,vte-ng)))
+       ("vte" ,vte)))
     (native-inputs
      `(("gettext" ,gettext-minimal)
        ("glib" ,glib)
