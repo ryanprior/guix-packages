@@ -29,6 +29,30 @@
 dump functions like pickle, json or PyYAML module.")
    (license license:bsd-3)))
 
+(define-public python-epc
+  (package
+   (name "python-epc")
+   (version "0.0.5")
+   (source
+    (origin
+     (method url-fetch)
+     (uri (pypi-uri "epc" version))
+     (sha256
+      (base32
+       "09bx1ln1bwa00917dndlgs4k589h8qx2x080xch5m58p92kjwkd1"))))
+   (build-system python-build-system)
+   (arguments '(#:tests? #f))
+   (propagated-inputs
+    `(("python-sexpdata" ,python-sexpdata)))
+   (native-inputs
+    `(("python-setuptools" ,python-setuptools)))
+   (home-page "https://github.com/tkf/python-epc")
+   (synopsis "Remote procedure call (RPC) stack for Emacs Lisp and Python")
+   (description
+    "Python-EPC can call elisp functions from Python and Python functions from
+elisp.")
+   (license license:gpl3)))
+
 (define-public python-importmagic
   (package
     (name "python-importmagic")
