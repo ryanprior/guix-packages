@@ -10,6 +10,25 @@
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages))
 
+(define-public python-sexpdata
+  (package
+   (name "python-sexpdata")
+   (version "0.0.3")
+   (source
+    (origin
+     (method url-fetch)
+     (uri (pypi-uri "sexpdata" version))
+     (sha256
+      (base32
+       "1q4lsjyzzqrdv64l0pv4ij9nd8gqhvxqcrpxc2xpxs652sk2gj0s"))))
+   (build-system python-build-system)
+   (home-page "https://github.com/tkf/sexpdata")
+   (synopsis "S-expression parser for Python")
+   (description
+    "sexpdata is a simple S-expression parser/serializer. It has simple load and
+dump functions like pickle, json or PyYAML module.")
+   (license license:bsd-3)))
+
 (define-public python-importmagic
   (package
     (name "python-importmagic")
