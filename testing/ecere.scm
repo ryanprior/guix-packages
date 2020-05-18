@@ -62,7 +62,7 @@
        ("fontconfig" ,fontconfig)
        ("freetype" ,freetype)
        ("giflib" ,giflib)
-       ("libjpeg" ,libjpeg)
+       ("libjpeg" ,libjpeg-turbo)
        ("ncurses" ,ncurses)
        ("libpng" ,libpng-1.2)
        ("sqlite" ,sqlite)
