@@ -71,13 +71,10 @@ Emacs integration for importmagic
 
 - Issue tracker :: https://issues.guix.gnu.org/41366
 
-
-
-
-
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
 - [[testing/proton.scm][protonvpn-cli]] is a command-line clinet for ProtonVPN.
 - [[testing/ecere.scm][Ecere]] is an SDK with GUI, 2D/3D graphics, networking, and an IDE
+- [[testing/v.scm][v]] is a compiler for the v programming language
