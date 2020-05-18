@@ -1,4 +1,4 @@
-(define-module (gnu packages certs)
+(define-module (testing mkcert)
   #:use-module (gnu packages)
   #:use-module (gnu packages nss)
   #:use-module (guix build-system go)

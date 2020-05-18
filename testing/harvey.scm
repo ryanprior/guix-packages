@@ -1,4 +1,4 @@
-(define-module (gnu packages harvey)
+(define-module (testing harvey)
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages gnome)

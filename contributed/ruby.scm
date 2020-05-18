@@ -21,7 +21,7 @@
 ;;; Copyright © 2019 Diego N. Barbato <dnbarbato@posteo.de>
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (gnu packages ruby)
+(define-module (contributed ruby)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
   #:use-module (gnu packages base)

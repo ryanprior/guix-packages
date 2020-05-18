@@ -1,4 +1,4 @@
-(define-module (gnu packages pantheon)
+(define-module (proposed pantheon)
   #:use-module (gnu packages cmake)
   #:use-module (gnu packages databases)
   #:use-module (gnu packages freedesktop)

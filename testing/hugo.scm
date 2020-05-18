@@ -1,6 +1,6 @@
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (gnu packages hugo)
+(define-module (testing hugo)
   #:use-module (guix build-system go)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)

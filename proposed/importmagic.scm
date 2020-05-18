@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (gnu packages importmagic)
+(define-module (proposed importmagic)
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages emacs-xyz)
   #:use-module (guix build-system python)
@@ -95,5 +95,3 @@ finding unresolved symbols in Python code and their corresponding imports.")
     (synopsis "Fix Python imports")
     (description "Importmagic.el fixes unresolved imports in Python buffers.")
     (license license:gpl3)))
-
-emacs-importmagic
