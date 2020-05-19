@@ -13,16 +13,25 @@ Terminal spreadsheet multitool for discovering and arranging data.
 - Package :: https://guix.gnu.org/packages/visidata-1.5.2/
 - Issue tracker :: https://issues.guix.gnu.org/issue/40757
 
+*** [[proposed/pantheon.scm][Granite]]
+An extension to gtk+ used in elementary OS applications.
+
+- Package :: https://guix.gnu.org/packages/granite-5.4.0/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+
+*** [[proposed/pantheon.scm][Pantheon Calculator]]
+Desktop calculator.
+
+- Package :: http://guix.gnu.org/packages/pantheon-calculator-1.5.5/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+
+
 ** Proposed packages
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
 
 - Issue tracker :: https://issues.guix.gnu.org/issue/41010
-
-*** [[proposed/pantheon.scm][Granite]]
-An extension to gtk+ used in elementary OS applications.
-
-- Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
 *** [[proposed/pantheon.scm][Sideload]]
 An application for installing Flatpaks.
@@ -36,11 +45,6 @@ The foundation to build software-center applications.
 
 *** [[proposed/pantheon.scm][vte 0.60.2]]
 A library implementing a terminal emulator widget.
-
-- Issue tracker :: https://issues.guix.gnu.org/issue/41293
-
-*** [[proposed/pantheon.scm][Pantheon Calculator]]
-Desktop calculator.
 
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
