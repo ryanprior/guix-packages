@@ -100,7 +100,7 @@ download.")
 (define-public appstream
   (package
     (name "appstream")
-    (version "0.12.10")
+    (version "0.12.11")
     (source (origin
               (method git-fetch)
               (uri (git-reference
@@ -109,7 +109,7 @@ download.")
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "1r4q7xi1xvpjcnyzkzb4pshhvd4agz7cc5nbb3kqb22054zab2qj"))))
+                "0ma1nldpc01rr2x14q1ymv2fvf7qcs3wp8fdqsnd17qx0hrz483c"))))
     (build-system meson-build-system)
     (arguments
      `(#:configure-flags
@@ -131,20 +131,21 @@ download.")
                  (("\\/etc")
                    (string-append out "/etc")))
                #t))))))
-    (native-inputs
-     `(("libxml2" ,libxml2)
-       ("gettext" ,gettext-minimal)
-       ("libxslt" ,libxslt)
-       ("glib2" ,glib)
-       ("glib:bin" ,glib "bin") ; for glib-compile-resources
-       ("pkg-config" ,pkg-config)
-       ("libsoup" ,libsoup)
-       ("gobject-introspection" ,gobject-introspection)
-       ("libyaml" ,libyaml)
-       ("vala" ,vala)
+    (inputs
+     `(("glib" ,glib)
        ("gperf" ,gperf)
-       ("cmake" ,cmake)
+       ("libsoup" ,libsoup)
+       ("libxml2" ,libxml2)
+       ("libxslt" ,libxslt)
+       ("libyaml" ,libyaml)
        ("lmdb" ,lmdb)))
+    (native-inputs
+     `(("cmake" ,cmake)
+       ("gettext" ,gettext-minimal)
+       ("glib:bin" ,glib "bin") ; for glib-compile-resources
+       ("gobject-introspection" ,gobject-introspection)
+       ("pkg-config" ,pkg-config)
+       ("vala" ,vala)))
     (home-page "https://www.freedesktop.org/wiki/Distributions/AppStream/")
     (synopsis "Provides the foundation to build software-center applications")
     (description "AppStream is a cross-distribution effort for enhancing the way
