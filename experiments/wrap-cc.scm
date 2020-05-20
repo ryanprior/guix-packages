@@ -2,17 +2,18 @@
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
 (define-module (experiments wrap-cc)
-  #:use-module (gnu packages)
-  #:use-module (gnu packages base)
   #:use-module (gnu packages assembly)
+  #:use-module (gnu packages base)
   #:use-module (gnu packages c)
+  #:use-module (gnu packages commencement)
   #:use-module (gnu packages gcc)
   #:use-module (gnu packages sdcc)
+  #:use-module (gnu packages)
+  #:use-module (guix build utils)
   #:use-module (guix build-system gnu)
   #:use-module (guix build-system trivial)
-  #:use-module (guix build utils)
-  #:use-module (guix utils)
-  #:use-module (guix packages))
+  #:use-module (guix packages)
+  #:use-module (guix utils))
 
 (define* (wrap-cc cc
                   #:optional
@@ -34,14 +35,11 @@
            (mkdir-p wrapper-dir)
            (symlink (string-append bin-dir ,bin)
                     (string-append wrapper-dir "cc"))))))
-    (synopsis "Wrapper for c compilers")
-    (description "This package provides wrappers for c compilers such that they
-can be invoked under the name @command{cc}.")))
-
-;; (define-syntax-rule (define-wrapped-cc name)
-;;   (define-public `(symbol-append ,name '-wrapper)
-;;     (wrap-cc #'name)))
-;; (define-wrapped-cc gcc)
+    (synopsis (string-append "Wrapper for " bin))
+    (description
+     (string-append
+      "Wraps " (package-name cc) " such that @command{" bin "} can be invoked
+under the name @command{cc}."))))
 
 (define-public gcc-wrapper (wrap-cc gcc))
 (define-public tcc-wrapper (wrap-cc tcc))
