@@ -75,6 +75,12 @@ Emacs integration for importmagic
 
 - Issue tracker :: https://issues.guix.gnu.org/41366
 
+*** [[proposed/vlang.scm][v]]
+Compiler for the v systems programming language.
+
+- Issue tracker :: https://issues.guix.info/41415
+
+
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.

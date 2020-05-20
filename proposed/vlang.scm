@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (testing vlang)
+(define-module (proposed vlang)
   #:use-module (gnu packages c)
   #:use-module (gnu packages gcc)
   #:use-module (gnu packages glib)
