@@ -1,8 +1,9 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (testing v)
+(define-module (testing vlang)
   #:use-module (gnu packages c)
+  #:use-module (gnu packages gcc)
   #:use-module (gnu packages glib)
   #:use-module (guix build-system gnu)
   #:use-module (guix git-download)
@@ -24,41 +25,77 @@
       (base32 "1d9qhacllvkqif42jaayixhjyhx7pzslh8p1yr5p19447q763fq1"))))
    (build-system gnu-build-system)
    (arguments
-    '(#:make-flags (list "TMPVC=vc/"
-                         "VERBOSE=1")
+    '(#:tests? #f ; tests are broken in v 0.1.27
+      #:make-flags
+      `("CC=gcc"
+        "GITCLEANPULL=true"
+        "GITFASTCLONE=mkdir -p"
+        "TCCREPO="
+        "TMPTCC=tcc"
+        ,(string-append "TMPVC=" (assoc-ref %build-inputs "vc"))
+        "VCREPO="
+        "VERBOSE=1"
+        "V_ALWAYS_CLEAN_TMP=false")
       #:phases
       (modify-phases %standard-phases
-        (replace 'configure
-          (lambda* (#:key inputs #:allow-other-keys)
-            (let ((vc-in (string-append (assoc-ref inputs "vc") "/v.c"))
-                  (vc "vc/v.c"))
-              (setenv "CC" (which "tcc"))
-              (mkdir-p "vc/")
-              (copy-file vc-in vc)
-              (substitute* vc
-                (("tos_lit\\(\"cc\"\\)") "tos_lit(\"gcc\")"))
-            #t)))
+        (delete 'configure)
         (add-before 'build 'patch-makefile
           (lambda _
             (substitute* "Makefile"
-              (("latest_(tcc|vc)") ""))
+              (("rm -rf") "true")
+              (("v self") "v -cc gcc cmd/v"))
+            #t))
+        ;; A few tests are broken in v 0.1.27. This function should be
+        ;; enabled to run tests in the next release.
+        ;; (replace 'check
+        ;;   (lambda _
+        ;;     (let* ((tmpbin "tmp/bin")
+        ;;            (gcc (which "gcc")))
+        ;;       (mkdir-p tmpbin)
+        ;;       (symlink gcc (string-append tmpbin "/cc"))
+        ;;       (setenv "PATH" (string-append tmpbin ":" (getenv "PATH")))
+        ;;       (invoke "./v" "test-fixed"))
+        ;;     #t))
+        (replace 'install
+          (lambda _
+            (let* ((bin (string-append (assoc-ref %outputs "out") "/bin"))
+                   (tools (string-append bin "/cmd/tools"))
+                   (thirdparty (string-append bin "/thirdparty"))
+                   (vlib (string-append bin "/vlib"))
+                   (vmod (string-append bin "/v.mod")))
+              (mkdir-p bin)
+              (copy-file "./v" (string-append bin "/v"))
+              ;; v requires as of 0.1.27 that these other components are in the
+              ;; same directory. In a future release we may be able to move
+              ;; these into other output folders.
+              (copy-recursively "cmd/tools" tools)
+              (copy-recursively "thirdparty" thirdparty)
+              (copy-recursively "vlib" vlib)
+              (copy-file "v.mod" vmod))
             #t)))))
+   (inputs
+    `(("glib" ,glib)
+      ("gcc" ,gcc)))
    (native-inputs
-    `(("tcc" ,tcc)
-      ("glib" ,glib)
-      ("vc" ,(origin
-               (method git-fetch)
-               (uri (git-reference
-                     (url "https://github.com/vlang/vc.git")
-                     (commit "c3c337aa3ab2f9279f2a97ba759f8fa4da8f70c6")))
-               (file-name (git-file-name "vc" "c3c337aa3ab2f9279f2a97ba759f8fa4da8f70c6"))
-               (sha256
-                (base32 "07318idrfkxfxf6zw5qsshx7ljd8gbvfic61mr3zrgsrd7hwwx4n"))))))
+    `(("vc"
+       ,(let ((vc-version "0884d7092f4c2a4f8ca16da6f1792efa235247be"))
+          ;; v bootstraps from generated c source code from a dedicated
+          ;; repository. It's readable, as generated source goes, and not at all
+          ;; obfuscated, and it's about 15kb. The original source written in
+          ;; golang is lost to the forces of entropy; modifying the generated c
+          ;; source by hand has been a commonly used technique for iterating on
+          ;; the codebase.
+          (origin
+            (method git-fetch)
+            (uri (git-reference
+                  (url "https://github.com/vlang/vc.git")
+                  (commit vc-version)))
+            (file-name (git-file-name "vc" vc-version))
+            (sha256
+             (base32 "17bs09iwxfd0si70j48n9nd16gfgcj8imd0azypk3xzzbz4wybnz")))))))
    (home-page "https://vlang.io/")
    (synopsis "Compiler for the V programming language")
    (description
     "V is a systems programming language.  It provides memory safety and thread
 safety guarantees with minimal abstraction.")
    (license license:expat)))
-
-v
