@@ -44,6 +44,7 @@
 under the name @command{cc}."))))
 
 (define-public gcc-wrapper (wrap-cc gcc))
+(define-public gcc-toolchain-wrapper (wrap-cc gcc-toolchain "gcc"))
 (define-public tcc-wrapper (wrap-cc tcc))
 (define-public sdcc-wrapper (wrap-cc sdcc))
 (define-public pcc-wrapper (wrap-cc pcc))
