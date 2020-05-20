@@ -12,9 +12,10 @@
   #:use-module (guix utils)
   #:use-module (guix packages))
 
-(define* (wrap-cc cc bin name)
-                  ;; (bin (package-name cc))
-                  ;; (name (string-append (package-name cc) "-wrapper")))
+(define* (wrap-cc cc
+                  #:optional
+                  (bin (package-name cc))
+                  (name (string-append (package-name cc) "-wrapper")))
   (package/inherit cc
     (name name)
     (source #f)
@@ -26,9 +27,11 @@
        #:builder
        (begin
          (use-modules (guix build utils))
-         (let ((bin-dir (string-append (assoc-ref %outputs "out") "/bin/")))
+         (let ((bin-dir (string-append (assoc-ref %build-inputs "cc") "/bin/"))
+               (wrapper-dir (string-append (assoc-ref %outputs "out") "/bin/")))
+           (mkdir-p wrapper-dir)
            (symlink (string-append bin-dir ,bin)
-                    (string-append bin-dir "cc"))))))
+                    (string-append wrapper-dir "cc"))))))
     (synopsis "Wrapper for c compilers")
     (description "This package provides wrappers for c compilers such that they
 can be invoked under the name @command{cc}.")))
