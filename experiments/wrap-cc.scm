@@ -36,8 +36,7 @@
     (description "This package provides wrappers for c compilers such that they
 can be invoked under the name @command{cc}.")))
 
-(define-public gcc-wrapper (wrap-cc gcc-toolchain "gcc" "gcc-wrapper"))
-;; (define-public gcc-wrapper (wrap-cc gcc))
-;; (define-public tcc-wrapper (wrap-cc tcc))
 
-gcc-wrapper
+(define-public gcc-wrapper (wrap-cc gcc))
+(define-public tcc-wrapper (wrap-cc tcc))
+(define-public pcc-wrapper (wrap-cc pcc))
