@@ -38,6 +38,10 @@
     (description "This package provides wrappers for c compilers such that they
 can be invoked under the name @command{cc}.")))
 
+;; (define-syntax-rule (define-wrapped-cc name)
+;;   (define-public `(symbol-append ,name '-wrapper)
+;;     (wrap-cc #'name)))
+;; (define-wrapped-cc gcc)
 
 (define-public gcc-wrapper (wrap-cc gcc))
 (define-public tcc-wrapper (wrap-cc tcc))
