@@ -6,6 +6,7 @@
   #:use-module (gnu packages base)
   #:use-module (gnu packages c)
   #:use-module (gnu packages gcc)
+  #:use-module (gnu packages sdcc)
   #:use-module (guix build-system gnu)
   #:use-module (guix build-system trivial)
   #:use-module (guix build utils)
@@ -39,4 +40,5 @@ can be invoked under the name @command{cc}.")))
 
 (define-public gcc-wrapper (wrap-cc gcc))
 (define-public tcc-wrapper (wrap-cc tcc))
+(define-public sdcc-wrapper (wrap-cc sdcc))
 (define-public pcc-wrapper (wrap-cc pcc))
