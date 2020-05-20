@@ -24,6 +24,8 @@
     (source #f)
     (build-system trivial-build-system)
     (outputs '("out"))
+    (native-inputs '())
+    (inputs '())
     (propagated-inputs `(("cc" ,cc)))
     (arguments
      `(#:modules ((guix build utils))
