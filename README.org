@@ -80,6 +80,11 @@ Compiler for the v systems programming language.
 
 - Issue tracker :: https://issues.guix.info/41415
 
+*** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
+These packages allow you invoke a c compiler as `cc`, helpful in certain build
+environments (such as `v`'s) that strongly prefer to have that command present.
+
+- Bug tracker :: https://issues.guix.gnu.org/41428
 
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
