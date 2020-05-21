@@ -86,10 +86,14 @@ environments (such as `v`'s) that strongly prefer to have that command present.
 
 - Bug tracker :: https://issues.guix.gnu.org/41428
 
+*** [[proposed/proton.scm][protonvpn-cli]]
+Command-line clinet for ProtonVPN.
+
+- Issue tracker :: https://issues.guix.gnu.org/41431
+
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
-- [[testing/proton.scm][protonvpn-cli]] is a command-line clinet for ProtonVPN.
 - [[testing/ecere.scm][Ecere]] is an SDK with GUI, 2D/3D graphics, networking, and an IDE
 - [[testing/v.scm][v]] is a compiler for the v programming language

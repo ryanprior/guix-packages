@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (testing proton)
+(define-module (proposed proton)
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages python-web)
   #:use-module (gnu packages vpn)
@@ -31,14 +31,13 @@
     (native-inputs
      `(("docopt" ,python-docopt)))
     (inputs
-     `(("openvpn" ,openvpn)
-       ("pythondialog" ,python-pythondialog)
+     `(("pythondialog" ,python-pythondialog)
        ("requests" ,python-requests)))
+    (propagated-inputs
+     `(("openvpn" ,openvpn)))
     (synopsis "Command-line client for ProtonVPN")
     (description
      "ProtonVPN is a secure point-to-point virtual private networking service
 with a gratis tier.")
     (home-page "https://github.com/ProtonVPN/linux-cli")
     (license license:gpl3)))
-
-protonvpn-cli
