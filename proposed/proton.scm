@@ -27,7 +27,7 @@
         (base32
          "0ixjb02kj4z79whm1izd8mrn2h0rp9cmw4im1qvp93rahqxdd4n8"))))
     (build-system python-build-system)
-    (arguments '(#:tests? #f))
+    (arguments '(#:tests? #f)) ; no tests in repo
     (native-inputs
      `(("docopt" ,python-docopt)))
     (inputs
@@ -37,7 +37,9 @@
      `(("openvpn" ,openvpn)))
     (synopsis "Command-line client for ProtonVPN")
     (description
-     "ProtonVPN is a secure point-to-point virtual private networking service
-with a gratis tier.")
+     "Official CLI for ProtonVPN, a secure point-to-point virtual private
+networking service with a gratis tier.  It can automatically find and connect
+to the fastest servers or use TOR over VPN.  The gratis tier offers unlimited
+bandwidth for up to 10 devices.")
     (home-page "https://github.com/ProtonVPN/linux-cli")
-    (license license:gpl3)))
+    (license license:gpl3+)))
