@@ -44,6 +44,11 @@ S-expression parser for Python
 - Package :: https://guix.gnu.org/packages/python-sexpdata-0.0.3/
 - Issue tracker :: https://issues.guix.gnu.org/41366
 
+*** [[contributed/proton.scm][protonvpn-cli]]
+Command-line client for ProtonVPN.
+
+- Package :: https://guix.gnu.org/packages/protonvpn-cli-2.2.2/
+- Issue tracker :: https://issues.guix.gnu.org/41431
 
 ** Proposed packages
 *** [[proposed/shells.scm][Oil]]
@@ -86,11 +91,6 @@ These packages allow you invoke a c compiler as `cc`, helpful in certain build
 environments (such as `v`'s) that strongly prefer to have that command present.
 
 - Bug tracker :: https://issues.guix.gnu.org/41428
-
-*** [[proposed/proton.scm][protonvpn-cli]]
-Command-line clinet for ProtonVPN.
-
-- Issue tracker :: https://issues.guix.gnu.org/41431
 
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
