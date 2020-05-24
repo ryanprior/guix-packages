@@ -23,7 +23,7 @@ An extension to gtk+ used in elementary OS applications.
 *** [[proposed/pantheon.scm][Pantheon Calculator]]
 Desktop calculator.
 
-- Package :: http://guix.gnu.org/packages/pantheon-calculator-1.5.5/
+- Package :: https://guix.gnu.org/packages/pantheon-calculator-1.5.5/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
 
