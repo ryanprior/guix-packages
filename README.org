@@ -26,6 +26,24 @@ Desktop calculator.
 - Package :: https://guix.gnu.org/packages/pantheon-calculator-1.5.5/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
+*** [[contributed/importmagic.scm][importmagic]]
+Library for adding, removing and managing Python imports
+
+- Package :: https://guix.gnu.org/packages/python-importmagic-0.1.7/
+- Issue tracker :: https://issues.guix.gnu.org/41366
+
+*** [[contributed/importmagic.scm][epc]]
+Remote procedure call (RPC) stack for Emacs Lisp and Python
+
+- Package :: https://guix.gnu.org/packages/python-epc-0.0.5/
+- Issue tracker :: https://issues.guix.gnu.org/41366
+
+*** [[contributed/importmagic.scm][sexpdata]]
+S-expression parser for Python
+
+- Package :: https://guix.gnu.org/packages/python-sexpdata-0.0.3/
+- Issue tracker :: https://issues.guix.gnu.org/41366
+
 
 ** Proposed packages
 *** [[proposed/shells.scm][Oil]]
@@ -52,23 +70,6 @@ A library implementing a terminal emulator widget.
 Graphical terminal with opinionated design and thoughtful touches.
 
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
-
-*** [[proposed/importmagic.scm][importmagic]]
-Library for adding, removing and managing Python imports
-
-- Issue tracker :: https://issues.guix.gnu.org/41366
-
-*** [[proposed/importmagic.scm][epc]]
-Remote procedure call (RPC) stack for Emacs Lisp and Python
-
-- Issue tracker :: https://issues.guix.gnu.org/41366
-
-*** [[proposed/importmagic.scm][sexpdata]]
-S-expression parser for Python
-
-- Issue tracker :: https://issues.guix.gnu.org/41366
-
-Library for adding, removing and managing Python imports
 
 *** [[proposed/importmagic.scm][importmagic.el]]
 Emacs integration for importmagic
