@@ -13,14 +13,14 @@ Terminal spreadsheet multitool for discovering and arranging data.
 - Package :: https://guix.gnu.org/packages/visidata-1.5.2/
 - Issue tracker :: https://issues.guix.gnu.org/issue/40757
 
-*** [[proposed/pantheon.scm][Granite]]
+*** [[contributed/pantheon.scm][Granite]]
 An extension to gtk+ used in elementary OS applications.
 
 - Package :: https://guix.gnu.org/packages/granite-5.4.0/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
 
-*** [[proposed/pantheon.scm][Pantheon Calculator]]
+*** [[contributed/pantheon.scm][Pantheon Calculator]]
 Desktop calculator.
 
 - Package :: https://guix.gnu.org/packages/pantheon-calculator-1.5.5/
