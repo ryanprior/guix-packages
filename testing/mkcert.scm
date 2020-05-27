@@ -19,7 +19,7 @@
      (file-name (git-file-name name version))
      (sha256
       (base32
-       "")))) ;; TODO hash repo
+       "0w1ji96hbd3anzsz82xjcafsqhgyz7c7n41rsq60yrllwbj5946f"))))
    (build-system go-build-system)
    (arguments
     '(#:import-path "github.com/FiloSottile/mkcert"))
