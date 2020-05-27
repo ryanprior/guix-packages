@@ -2,7 +2,6 @@
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
 (define-module (proposed importmagic)
-  #:use-module (contributed importmagic)
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages emacs-xyz)
   #:use-module (guix build-system python)
