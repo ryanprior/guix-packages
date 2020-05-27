@@ -1,3 +1,6 @@
+;;; GNU Guix --- Functional package management for GNU
+;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
+
 (define-module (contributed pantheon)
   #:use-module (gnu packages cmake)
   #:use-module (gnu packages databases)
