@@ -50,11 +50,12 @@ Command-line client for ProtonVPN.
 - Package :: https://guix.gnu.org/packages/protonvpn-cli-2.2.2/
 - Issue tracker :: https://issues.guix.gnu.org/41431
 
-** Proposed packages
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
 
+- Package :: https://guix.gnu.org/packages/oil-0.8.pre5/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41010
+** Proposed packages
 
 *** [[proposed/pantheon.scm][Sideload]]
 An application for installing Flatpaks.

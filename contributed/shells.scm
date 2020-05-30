@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (proposed shells)
+(define-module (contributed shells)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages python)
   #:use-module (gnu packages readline)
