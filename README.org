@@ -102,3 +102,4 @@ Linter for Python source code.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
 - [[testing/ecere.scm][Ecere]] is an SDK with GUI, 2D/3D graphics, networking, and an IDE
 - [[testing/v.scm][v]] is a compiler for the v programming language
+- [[testing/vala-language-server.scm][vala-language-server and vala-0.48]] are tools for developing elementary OS
