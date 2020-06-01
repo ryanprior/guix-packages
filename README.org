@@ -96,10 +96,17 @@ environments (such as `v`'s) that strongly prefer to have that command present.
 Linter for Python source code.
 
 - Bug tracker :: https://issues.guix.gnu.org/41580
+*** [[proposed/vala-language-server.scm][vala-0.48]]
+A programming language centered around gobject.
+
+- Issue tracker :: https://issues.guix.gnu.org/41639
+*** [[proposed/vala-language-server.scm][vala-language-server]]
+Code intelligence for the Vala language.
+
+- Issue tracker :: https://issues.guix.gnu.org/41639
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
 - [[testing/ecere.scm][Ecere]] is an SDK with GUI, 2D/3D graphics, networking, and an IDE
 - [[testing/v.scm][v]] is a compiler for the v programming language
-- [[testing/vala-language-server.scm][vala-language-server and vala-0.48]] are tools for developing elementary OS
