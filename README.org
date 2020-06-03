@@ -19,7 +19,6 @@ An extension to gtk+ used in elementary OS applications.
 - Package :: https://guix.gnu.org/packages/granite-5.4.0/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
 
-
 *** [[contributed/pantheon.scm][Pantheon Calculator]]
 Desktop calculator.
 
@@ -48,7 +47,9 @@ S-expression parser for Python
 Command-line client for ProtonVPN.
 
 - Package :: https://guix.gnu.org/packages/protonvpn-cli-2.2.2/
-- Issue tracker :: https://issues.guix.gnu.org/41431
+**** Issues
+- https://issues.guix.gnu.org/41431
+- https://issues.guix.gnu.org/41679
 
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
