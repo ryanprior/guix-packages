@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (proposed vala)
+(define-module (proposed vala-language-server)
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages glib)
