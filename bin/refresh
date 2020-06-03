@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function packages() {
+    grep -r '^    (name' contributed/ proposed/ \
+        | awk -F'"' '{ print $2 }' \
+        | sed '/^$/d'
+}
+
+cd $(git rev-parse --show-toplevel)
+guix refresh --load-path=. $(packages)
