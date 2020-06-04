@@ -110,4 +110,6 @@ Code intelligence for the Vala language.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
 - [[testing/ecere.scm][Ecere]] is an SDK with GUI, 2D/3D graphics, networking, and an IDE
-
+- [[testing/pantheon.scm][pantheon-gtk-theme]] is the theme for the Pantheon desktop environment.
+- [[testing/pantheon.scm][pantheon-icon-theme]] is the vector icon theme for Pantheon.
+- [[testing/appcenter.scm][appcenter-planner]] is a desktop planner for elementary OS
