@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (proposed vala-language-server)
+(define-module (contributed vala-language-server)
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages glib)
@@ -80,11 +80,11 @@ libraries written in C.")
     (inputs
      `(("jsonrpc-glib" ,jsonrpc-glib)
        ("libgee" ,libgee)
+       ("vala" ,vala-0.48)
+       ("glib" ,glib)
        ("json-glib" ,json-glib)))
     (native-inputs
-     `(("glib" ,glib)
-       ("pkg-config" ,pkg-config)
-       ("vala" ,vala-0.48)))
+     `(("pkg-config" ,pkg-config)))
     (home-page "https://github.com/benwaffle/vala-language-server")
     (synopsis "Language server for Vala")
     (description "The Vala language server is an implementation of the Vala
