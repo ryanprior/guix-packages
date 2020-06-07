@@ -56,6 +56,16 @@ A Unix shell and programming language. It's our upgrade path from Bash.
 
 - Package :: https://guix.gnu.org/packages/oil-0.8.pre5/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41010
+*** [[proposed/vala-language-server.scm][vala-0.48]]
+A programming language centered around gobject.
+
+- Package :: https://guix.gnu.org/packages/vala-0.48.6/
+- Issue tracker :: https://issues.guix.gnu.org/41639
+*** [[proposed/vala-language-server.scm][vala-language-server]]
+Code intelligence for the Vala language.
+
+- Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
+- Issue tracker :: https://issues.guix.gnu.org/41639
 ** Proposed packages
 
 *** [[proposed/pantheon.scm][Sideload]]
@@ -97,14 +107,6 @@ environments (such as `v`'s) that strongly prefer to have that command present.
 Linter for Python source code.
 
 - Bug tracker :: https://issues.guix.gnu.org/41580
-*** [[proposed/vala-language-server.scm][vala-0.48]]
-A programming language centered around gobject.
-
-- Issue tracker :: https://issues.guix.gnu.org/41639
-*** [[proposed/vala-language-server.scm][vala-language-server]]
-Code intelligence for the Vala language.
-
-- Issue tracker :: https://issues.guix.gnu.org/41639
 ** Testing
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
