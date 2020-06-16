@@ -98,11 +98,6 @@ Compiler for the v systems programming language.
 
 - Issue tracker :: https://issues.guix.info/41415
 
-*** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
-These packages allow you invoke a c compiler as `cc`, helpful in certain build
-environments (such as `v`'s) that strongly prefer to have that command present.
-
-- Bug tracker :: https://issues.guix.gnu.org/41428
 *** [[https://github.com/ryanprior/guix/blob/update-pylint/gnu/packages/check.scm#L1890-L1929][pylint 2.5.2]]
 Linter for Python source code.
 
@@ -115,3 +110,13 @@ Linter for Python source code.
 - [[testing/pantheon.scm][pantheon-gtk-theme]] is the theme for the Pantheon desktop environment.
 - [[testing/pantheon.scm][pantheon-icon-theme]] is the vector icon theme for Pantheon.
 - [[testing/appcenter.scm][appcenter-planner]] is a desktop planner for elementary OS
+** Forbidden
+*** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
+These packages allow you invoke a c compiler as `cc`, helpful in certain build
+environments (such as `v`'s) that strongly prefer to have that command present.
+
+Ludovic [[https://issues.guix.gnu.org/41428#6][dislikes the idea]] and didn't have anything to say in response to my
+argument in favor, so the /forbidden c compiler wrappers/ are lost to the
+living and now available only in these ominous grimoires.
+
+- Bug tracker :: https://issues.guix.gnu.org/41428
