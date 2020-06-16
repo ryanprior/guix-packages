@@ -1,7 +1,7 @@
 ;;; GNU Guix --- Functional package management for GNU
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (proposed wrap-cc)
+(define-module (forbidden wrap-cc)
   #:use-module (gnu packages assembly)
   #:use-module (gnu packages base)
   #:use-module (gnu packages c)
