@@ -1,6 +1,6 @@
 #+title: Ryan Prior's Guix Packages
 
-** Contributed packages
+** Contributed packages 📦📦📦
 *** [[contributed/ruby.scm][Ruby 2.7.1]]
 A programming language interpreter
 
@@ -66,7 +66,7 @@ Code intelligence for the Vala language.
 
 - Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
 - Issue tracker :: https://issues.guix.gnu.org/41639
-** Proposed packages
+** Proposed packages 🚚📦📨
 
 *** [[proposed/pantheon.scm][Sideload]]
 An application for installing Flatpaks.
@@ -102,7 +102,7 @@ Compiler for the v systems programming language.
 Linter for Python source code.
 
 - Bug tracker :: https://issues.guix.gnu.org/41580
-** Testing
+** Testing 🏗📦🚧
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
 - [[testing/mkcert.scm][mkcert]] creates TLS certificates for local testing and manage them using a CA.
@@ -110,7 +110,7 @@ Linter for Python source code.
 - [[testing/pantheon.scm][pantheon-gtk-theme]] is the theme for the Pantheon desktop environment.
 - [[testing/pantheon.scm][pantheon-icon-theme]] is the vector icon theme for Pantheon.
 - [[testing/appcenter.scm][appcenter-planner]] is a desktop planner for elementary OS
-** Forbidden
+** Forbidden 📦😈📖
 *** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
 These packages allow you invoke a c compiler as `cc`, helpful in certain build
 environments (such as `v`'s) that strongly prefer to have that command present.
