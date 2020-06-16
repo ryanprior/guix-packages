@@ -112,8 +112,8 @@ Linter for Python source code.
 - [[testing/appcenter.scm][appcenter-planner]] is a desktop planner for elementary OS
 ** Forbidden 📦😈📖
 *** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
-These packages allow you invoke a c compiler as `cc`, helpful in certain build
-environments (such as `v`'s) that strongly prefer to have that command present.
+These packages allow you invoke a c compiler as ~cc~, helpful in certain build
+environments (such as ~v~'s) that strongly prefer to have that command present.
 
 Ludovic [[https://issues.guix.gnu.org/41428#6][dislikes the idea]] and didn't have anything to say in response to my
 argument in favor, so the /forbidden c compiler wrappers/ are lost to the
