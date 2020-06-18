@@ -15,7 +15,7 @@
 (define-public oil
   (package
     (name "oil")
-    (version "0.8.pre4") ; "Despite the pre4 version qualifier, this is by far
+    (version "0.8.pre6") ; "Despite the pre4 version qualifier, this is by far
                          ; the best Oil release ever… I may change the version
                          ; numbering scheme in the near future to reflect this."
                          ; - upstream on whether to ship pre4 in Guix
@@ -26,7 +26,7 @@
                            version ".tar.gz"))
        (sha256
         (base32
-         "0m2p8p5hi2r14xx9pphsa0ar56kqsa33gr2w2blc3jx07aqhjpzy"))))
+         "11nfwn5b1w74hv78065jg2zm45mqzi59381b0f649j7n3g7yp3iq"))))
     (build-system gnu-build-system)
     (arguments
      `(#:strip-binaries? #f ; Strip breaks the binary.
