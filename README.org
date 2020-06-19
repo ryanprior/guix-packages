@@ -54,8 +54,8 @@ Command-line client for ProtonVPN.
 *** [[proposed/shells.scm][Oil]]
 A Unix shell and programming language. It's our upgrade path from Bash.
 
-- Package :: https://guix.gnu.org/packages/oil-0.8.pre5/
-- Issue tracker :: https://issues.guix.gnu.org/issue/41010
+- Package :: https://guix.gnu.org/packages/oil-0.8.pre6/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41940, https://issues.guix.gnu.org/issue/41010
 *** [[proposed/vala-language-server.scm][vala-0.48]]
 A programming language centered around gobject.
 
