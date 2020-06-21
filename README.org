@@ -68,6 +68,18 @@ Code intelligence for the Vala language.
 - Issue tracker :: https://issues.guix.gnu.org/41639
 ** Proposed packages 🚚📦📨
 
+*** [[contributed/ruby.scm][Ruby 2.7.1]]
+A programming language interpreter
+
+This is proposed in two waves:
+1) add the 2.7.1 package
+2) change "ruby" so it's an alias to 2.7.1
+
+The first is already in "contributed" above, the second will hopefully migrate
+up there.
+
+- Package :: https://guix.gnu.org/packages/ruby-2.7.1/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41036
 *** [[proposed/pantheon.scm][Sideload]]
 An application for installing Flatpaks.
 
