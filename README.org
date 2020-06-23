@@ -122,6 +122,7 @@ Linter for Python source code.
 - [[testing/pantheon.scm][pantheon-gtk-theme]] is the theme for the Pantheon desktop environment.
 - [[testing/pantheon.scm][pantheon-icon-theme]] is the vector icon theme for Pantheon.
 - [[testing/appcenter.scm][appcenter-planner]] is a desktop planner for elementary OS
+- [[testing/pantheon.scm][pantheon-code]] is a code editor for the Pantheon desktop
 ** Forbidden 📦😈📖
 *** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
 These packages allow you invoke a c compiler as ~cc~, helpful in certain build
