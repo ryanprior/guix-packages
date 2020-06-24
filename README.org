@@ -66,6 +66,12 @@ Code intelligence for the Vala language.
 
 - Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
 - Issue tracker :: https://issues.guix.gnu.org/41639
+*** [[proposed/vlang.scm][v]]
+Compiler for the v systems programming language.
+
+- Package :: https://guix.gnu.org/packages/v-0.1.27/
+- Issue tracker :: https://issues.guix.info/41415
+
 ** Proposed packages 🚚📦📨
 
 *** [[contributed/ruby.scm][Ruby 2.7.1]]
@@ -104,11 +110,6 @@ Graphical terminal with opinionated design and thoughtful touches.
 Emacs integration for importmagic
 
 - Issue tracker :: https://issues.guix.gnu.org/41366
-
-*** [[proposed/vlang.scm][v]]
-Compiler for the v systems programming language.
-
-- Issue tracker :: https://issues.guix.info/41415
 
 *** [[https://github.com/ryanprior/guix/blob/update-pylint/gnu/packages/check.scm#L1890-L1929][pylint 2.5.2]]
 Linter for Python source code.
