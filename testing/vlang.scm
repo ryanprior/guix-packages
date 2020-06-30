@@ -22,35 +22,17 @@
              (url "https://github.com/vlang/v.git")
              (commit version)))
        (file-name (git-file-name name version))
-       ;; (sha256
-       ;;  (base32 "00k05gjcmbgn0a53vn61vahwj68gjm3g263yffvqcr7fxpbfirc4"))
-       (sha256 #f)
-       ))
+       (sha256
+        (base32 "0xkl8sgp302ifba6jyixn4k420940f0pvri853hxa7i7i0ddvqih"))))
     (build-system gnu-build-system)
     (arguments
      '(#:tests? #f ; tests are broken in v 0.1.27
-       #:make-flags
-       `("CC=gcc"
-         "GITCLEANPULL=true"
-         "GITFASTCLONE=mkdir -p"
-         "TCCREPO="
-         "TMPTCC=tcc"
-         ,(string-append "TMPVC=" (assoc-ref %build-inputs "vc"))
-         "VCREPO="
-         "VERBOSE=1"
-         "V_ALWAYS_CLEAN_TMP=false")
        #:phases
        (modify-phases %standard-phases
          (delete 'configure)
          (replace 'build
            (lambda _
-             (invoke "v -cc gcc cmd/v")))
-         (add-before 'build 'patch-makefile
-           (lambda _
-             (substitute* "Makefile"
-               (("rm -rf") "true")
-               (("v self") "v -cc gcc cmd/v"))
-             #t))
+             (invoke "v" "-cc" "gcc" "-o" "./v" "cmd/v")))
          ;; A few tests are broken in v 0.1.27. This function should be
          ;; enabled to run tests in the next release.
          ;; (replace 'check
@@ -92,3 +74,5 @@ safety guarantees with minimal abstraction.")
     (license license:expat)))
 
 v-interim-1
+
+;; using this we can see that the this commit can't build the very next commit. not sure why yet.
