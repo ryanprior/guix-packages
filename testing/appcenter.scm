@@ -72,3 +72,55 @@
     (description "Planner keeps track of all your tasks, projects, and goals
 in one place.")
     (license license:gpl3+)))
+
+(define-public appcenter-ephemeral
+    (package
+    (name "appcenter-ephemeral")
+    (version "6.4.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/cassidyjames/ephemeral.git")
+             (commit version)))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32 "1lzcwaczh601kwbx7fzg32nrzlg67asby7p86qy10qz86xf4g608"))))
+    (build-system meson-build-system)
+    (arguments
+     `(#:glib-or-gtk? #t
+       #:phases
+       (modify-phases %standard-phases
+         (add-before 'install 'set-environment-variables
+           (lambda _
+             ;; Disable compiling schemas and updating desktop databases
+             (setenv "DESTDIR" "/")
+             #t))
+         (add-after 'install 'install-symlinks
+           (lambda* (#:key outputs #:allow-other-keys)
+             (let* ((out (assoc-ref outputs "out"))
+                    (bin (string-append out "/bin/com.github.cassidyjames.ephemeral"))
+                    (link (string-append out "/bin/ephemeral")))
+               (symlink bin link)))))))
+    (inputs
+     `(("granite" ,granite)
+       ("gtk" ,gtk+)
+       ("pantheon-gtk-theme" ,pantheon-gtk-theme)
+       ("pantheon-icon-theme" ,pantheon-icon-theme)
+       ("libdazzle" ,libdazzle)
+       ("webkitgtk" ,webkitgtk)))
+    (native-inputs
+     `(("gettext" ,gettext-minimal)
+       ("glib" ,glib)
+       ("glib:bin" ,glib "bin") ; for glib-compile-schemas
+       ("gnome-settings-daemon" ,gnome-settings-daemon)
+       ("intltool" ,intltool)
+       ("json-glib" ,json-glib)
+       ("libgee" ,libgee)
+       ("libsoup" ,libsoup-minimal)
+       ("pkg-config" ,pkg-config)
+       ("vala" ,vala)))
+    (home-page "https://planner-todo.web.app/")
+    (synopsis "Forgetful web browser")
+    (description "Ephemeral browses the web without saving any data.")
+    (license license:gpl3+)))
