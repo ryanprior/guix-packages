@@ -6,6 +6,7 @@
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages gnome)
+  #:use-module (gnu packages gnupg)
   #:use-module (gnu packages gperf)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages linux)
@@ -26,12 +27,17 @@
 (define-public sideload
   (package
     (name "sideload")
-    (version "1.1.0")
-    (source (origin
-              (method url-fetch)
-              (uri (string-append "https://github.com/elementary/sideload/archive/"
-                                  version ".tar.gz"))
-              (sha256 (base32 "0i236hr3iflp4hp0fxczxdkj9d21gq75ai5s3a0z1djqzq4083z5"))))
+    (version "1.1.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/elementary/sideload.git")
+             (commit version)))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0mlc3nm2navzxm8k1rwpbw4w6mv30lmhqybm8jqxd4v8x7my73vq"))))
     (build-system meson-build-system)
     (arguments
      `(#:glib-or-gtk? #t
@@ -40,23 +46,31 @@
                                               "/include"))
        #:phases
        (modify-phases %standard-phases
+         (add-before 'install 'set-environment-variables
+           (lambda _
+             ;; Disable compiling schemas and updating desktop databases
+             (setenv "DESTDIR" "/")
+             #t))
          (add-after 'install 'install-symlinks
            (lambda* (#:key outputs #:allow-other-keys)
              (let* ((out (assoc-ref outputs "out"))
                     (bin (string-append out "/bin/io.elementary.sideload"))
                     (link (string-append out "/bin/sideload")))
-               (symlink bin link)))))))
+               (symlink bin link)
+               #t))))))
     (inputs
      `(("flatpak" ,flatpak)
        ("granite" ,granite)
        ("gtk" ,gtk+)
+       ("hicolor-icon-theme" ,hicolor-icon-theme)
        ("libostree" ,libostree)))
     (propagated-inputs
-     `(("glib-networking" ,glib-networking)))
+     ;; Sideload needs these in the environment to fetch data securely from
+     ;; Flatpak remotes.
+     `(("gnupg" ,gnupg)
+       ("gpgme" ,gpgme)))
     (native-inputs
-     `(("cmake" ,cmake)
-       ("desktop-file-utils" ,desktop-file-utils) ; for update-desktop-database
-       ("gettext" ,gettext-minimal)
+     `(("gettext" ,gettext-minimal)
        ("glib" ,glib)
        ("glib:bin" ,glib "bin")
        ("gobject-introspection" ,gobject-introspection)
@@ -69,7 +83,7 @@
     (description "Sideload handles flatpakref files, like those you might find
 on Flathub or another third-party website providing a Flatpak app for
 download.")
-    (license license:gpl3)))
+    (license license:gpl3+)))
 
 (define-public appstream
   (package
