@@ -1,4 +1,4 @@
-(define-module (testing quickjs)
+(define-module (proposed quickjs)
   #:use-module (gnu packages time)
   #:use-module (guix download)
   #:use-module (guix build-system gnu)
