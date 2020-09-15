@@ -72,6 +72,12 @@ Compiler for the v systems programming language.
 - Package :: https://guix.gnu.org/packages/v-0.1.27/
 - Issue tracker :: https://issues.guix.info/41415
 
+*** [[proposed/quickjs.scm][quickjs]]
+Small embeddable Javascript runtime.
+
+- Package :: https://guix.gnu.org/en/packages/quickjs-2020-09-06/
+- Bug tracker :: https://issues.guix.gnu.org/issue/43391
+
 ** Proposed packages 🚚📦📨
 
 *** [[contributed/ruby.scm][Ruby 2.7.1]]
@@ -115,11 +121,6 @@ Emacs integration for importmagic
 Linter for Python source code.
 
 - Bug tracker :: https://issues.guix.gnu.org/41580
-*** [[proposed/quickjs.scm][quickjs]]
-Small embeddable Javascript runtime.
-
-- Bug tracker :: https://issues.guix.gnu.org/issue/43391
-
 ** Testing 🏗📦🚧
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.

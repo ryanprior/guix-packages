@@ -1,4 +1,4 @@
-(define-module (proposed quickjs)
+(define-module (contributed quickjs)
   #:use-module (gnu packages time)
   #:use-module (guix download)
   #:use-module (guix build-system gnu)
@@ -14,7 +14,8 @@
               (uri (string-append "https://bellard.org/quickjs/quickjs-"
                                   version ".tar.xz"))
               (sha256
-               (base32 "05vpnnzmws7plnwsnk2brwf7whyj84l5xl0iahi1xdn6rpla6880"))))
+               (base32
+                "05vpnnzmws7plnwsnk2brwf7whyj84l5xl0iahi1xdn6rpla6880"))))
     (build-system gnu-build-system)
     (arguments
      `(#:make-flags
