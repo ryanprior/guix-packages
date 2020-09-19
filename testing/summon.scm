@@ -56,3 +56,29 @@
      "Golf is a modest options parsing library for Go command line interface
 programs.  Meant to be small, like flag included in Go's standard library.")
     (license license:asl2.0)))
+
+(define-public go-github-com-bgentry-go-netrc
+  (package
+    (name "go-github.com-bgentry-go-netrc")
+    (version "master")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/bgentry/go-netrc")
+             (commit version)))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0dn2h8avgavqdzdqnph8bkhj35bx0wssczry1zdczr22xv650g1l"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/bgentry/go-netrc/netrc"
+       #:unpack-path "github.com/bgentry/go-netrc"))
+    (home-page "https://github.com/bgentry/go-netrc")
+    (synopsis "Package for reading and writing netrc files")
+    (description
+     "This package can parse netrc files, make changes to them, and then
+serialize them back to netrc format, while preserving any whitespace that was
+present in the source file.")
+    (license license:expat)))
