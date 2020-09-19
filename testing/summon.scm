@@ -82,3 +82,19 @@ programs.  Meant to be small, like flag included in Go's standard library.")
 serialize them back to netrc format, while preserving any whitespace that was
 present in the source file.")
     (license license:expat)))
+
+(define-public go-github-com-sirupsen-logrus-1.6
+  (package
+    (inherit go-github-com-sirupsen-logrus)
+    (name "go-github-com-sirupsen-logrus")
+    (version "1.6.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/sirupsen/logrus")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1zf9is1yxxnna0d1pyag2m9ziy3l27zb2j92p9msm1gx5jjrvzzj"))))))
