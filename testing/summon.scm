@@ -166,3 +166,41 @@ present in the source file.")
     (description "The summon-conjur utility fetches a secret from Conjur,
 printing it to stdout.")
     (license license:expat)))
+
+(define-public go-github-com-cyberark-summon
+  (package
+    (name "summon")
+    (version "0.8.2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/cyberark/summon")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1z4xnrncwvp3rfm97zvc0ivvw2fh1hrjhj3rplvidzxjfyasbvwv"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:install-source? #f
+       #:import-path "github.com/cyberark/summon/cmd"
+       #:unpack-path "github.com/cyberark/summon"
+       #:phases
+       (modify-phases %standard-phases
+         (add-after 'install 'rename-binary
+           (lambda* (#:key outputs #:allow-other-keys)
+             (let* ((out (assoc-ref outputs "out"))
+                    (src (string-append out "/bin/cmd"))
+                    (dest (string-append out "/bin/summon")))
+               (rename-file src dest)))))))
+    (inputs
+     `(("github.com/codegangsta/cli" ,go-github-com-codegangsta-cli)
+       ("gopkg.in/yaml.v3" ,go-gopkg-in-yaml-v3)))
+    (home-page "https://cyberark.github.io/summon/")
+    (synopsis "Fetches secrets and makes them available to a process")
+    (description "Summon fetches secrets using a provider program and a
+configuration file, then launches a subprocess with access to those secrets
+via its environment or a memory-mapped temporary file.  When the subprocess
+exits, it removes the secrets.")
+    (license license:expat)))
