@@ -5,7 +5,8 @@
   #:use-module (guix build-system go)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)
-  #:use-module (guix packages))
+  #:use-module (guix packages)
+  #:use-module (guix utils))
 
 (define-public go-github-com-codegangsta-cli
   ;; previous name for urfave/cli
@@ -129,3 +130,39 @@ present in the source file.")
     (synopsis "Go client for the CyberArk Conjur API ")
     (description "This package provides programmatic Golang access to the Conjur API.")
     (license license:asl2.0)))
+
+(define-public go-github-com-cyberark-summon-conjur
+  (package
+    (name "summon-conjur")
+    (version "0.5.3")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/cyberark/summon-conjur")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "07c0n3pqrh51whwgxcj7r4hgxa3habgwp0l6lirhs8gry9hyzx5a"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:install-source? #f
+       #:import-path "github.com/cyberark/summon-conjur/cmd"
+       #:unpack-path "github.com/cyberark/summon-conjur"
+       #:phases
+       (modify-phases %standard-phases
+         (add-after 'install 'rename-binary
+           (lambda* (#:key outputs #:allow-other-keys)
+             (let* ((out (assoc-ref outputs "out"))
+                    (src (string-append out "/bin/cmd"))
+                    (dest (string-append out "/bin/summon-conjur")))
+               (rename-file src dest)))))))
+    (inputs
+     `(("github.com/cyberark/conjur-api-go/conjurapi" ,go-github-com-cyberark-conjur-api)
+       ("github.com/karrick/golf" ,go-github-com-karrick-golf)))
+    (home-page "https://cyberark.github.io/summon/")
+    (synopsis "Fetches secrets from a Conjur service")
+    (description "The summon-conjur utility fetches a secret from Conjur,
+printing it to stdout.")
+    (license license:expat)))
