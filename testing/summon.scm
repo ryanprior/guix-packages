@@ -57,7 +57,7 @@
     (description
      "Golf is a modest options parsing library for Go command line interface
 programs.  Meant to be small, like flag included in Go's standard library.")
-    (license license:asl2.0)))
+    (license license:expat)))
 
 (define-public go-github-com-bgentry-go-netrc
   (package
