@@ -9,8 +9,8 @@
   + [X] golang.org/x/text
 - [X] github.com/alecthomas/chroma
 - [X] github.com/armon/go-radix
-- [-] github.com/aws/aws-sdk-go
-  + [ ] github.com/aws/aws-sdk-go
+- [X] github.com/aws/aws-sdk-go
+  + [X] github.com/aws/aws-sdk-go
   + [X] github.com/go-sql-driver/mysql
   + [X] github.com/jmespath/go-jmespath
     + [X] github.com/davecgh/go-spew
@@ -25,7 +25,6 @@
 - [ ] github.com/dustin/go-humanize
 - [ ] github.com/fsnotify/fsnotify
 - [ ] github.com/gobwas/glob
-- [ ] github.com/gobwas/glob/syntax
 - [ ] github.com/gorilla/websocket
 - [ ] github.com/jdkato/prose/transform
 - [ ] github.com/kyokomi/emoji
@@ -35,9 +34,7 @@
 - [ ] github.com/mitchellh/hashstructure
 - [ ] github.com/mitchellh/mapstructure
 - [ ] github.com/muesli/smartcrop
-- [ ] github.com/nicksnyder/go-i18n/i18n/bundle
-- [ ] github.com/nicksnyder/go-i18n/i18n/language
-- [ ] github.com/nicksnyder/go-i18n/i18n/translation
+- [ ] github.com/nicksnyder/go-i18n/i18n
 - [ ] github.com/niklasfasching/go-org/org
 - [ ] github.com/olekukonko/tablewriter
 - [ ] github.com/pkg/errors
@@ -48,40 +45,17 @@
 - [ ] github.com/spf13/afero
 - [ ] github.com/spf13/cast
 - [ ] github.com/spf13/cobra
-- [ ] github.com/spf13/cobra/doc
 - [ ] github.com/spf13/fsync
 - [ ] github.com/spf13/jwalterweatherman
 - [ ] github.com/spf13/pflag
 - [ ] github.com/spf13/viper
-- [ ] github.com/tdewolff/minify/v2
-- [ ] github.com/tdewolff/minify/v2/css
-- [ ] github.com/tdewolff/minify/v2/html
-- [ ] github.com/tdewolff/minify/v2/js
-- [ ] github.com/tdewolff/minify/v2/json
-- [ ] github.com/tdewolff/minify/v2/svg
-- [ ] github.com/tdewolff/minify/v2/xml
+- [ ] github.com/tdewolff/minify
 - [ ] github.com/yuin/goldmark
 - [ ] github.com/yuin/goldmark-highlighting
-- [ ] github.com/yuin/goldmark/ast
-- [ ] github.com/yuin/goldmark/extension
-- [ ] github.com/yuin/goldmark/parser
-- [ ] github.com/yuin/goldmark/renderer
-- [ ] github.com/yuin/goldmark/renderer/html
-- [ ] github.com/yuin/goldmark/text
-- [ ] github.com/yuin/goldmark/util
 - [ ] gocloud.dev/blob
-- [ ] gocloud.dev/blob/azureblob
-- [ ] gocloud.dev/blob/fileblob
-- [ ] gocloud.dev/blob/gcsblob
-- [ ] gocloud.dev/blob/s3blob
-- [ ] golang.org/x/image/bmp
-- [ ] golang.org/x/image/tiff
-- [ ] golang.org/x/image/webp
-- [ ] golang.org/x/net/html
-- [ ] golang.org/x/sync/errgroup
-- [ ] golang.org/x/sync/semaphore
-- [ ] golang.org/x/text/runes
-- [ ] golang.org/x/text/transform
-- [ ] golang.org/x/text/unicode/norm
+- [ ] golang.org/x/image
+- [ ] golang.org/x/net
+- [ ] golang.org/x/sync
+- [ ] golang.org/x/text
 - [ ] google.golang.org/api/compute/v1
 - [ ] gopkg.in/yaml.v2
