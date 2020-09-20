@@ -60,6 +60,30 @@ incorrectly escaped by net/url.")
 Pure-ell.  Based on the Wikipedia article for URLs and RFC 3986.")
     (license license:expat)))
 
+(define-public go-github-com-armon-go-radix
+  (package
+    (name "go-github-com-armon-go-radix")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/armon/go-radix")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1m1k0jz9gjfrk4m7hjm7p03qmviamfgxwm2ghakqxw3hdds8v503"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/armon/go-radix"))
+    (home-page "https://github.com/armon/go-radix")
+    (synopsis "Package that implements a radix tree")
+    (description
+     "This package provides a single radix tree implementation optimized for
+sparse nodes.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
