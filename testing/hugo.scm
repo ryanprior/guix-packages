@@ -189,7 +189,7 @@ transforms one JSON document into another through a JMESPath expression.")
        ("go-github-com-puerkitobio-purell" ,go-github-com-puerkitobio-purell)
        ("go-github-com-alecthomas-chroma" ,go-github-com-alecthomas-chroma)
        ("go-github-com-armon-go-radix" ,go-github-com-armon-go-radix)
-       ))
+       ("go-github-com-aws-sdk" ,go-github-com-aws-sdk)))
     ;; There are a bunch of dependencies; see hugo-deps.org
     ;; TODO figure out which deps are already packaged
     ;; TODO package more go deps as necessary
