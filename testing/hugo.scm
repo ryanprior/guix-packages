@@ -32,6 +32,34 @@ the net/url package, modified so as to allow some reserved characters
 incorrectly escaped by net/url.")
     (license license:expat)))
 
+(define-public go-github-com-puerkitobio-purell
+  (package
+    (name "go-github-com-puerkitobio-purell")
+    (version "1.1.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/PuerkitoBio/purell")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0c525frsxmalrn55hzzsxy17ng8avkd40ga0wxfw9haxsdjgqdqy"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/PuerkitoBio/purell"))
+    (propagated-inputs
+     `(("go-github-com-puerkitobio-urlesc" ,go-github-com-puerkitobio-urlesc)
+       ("go-golang-org-x-net" ,go-golang-org-x-net)
+       ("go-golang-org-x-text" ,go-golang-org-x-text)))
+    (home-page "https://github.com/PuerkitoBio/purell")
+    (synopsis "Normalizes URLs")
+    (description
+     "Purell is a tiny Go library to normalize URLs.  It returns a pure URL; a
+Pure-ell.  Based on the Wikipedia article for URLs and RFC 3986.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
