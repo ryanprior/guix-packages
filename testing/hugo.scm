@@ -183,6 +183,13 @@ transforms one JSON document into another through a JMESPath expression.")
     (build-system go-build-system)
     (arguments
      '(#:import-path "github.com/gohugoio/hugo"))
+    (native-inputs
+     `(("go-github-com-burntsushi-locker" ,go-github-com-burntsushi-locker)
+       ("go-github-com-burntsushi-toml" ,go-github-com-burntsushi-toml)
+       ("go-github-com-puerkitobio-purell" ,go-github-com-puerkitobio-purell)
+       ("go-github-com-alecthomas-chroma" ,go-github-com-alecthomas-chroma)
+       ("go-github-com-armon-go-radix" ,go-github-com-armon-go-radix)
+       ))
     ;; There are a bunch of dependencies; see hugo-deps.org
     ;; TODO figure out which deps are already packaged
     ;; TODO package more go deps as necessary
