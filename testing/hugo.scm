@@ -218,6 +218,30 @@ timeframe on which it will change.")
 filenames to info objects for a given revision of a Git repo.")
     (license license:expat)))
 
+(define-public go-golang.org-x-xerrors
+  (let ((commit "5ec99f83aff198f5fbd629d6c8d8eb38a04218ca")
+        (revision "0"))
+    (package
+      (name "go-golang.org-x-xerrors")
+      (version (git-version "0.0.0" revision commit))
+      (source (origin
+                (method git-fetch)
+                (uri (git-reference
+                      (url "https://go.googlesource.com/xerrors")
+                      (commit commit)))
+                (file-name (git-file-name name version))
+                (sha256
+                 (base32
+                  "1dbzc3gmf2haazpv7cgmv97rq40g2xzwbglc17vas8dwhgwgwrzb"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "golang.org/x/xerrors"))
+      (synopsis "Go 1.13 error values")
+      (description
+       "This package holds the transition packages for the new Go 1.13 error values.")
+      (home-page "https://godoc.org/golang.org/xerrors")
+      (license license:bsd-3))))
+
 (define-public hugo
   (package
     (name "hugo")
