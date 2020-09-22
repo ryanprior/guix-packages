@@ -18,21 +18,32 @@
     + [X] go.gopkg.in/yaml-v2
   + [X] github.com/pkg/errors
   + [X] golang.org/x/net
-- [ ] github.com/bep/debounce
-- [ ] github.com/bep/gitmap
-- [ ] github.com/bep/tmc
-- [ ] github.com/disintegration/gift
+- [X] github.com/bep/debounce
+- [X] github.com/bep/gitmap
+- [X] github.com/bep/tmc
+  + [X] github.com/bep/tmc
+  + [X] github.com/bep/debounce
+  + [X] github.com/frankban/quicktest
+    + [X] github.com/frankban/quicktest
+      + [X] github.com/frankban/quicktest
+      + [X] go-github-com-google-go-cmp-cmp-0.5.2
+      + [X] go-golang.org-x-xerrors
+    + [X] github.com/google/go-cmp
+    + [X] github.com/kr/pretty
+  + [X] github.com/google/go-cmp
+  + [X] gopkg.in/yaml.v2
+- [X] github.com/disintegration/gift
 - [ ] github.com/dustin/go-humanize
-- [ ] github.com/fsnotify/fsnotify
-- [ ] github.com/gobwas/glob
+- [X] github.com/fsnotify/fsnotify
+- [X] github.com/gobwas/glob
 - [ ] github.com/gorilla/websocket
 - [ ] github.com/jdkato/prose/transform
 - [ ] github.com/kyokomi/emoji
 - [ ] github.com/markbates/inflect
-- [ ] github.com/mattn/go-isatty
+- [X] github.com/mattn/go-isatty
 - [ ] github.com/miekg/mmark
 - [ ] github.com/mitchellh/hashstructure
-- [ ] github.com/mitchellh/mapstructure
+- [X] github.com/mitchellh/mapstructure
 - [ ] github.com/muesli/smartcrop
 - [ ] github.com/nicksnyder/go-i18n/i18n
 - [ ] github.com/niklasfasching/go-org/org
