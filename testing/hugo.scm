@@ -362,7 +362,24 @@ timeframe on which it will change.")
        ("go-github-com-puerkitobio-purell" ,go-github-com-puerkitobio-purell)
        ("go-github-com-alecthomas-chroma" ,go-github-com-alecthomas-chroma)
        ("go-github-com-armon-go-radix" ,go-github-com-armon-go-radix)
-       ("go-github-com-aws-sdk" ,go-github-com-aws-sdk)))
+       ("go-github-com-aws-sdk" ,go-github-com-aws-sdk)
+       ("go-github-com-bep-debounce" ,go-github-com-bep-debounce)
+       ("go-github-com-bep-gitmap" ,go-github-com-bep-gitmap)
+       ("go-github-com-bep-tmc" ,go-github-com-bep-tmc)
+       ("go-github-com-disintegration-gift" ,go-github-com-disintegration-gift)
+       ;; go-humanize
+       ("go-github-com-fsnotify-fsnotify" ,go-github-com-fsnotify-fsnotify)
+       ("go-github-com-gobwas-glob" ,go-github-com-gobwas-glob)
+       ;; gorilla/websocket
+       ;; prose/transform
+       ;; kyokomi/emoji
+       ;; markbates/inflect
+       ("go-github-com-mattn-go-isatty" ,go-github-com-mattn-go-isatty)
+       ;; miekg/mmark
+       ;; mitchellh/hashstructure
+       ("go-github-com-mitchellh-mapstructure" ,go-github-com-mitchellh-mapstructure)
+       ;; muesli/smartcrop
+       ))
     ;; There are a bunch of dependencies; see hugo-deps.org
     ;; TODO figure out which deps are already packaged
     ;; TODO package more go deps as necessary
@@ -371,5 +388,3 @@ timeframe on which it will change.")
     (description "Hugo takes a directory with content and templates and renders
 them into a full HTML website.")
     (license license:asl2.0)))
-
-hugo
