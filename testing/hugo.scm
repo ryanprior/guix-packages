@@ -287,6 +287,35 @@ filenames to info objects for a given revision of a Git repo.")
 tests.")
     (license license:expat)))
 
+(define-public go-github-com-bep-tmc
+  (package
+    (name "go-github-com-bep-tmc")
+    (version "0.5.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/bep/tmc")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1jn3j7mh77a5bbwh3hx3r0blzbdj2fvk5wvcfa8fr45qp2zlpbhx"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/bep/tmc"))
+    (propagated-inputs
+     `(("go-github-com-bep-debounce" ,go-github-com-bep-debounce)
+       ("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)
+       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
+       ("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)))
+    (home-page "https://github.com/bep/tmc")
+    (synopsis "Debouncer written in Go")
+    (description
+     "This package removes high-frequency signals from an input, limiting the
+timeframe on which it will change.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
