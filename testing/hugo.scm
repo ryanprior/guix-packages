@@ -2,6 +2,7 @@
 
 (define-module (testing hugo)
   #:use-module (gnu packages golang)
+  #:use-module (gnu packages version-control)
   #:use-module (guix build-system go)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)
@@ -189,6 +190,34 @@ transforms one JSON document into another through a JMESPath expression.")
      "This package removes high-frequency signals from an input, limiting the
 timeframe on which it will change.")
     (license license:expat)))
+
+(define-public go-github-com-bep-gitmap
+  (package
+    (name "go-github-com-bep-gitmap")
+    (version "1.1.2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/bep/gitmap")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0hvynpflvbn6g1vgrv37njn8005qxdq8l1289ymr37a2p5c1jncm"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:tests? #f ;; tests require the .git directory
+       #:import-path "github.com/bep/gitmap"))
+    (native-inputs
+     `(("git" ,git)))
+    (home-page "https://github.com/bep/gitmap")
+    (synopsis "Creates a map from filenames to info objects in a Git repo.")
+    (description
+     "Gitmap provides a fairly fast method to create a map from all the
+filenames to info objects for a given revision of a Git repo.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
