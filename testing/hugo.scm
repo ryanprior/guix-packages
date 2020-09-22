@@ -166,6 +166,29 @@ transforms one JSON document into another through a JMESPath expression.")
      "This is the official AWS SDK for the Go programming language.")
     (license license:asl2.0)))
 
+(define-public go-github-com-bep-debounce
+  (package
+    (name "go-github-com-bep-debounce")
+    (version "1.2.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/bep/debounce")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1vxa9cz2z0cmjixz3gjfp18fzliy9d2q7q6cz0zqs7yqbpjn5f55"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/bep/debounce"))
+    (home-page "https://github.com/bep/debounce")
+    (synopsis "Debouncer written in Go")
+    (description
+     "This package removes high-frequency signals from an input, limiting the
+timeframe on which it will change.")
+    (license license:expat)))
 (define-public hugo
   (package
     (name "hugo")
