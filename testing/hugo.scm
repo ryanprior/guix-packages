@@ -242,6 +242,24 @@ filenames to info objects for a given revision of a Git repo.")
       (home-page "https://godoc.org/golang.org/xerrors")
       (license license:bsd-3))))
 
+(define-public go-github-com-google-go-cmp-cmp-0.5.2
+  (package
+    (inherit go-github-com-google-go-cmp-cmp)
+    (name "go-github-com-google-go-cmp-cmp")
+    (version "0.5.2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/google/go-cmp")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0qchy411jm9q2l9mf7x3ry2ycaqp9xdhf2nx14qrpzcxfigv2705"))))
+    (propagated-inputs
+     `(("go-golang.org-x-xerrors" ,go-golang.org-x-xerrors)))))
+
 (define-public hugo
   (package
     (name "hugo")
