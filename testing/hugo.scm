@@ -316,6 +316,29 @@ tests.")
 timeframe on which it will change.")
     (license license:expat)))
 
+(define-public go-github-com-disintegration-gift
+  (package
+    (name "go-github-com-disintegration-gift")
+    (version "1.2.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/disintegration/gift")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0zdki6ydqgxl7lg23f4885w8ij34sdg8xv7b7yp6c7ffi2ikk07f"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/disintegration/gift"))
+    (home-page "https://github.com/disintegration/gift")
+    (synopsis "Go image filtering toolkit")
+    (description
+     "This package provides a set of useful image processing filters.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
