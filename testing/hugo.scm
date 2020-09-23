@@ -339,6 +339,29 @@ timeframe on which it will change.")
      "This package provides a set of useful image processing filters.")
     (license license:expat)))
 
+(define-public go-github-com-dustin-go-humanize
+  (package
+    (name "go-github-com-dustin-go-humanize")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/dustin/go-humanize")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1kqf1kavdyvjk7f8kx62pnm7fbypn9z1vbf8v2qdh3y7z7a0cbl3"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/dustin/go-humanize"))
+    (home-page "https://github.com/dustin/go-humanize")
+    (synopsis "Formatters for units to human friendly sizes")
+    (description
+     "This package provides functions for helping humanize times and sizes, like “7 hours ago.”")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
