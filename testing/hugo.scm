@@ -362,6 +362,30 @@ timeframe on which it will change.")
      "This package provides functions for helping humanize times and sizes, like “7 hours ago.”")
     (license license:expat)))
 
+(define-public go-github-com-gorilla-websocket
+  (package
+    (name "go-github-com-gorilla-websocket")
+    (version "1.4.2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gorilla/websocket")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0mkm9w6kjkrlzab5wh8p4qxkc0icqawjbvr01d2nk6ykylrln40s"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/gorilla/websocket"))
+    (home-page "https://github.com/gorilla/websocket")
+    (synopsis "A fast, well-tested and widely used WebSocket implementation for Go")
+    (description
+     "The Gorilla WebSocket package provides a complete and tested
+implementation of the WebSocket protocol.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
