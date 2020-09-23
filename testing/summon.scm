@@ -157,8 +157,9 @@ present in the source file.")
              (let* ((out (assoc-ref outputs "out"))
                     (src (string-append out "/bin/cmd"))
                     (dest (string-append out "/bin/summon-conjur")))
-               (rename-file src dest)))))))
-    (inputs
+               (rename-file src dest)
+               #t))))))
+    (native-inputs
      `(("github.com/cyberark/conjur-api-go/conjurapi" ,go-github-com-cyberark-conjur-api)
        ("github.com/karrick/golf" ,go-github-com-karrick-golf)))
     (home-page "https://cyberark.github.io/summon/")
@@ -193,8 +194,9 @@ printing it to stdout.")
              (let* ((out (assoc-ref outputs "out"))
                     (src (string-append out "/bin/cmd"))
                     (dest (string-append out "/bin/summon")))
-               (rename-file src dest)))))))
-    (inputs
+               (rename-file src dest)
+               #t))))))
+    (native-inputs
      `(("github.com/codegangsta/cli" ,go-github-com-codegangsta-cli)
        ("gopkg.in/yaml.v3" ,go-gopkg-in-yaml-v3)))
     (home-page "https://cyberark.github.io/summon/")
