@@ -414,10 +414,10 @@ implementation of the WebSocket protocol.")
        ("go-github-com-bep-gitmap" ,go-github-com-bep-gitmap)
        ("go-github-com-bep-tmc" ,go-github-com-bep-tmc)
        ("go-github-com-disintegration-gift" ,go-github-com-disintegration-gift)
-       ;; go-humanize
+       ("go-github-com-dustin-go-humanize" ,go-github-com-dustin-go-humanize)
        ("go-github-com-fsnotify-fsnotify" ,go-github-com-fsnotify-fsnotify)
        ("go-github-com-gobwas-glob" ,go-github-com-gobwas-glob)
-       ;; gorilla/websocket
+       ("go-github-com-gorilla-websocket" ,go-github-com-gorilla-websocket)
        ;; prose/transform
        ;; kyokomi/emoji
        ;; markbates/inflect

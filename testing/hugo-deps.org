@@ -33,10 +33,10 @@
   + [X] github.com/google/go-cmp
   + [X] gopkg.in/yaml.v2
 - [X] github.com/disintegration/gift
-- [ ] github.com/dustin/go-humanize
+- [X] github.com/dustin/go-humanize
 - [X] github.com/fsnotify/fsnotify
 - [X] github.com/gobwas/glob
-- [ ] github.com/gorilla/websocket
+- [X] github.com/gorilla/websocket
 - [ ] github.com/jdkato/prose/transform
 - [ ] github.com/kyokomi/emoji
 - [ ] github.com/markbates/inflect
