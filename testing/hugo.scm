@@ -459,6 +459,36 @@ targets.")
 bootstrapped.")
     (license license:expat)))
 
+(define-public go-github-com-gobuffalo-envy
+  (package
+    (name "go-github-com-gobuffalo-envy")
+    (version "1.9.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gobuffalo/envy")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "119lb8i5pzbfwddmrfmjjai9m5np4p485bqxhb82jzsxavzc88m7"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:tests? #f ;; TODO tests require mutable filesystem
+       #:import-path "github.com/gobuffalo/envy"))
+    (propagated-inputs
+     `(("go-github-com-davecgh-go-spew" ,go-github-com-davecgh-go-spew)
+       ("go-github-com-joho-godotenv" ,go-github-com-joho-godotenv)
+       ("go-github-com-rogpeppe-go-internal" ,go-github-com-rogpeppe-go-internal)
+       ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)))
+    (home-page "https://github.com/gobuffalo/envy")
+    (synopsis "Makes working with environment variables in Go trivial.")
+    (description
+     "Envy provides convenience methods for working with environment
+variables.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
