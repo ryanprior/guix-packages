@@ -435,6 +435,30 @@ functions, and Mage automatically uses them as Makefile-like runnable
 targets.")
     (license license:asl2.0)))
 
+(define-public go-github-com-joho-godotenv
+  (package
+    (name "go-github-com-joho-godotenv")
+    (version "1.3.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/joho/godotenv")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0ri8if0pc3x6jg4c3i8wr58xyfpxkwmcjk3rp8gb398a1aa3gpjm"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/joho/godotenv"))
+    (home-page "https://github.com/joho/godotenv")
+    (synopsis "Loads environment variables from a file.")
+    (description
+     "Dotenv load variables from a .env file when the environment is
+bootstrapped.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
