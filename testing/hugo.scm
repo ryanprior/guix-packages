@@ -386,6 +386,30 @@ timeframe on which it will change.")
 implementation of the WebSocket protocol.")
     (license license:expat)))
 
+(define-public go-github-com-kyokomi-emoji
+  (package
+    (name "go-github-com-kyokomi-emoji")
+    (version "2.2.5")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/kyokomi/emoji")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0abjjslfip135595v085z1c8pns0lgmm4scqdwxx3nxy4njwqmph"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/kyokomi/emoji"))
+    (home-page "https://github.com/kyokomi/emoji")
+    (synopsis "Emoji terminal output for golang")
+    (description
+     "The emoji package provides methods for interpolating emoji into strings
+and character sequences.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
