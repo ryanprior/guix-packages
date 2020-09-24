@@ -410,6 +410,31 @@ implementation of the WebSocket protocol.")
 and character sequences.")
     (license license:expat)))
 
+(define-public go-github-com-magefile-mage
+  (package
+    (name "go-github-com-magefile-mage")
+    (version "1.10.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/magefile/mage")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0c77xgz2bz4j9sh9v7f49iqyamc4lvvldcmn6v50hk98s9193gbf"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/magefile/mage"))
+    (home-page "https://magefile.org/")
+    (synopsis "Build tool and task runner like make/rake using Go")
+    (description
+     "Mage is a make-like build tool using Go.  You write plain-old go
+functions, and Mage automatically uses them as Makefile-like runnable
+targets.")
+    (license license:asl2.0)))
+
 (define-public hugo
   (package
     (name "hugo")
