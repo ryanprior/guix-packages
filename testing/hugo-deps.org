@@ -37,9 +37,17 @@
 - [X] github.com/fsnotify/fsnotify
 - [X] github.com/gobwas/glob
 - [X] github.com/gorilla/websocket
-- [ ] github.com/jdkato/prose/transform
-- [ ] github.com/kyokomi/emoji
-- [ ] github.com/markbates/inflect
+- [X] github.com/kyokomi/emoji
+- [X] github.com/magefile/mage
+- [X] github.com/markbates/inflect
+  + [X] github.com/markbates/inflect
+  + [X] github.com/gobuffalo/envy
+    + [X] github.com/gobuffalo/envy
+    + [X] github.com/davecgh/go-spew
+    + [X] github.com/joho/godotenv
+    + [X] github.com/rogpeppe/go-internal
+    + [X] github.com/stretchr/testify
+  + [X] github.com/stretchr/testify
 - [X] github.com/mattn/go-isatty
 - [ ] github.com/miekg/mmark
 - [ ] github.com/mitchellh/hashstructure

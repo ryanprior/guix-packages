@@ -548,9 +548,9 @@ capitalizations, spacing, and so on.")
        ("go-github-com-fsnotify-fsnotify" ,go-github-com-fsnotify-fsnotify)
        ("go-github-com-gobwas-glob" ,go-github-com-gobwas-glob)
        ("go-github-com-gorilla-websocket" ,go-github-com-gorilla-websocket)
-       ;; prose/transform
-       ;; kyokomi/emoji
-       ;; markbates/inflect
+       ("go-github-com-kyokomi-emoji" ,go-github-com-kyokomi-emoji)
+       ("go-github-com-magefile-mage" ,go-github-com-magefile-mage)
+       ("go-github-com-markbates-inflect" ,go-github-com-markbates-inflect)
        ("go-github-com-mattn-go-isatty" ,go-github-com-mattn-go-isatty)
        ;; miekg/mmark
        ;; mitchellh/hashstructure
