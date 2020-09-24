@@ -489,6 +489,33 @@ bootstrapped.")
 variables.")
     (license license:expat)))
 
+(define-public go-github-com-markbates-inflect
+  (package
+    (name "go-github-com-markbates-inflect")
+    (version "1.0.4")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/markbates/inflect")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0pd50b8q6bib84yab14csd6nc08hfdapzbh1nnw6qrmc1zxi7r7m"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/markbates/inflect"))
+    (propagated-inputs
+     `(("go-github-com-gobuffalo-envy" ,go-github-com-gobuffalo-envy)
+       ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)))
+    (home-page "https://github.com/markbates/inflect")
+    (synopsis "An inflection engine for golang")
+    (description
+     "The inflect package transforms text into different styles,
+capitalizations, spacing, and so on.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
