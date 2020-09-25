@@ -479,6 +479,36 @@ timeframe on which it will change.")
 json.Marshal and json.Unmarshal to convert to or from the struct.")
     (license license:expat)))
 
+(define-public go-github-com-getkin-kin-openapi
+  (package
+    (name "go-github-com-getkin-kin-openapi")
+    (version "0.22.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/getkin/kin-openapi")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "01bqrxf40s2pvcf55szi719g9nwz4yh6c01kr0v581jl249jk1am"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/getkin/kin-openapi/openapi3"
+       #:unpack-path "github.com/getkin/kin-openapi"))
+    (propagated-inputs
+     `(("go-github-com-ghodss-yaml" ,go-github-com-ghodss-yaml)
+       ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)
+       ("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)))
+    (home-page "https://github.com/getkin/kin-openapi")
+    (synopsis "OpenAPI 3.0 implementation for Go.")
+    (description
+     "This package handles OpenAPI files.  It targets the latest OpenAPI
+version (currently 3), but the project contains support for older OpenAPI
+versions too.")
+    (license license:expat)))
+
 (define-public go-github-com-gorilla-websocket
   (package
     (name "go-github-com-gorilla-websocket")
