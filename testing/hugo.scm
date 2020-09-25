@@ -288,6 +288,30 @@ filenames to info objects for a given revision of a Git repo.")
 and TypeScript code for distribution on the web.")
     (license license:expat)))
 
+(define-public go-github-com-fortytw2-leaktest
+  (package
+    (name "go-github-com-fortytw2-leaktest")
+    (version "d73c753520d9250e8f091d70d468a99c71f8bceb")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/fortytw2/leaktest")
+             (commit version)))
+       (file-name (git-file-name name "master"))
+       (sha256
+        (base32
+         "15aqrdfz9gf7k571f6l5dfjy3apjxaxrpj60rqv9bfz2sqw8inlf"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/fortytw2/leaktest"))
+    (home-page "https://github.com/fortytw2/leaktest")
+    (synopsis "Goroutine leak detector.")
+    (description
+     "This package takes a snapshot of running goroutines at the start of a
+test, and at the end—compares the two et voilà.")
+    (license license:expat)))
+
 (define-public go-github-com-frankban-quicktest
   (package
     (name "go-github-com-frankban-quicktest")
