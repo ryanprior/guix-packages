@@ -339,6 +339,45 @@ test, and at the end—compares the two et voilà.")
 tests.")
     (license license:expat)))
 
+(define-public go-github-com-bep-golibsass
+  (package
+    (name "go-github-com-bep-golibsass")
+    (version "0.7.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/bep/golibsass")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0xk3m2ynbydzx87dz573ihwc4ryq0r545vz937szz175ivgfrhh3"))
+       (snippet
+        '(begin
+           ((@ (guix build utils) delete-file-recursively) "libsass_src")
+           #t))))
+    (build-system go-build-system)
+    (arguments
+     '(#:build-flags '("-tags" "dev")
+       #:import-path "github.com/bep/golibsass/libsass"
+       #:unpack-path "github.com/bep/golibsass"
+       #:phases
+       (modify-phases %standard-phases
+         (replace 'check
+           (lambda* (#:key import-path #:allow-other-keys)
+             (invoke "go" "test" import-path "-tags" "dev"))))))
+    (propagated-inputs
+     `(("libsass" ,libsass)))
+    (native-inputs
+     `(("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)))
+    (home-page "https://github.com/bep/golibsass")
+    (synopsis "Easy to use Go bindings for LibSass")
+    (description
+     "This package provides SCSS compiler support for Go applications.")
+    (license license:expat)))
+
+
 (define-public go-github-com-bep-tmc
   (package
     (name "go-github-com-bep-tmc")
