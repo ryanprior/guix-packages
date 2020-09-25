@@ -453,6 +453,32 @@ timeframe on which it will change.")
      "This package provides functions for helping humanize times and sizes, like “7 hours ago.”")
     (license license:expat)))
 
+(define-public go-github-com-ghodss-yaml
+  (package
+    (name "go-github-com-ghodss-yaml")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/ghodss/yaml")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0skwmimpy7hlh7pva2slpcplnm912rp3igs98xnqmn859kwa5v8g"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/ghodss/yaml"))
+    (propagated-inputs
+     `(("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)))
+    (home-page "https://github.com/ghodss/yaml")
+    (synopsis "Marshal and unmarshal YAML in Golang.")
+    (description
+     "This package converts YAML to JSON using go-yaml and then uses
+json.Marshal and json.Unmarshal to convert to or from the struct.")
+    (license license:expat)))
+
 (define-public go-github-com-gorilla-websocket
   (package
     (name "go-github-com-gorilla-websocket")
