@@ -1,0 +1,96 @@
+#+title: New Hugo Dependencies
+
+- [X] github.com/BurntSushi/locker
+- [X] github.com/BurntSushi/toml
+- [X] github.com/PuerkitoBio/purel
+  + [X] github.com/PuerkitoBio/purell
+  + [X] github.com/PuerkitoBio/urlesc
+  + [X] golang.org/x/net
+  + [X] golang.org/x/text
+- [X] github.com/PuerkitoBio/urlesc
+- [X] github.com/alecthomas/chroma
+- [X] github.com/alecthomas/repr
+- [X] github.com/armon/go-radix
+- [X] github.com/aws/aws-sdk-go
+  + [X] github.com/aws/aws-sdk-go
+  + [X] github.com/go-sql-driver/mysql
+  + [X] github.com/jmespath/go-jmespath
+    + [X] github.com/davecgh/go-spew
+    + [X] github.com/pmezard/go-difflib
+    + [X] go.gopkg.in/yaml-v2
+  + [X] github.com/pkg/errors
+  + [X] golang.org/x/net
+- [X] github.com/bep/debounce
+- [X] github.com/bep/gitmap
+- [X] github.com/bep/golibsass
+- [X] github.com/bep/tmc
+  + [X] github.com/bep/tmc
+  + [X] github.com/bep/debounce
+  + [X] github.com/frankban/quicktest
+    + [X] github.com/frankban/quicktest
+      + [X] github.com/frankban/quicktest
+      + [X] go-github-com-google-go-cmp-cmp-0.5.2
+      + [X] go-golang.org-x-xerrors
+    + [X] github.com/google/go-cmp
+    + [X] github.com/kr/pretty
+  + [X] github.com/google/go-cmp
+  + [X] gopkg.in/yaml.v2
+- [X] github.com/disintegration/gift
+- [X] github.com/dustin/go-humanize
+- [X] jgithub.com/evanw/esbuild
+- [X] github.com/fortytw2/leaktest
+- [X] github.com/frankban/quicktest
+- [X] github.com/fsnotify/fsnotify
+- [X] github.com/getkin/kin-openapi
+  + [X] github.com/getkin/kin-openapi
+  + [X] github.com/ghodss/yaml
+  + [X] github.com/stretchr/testify
+  + [X] gopkg.in/yaml.v2 v2.3.0
+- [X] github.com/ghodss/yaml
+- [X] github.com/gobwas/glob
+- [ ] github.com/gohugoio/testmodBuilder
+  * This contains a dependency on Hugo, creating a circular dependency. hopefully it's not actually necessary for building Hugo.
+- [X] github.com/google/go-cmp
+- [X] github.com/gorilla/websocket
+- [ ] github.com/jdkato/prose
+  + [ ] github.com/jdkato/prose
+  + [ ] github.com/neurosnap/sentences
+  + [ ] gonum.org/v1/gonum
+  + [ ] gopkg.in/neurosnap/sentences.v1
+- [X] github.com/kyokomi/emoji
+- [X] github.com/magefile/mage
+- [X] github.com/markbates/inflect
+- [X] github.com/mattn/go-isatty
+- [ ] github.com/miekg/mmark
+- [ ] github.com/mitchellh/hashstructure
+- [X] github.com/mitchellh/mapstructure
+- [ ] github.com/muesli/smartcrop
+- [ ] github.com/nfnt/resize
+- [ ] github.com/nicksnyder/go-i18n
+- [ ] github.com/niklasfasching/go-org
+- [ ] github.com/olekukonko/tablewriter
+- [ ] github.com/pelletier/go-toml
+- [ ] github.com/pkg/errors
+- [ ] github.com/rogpeppe/go-internal
+- [ ] github.com/russross/blackfriday
+- [ ] github.com/rwcarlsen/goexif
+- [ ] github.com/sanity-io/litter
+- [ ] github.com/spf13/afero
+- [ ] github.com/spf13/cast
+- [ ] github.com/spf13/cobra
+- [ ] github.com/spf13/fsync
+- [ ] github.com/spf13/jwalterweatherman
+- [ ] github.com/spf13/pflag
+- [ ] github.com/spf13/viper
+- [ ] github.com/tdewolff/minify/v2
+- [ ] github.com/yuin/goldmark
+- [ ] github.com/yuin/goldmark-highlighting
+- [ ] gocloud.dev
+- [ ] golang.org/x/image
+- [ ] golang.org/x/net
+- [ ] golang.org/x/sync
+- [ ] golang.org/x/text
+- [ ] google.golang.org/api
+- [ ] gopkg.in/check.v1
+- [ ] gopkg.in/ini.v1
+- [ ] gopkg.in/yaml.v2
