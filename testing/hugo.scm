@@ -3,6 +3,7 @@
 (define-module (testing hugo)
   #:use-module (gnu packages golang)
   #:use-module (gnu packages version-control)
+  #:use-module (gnu packages web)
   #:use-module (guix build-system go)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)
@@ -259,6 +260,33 @@ filenames to info objects for a given revision of a Git repo.")
          "0qchy411jm9q2l9mf7x3ry2ycaqp9xdhf2nx14qrpzcxfigv2705"))))
     (propagated-inputs
      `(("go-golang.org-x-xerrors" ,go-golang.org-x-xerrors)))))
+
+(define-public go-github-com-evanw-esbuild
+  (package
+    (name "go-github-com-evanw-esbuild")
+    (version "0.7.5")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/evanw/esbuild")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "126q9s21d7569cv3whik19p23xs6zf5lv56pqmz9bw87lw2bvrjp"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/evanw/esbuild/cmd/esbuild"
+       #:unpack-path "github.com/evanw/esbuild"))
+    (propagated-inputs
+     `(("go-golang-org-x-sys" ,go-golang-org-x-sys)))
+    (home-page "https://github.com/evanw/esbuild")
+    (synopsis "An extremely fast JavaScript bundler and minifier.")
+    (description
+     "This is a JavaScript bundler and minifier.  It packages up JavaScript
+and TypeScript code for distribution on the web.")
+    (license license:expat)))
 
 (define-public go-github-com-frankban-quicktest
   (package
