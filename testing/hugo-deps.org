@@ -78,3 +78,12 @@
 - [ ] golang.org/x/text
 - [ ] google.golang.org/api/compute/v1
 - [ ] gopkg.in/yaml.v2
+
+** Hugo-extended
+Finally an answer (albeit still unsatisfying) on why hugo-extended is a separate package:
+https://discourse.gohugo.io/t/error-messages-informative-vs-uninformative/25879/2
+
+How to build:
+#+begin_src bash
+go install -tags extended
+#+end_src
