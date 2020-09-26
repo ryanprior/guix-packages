@@ -171,7 +171,7 @@ printing it to stdout.")
 (define-public go-github-com-cyberark-summon
   (package
     (name "summon")
-    (version "0.8.2")
+    (version "0.8.3")
     (source
      (origin
        (method git-fetch)
@@ -181,7 +181,7 @@ printing it to stdout.")
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "1z4xnrncwvp3rfm97zvc0ivvw2fh1hrjhj3rplvidzxjfyasbvwv"))))
+         "0f1rs21kwms607ndz4jpyx06v5rpkirbrwka1glz7l8wdgnijy5w"))))
     (build-system go-build-system)
     (arguments
      '(#:install-source? #f
