@@ -767,6 +767,33 @@ deprecated), HTML5 output, markdown and manual pages.")
 with common interpolation methods.")
     (license license:expat)))
 
+(define-public go-github-com-muesli-smartcrop
+  (package
+    (name "go-github-com-muesli-smartcrop")
+    (version "0.3.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/muesli/smartcrop")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "10ns8nvxjpykgh1rapg1pn0p3r9qvrjifw2p23yha85d9wnk8i1x"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/muesli/smartcrop"))
+    (propagated-inputs
+     `(("go-golang-org-x-image" ,go-golang-org-x-image)
+       ("go-github-com-nfnt-resize" ,go-github-com-nfnt-resize)))
+    (home-page "https://github.com/muesli/smartcrop")
+    (synopsis "Finds good image crops for arbitrary crop sizes.")
+    (description
+     "Smartcrop implements an algorithm to find good crops for images.  It's
+based on Jonas Wagner's smartcrop.js.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
