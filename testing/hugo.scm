@@ -743,6 +743,30 @@ xml2rfc (aforementioned RFC 7991), RFC 7749 (xml2rfc version 2 - now
 deprecated), HTML5 output, markdown and manual pages.")
     (license license:expat)))
 
+(define-public go-github-com-nfnt-resize
+  (package
+    (name "go-github-com-nfnt-resize")
+    (version "83c6a9932646f83e3267f353373d47347b6036b2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/nfnt/resize")
+             (commit  version)))
+       (file-name (git-file-name name "master"))
+       (sha256
+        (base32
+         "005cpiwq28krbjf0zjwpfh63rp4s4is58700idn24fs3g7wdbwya"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/nfnt/resize"))
+    (home-page "https://github.com/nfnt/resize")
+    (synopsis "Pure golang image resizing.")
+    (description
+     "This package provides image resizing for the Go programming language
+with common interpolation methods.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
