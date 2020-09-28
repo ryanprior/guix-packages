@@ -842,10 +842,39 @@ based on Jonas Wagner's smartcrop.js.")
        ("go-github-com-magefile-mage" ,go-github-com-magefile-mage)
        ("go-github-com-markbates-inflect" ,go-github-com-markbates-inflect)
        ("go-github-com-mattn-go-isatty" ,go-github-com-mattn-go-isatty)
-       ;; miekg/mmark
+       ("go-github-com-miekg-mmark" ,go-github-com-miekg-mmark)
        ("go-github-com-mitchellh-hashstructure" ,go-github-com-mitchellh-hashstructure)
        ("go-github-com-mitchellh-mapstructure" ,go-github-com-mitchellh-mapstructure)
-       ;; muesli/smartcrop
+       ("go-github-com-muesli-smartcrop" ,go-github-com-muesli-smartcrop)
+       ("go-github-com-nfnt-resize" ,go-github-com-nfnt-resize)
+       ;; go-i18n
+       ;; go-org
+       ("go-github-com-olekukonko-tablewriter" ,go-github-com-olekukonko-tablewriter)
+       ("go-github-com-pelletier-go-toml" ,go-github-com-pelletier-go-toml)
+       ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)
+       ("go-github-com-rogpeppe-go-internal" ,go-github-com-rogpeppe-go-internal)
+       ("go-github-com-russross-blackfriday" ,go-github-com-russross-blackfriday)
+       ;; rwcarlsen/goexif
+       ;; sanity-io/litter
+       ("go-github-com-spf13-afero" ,go-github-com-spf13-afero)
+       ("go-github-com-spf13-cast" ,go-github-com-spf13-cast)
+       ("go-github-com-spf13-cobra" ,go-github-com-spf13-cobra)
+       ;; spf13/fsync
+       ("go-github-com-spf13-jwalterweatherman" ,go-github-com-spf13-jwalterweatherman)
+       ("go-github-com-spf13-pflag" ,go-github-com-spf13-pflag)
+       ("go-github-com-spf13-viper" ,go-github-com-spf13-viper)
+       ;; tdewolff/minify/v2
+       ("go-github-com-yuin-goldmark" ,go-github-com-yuin-goldmark)
+       ;; yuin/goldmark-highlighting
+       ;; gocloud.dev
+       ("go-golang-org-x-image" ,go-golang-org-x-image)
+       ("go-golang-org-x-net" ,go-golang-org-x-net)
+       ;; x/sync
+       ("go-golang-org-x-text" ,go-golang-org-x-text)
+       ;; google.golang.org/api
+       ("go-gopkg-in-check-v1" ,go-gopkg-in-check-v1)
+       ("go-gopkg-in-ini-v1" ,go-gopkg-in-ini-v1)
+       ("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)
        ))
     ;; There are a bunch of dependencies; see hugo-deps.org
     ;; TODO figure out which deps are already packaged

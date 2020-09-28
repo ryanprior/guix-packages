@@ -61,36 +61,41 @@
 - [X] github.com/magefile/mage
 - [X] github.com/markbates/inflect
 - [X] github.com/mattn/go-isatty
-- [ ] github.com/miekg/mmark
-- [ ] github.com/mitchellh/hashstructure
+- [X] github.com/miekg/mmark
+  + [X] github.com/miekg/mmark
+  + [X] github.com/gomarkdown/markdown
+- [X] github.com/mitchellh/hashstructure
 - [X] github.com/mitchellh/mapstructure
-- [ ] github.com/muesli/smartcrop
-- [ ] github.com/nfnt/resize
+- [X] github.com/muesli/smartcrop
+  + [X] github.com/muesli/smartcrop
+  + [X] github.com/nfnt/resize
+  + [X] x/image
+- [X] github.com/nfnt/resize
 - [ ] github.com/nicksnyder/go-i18n
 - [ ] github.com/niklasfasching/go-org
-- [ ] github.com/olekukonko/tablewriter
-- [ ] github.com/pelletier/go-toml
-- [ ] github.com/pkg/errors
-- [ ] github.com/rogpeppe/go-internal
-- [ ] github.com/russross/blackfriday
+- [X] github.com/olekukonko/tablewriter
+- [X] github.com/pelletier/go-toml
+- [X] github.com/pkg/errors
+- [X] github.com/rogpeppe/go-internal
+- [X] github.com/russross/blackfriday
 - [ ] github.com/rwcarlsen/goexif
 - [ ] github.com/sanity-io/litter
-- [ ] github.com/spf13/afero
-- [ ] github.com/spf13/cast
-- [ ] github.com/spf13/cobra
+- [X] github.com/spf13/afero
+- [X] github.com/spf13/cast
+- [X] github.com/spf13/cobra
 - [ ] github.com/spf13/fsync
-- [ ] github.com/spf13/jwalterweatherman
-- [ ] github.com/spf13/pflag
-- [ ] github.com/spf13/viper
+- [X] github.com/spf13/jwalterweatherman
+- [X] github.com/spf13/pflag
+- [X] github.com/spf13/viper
 - [ ] github.com/tdewolff/minify/v2
-- [ ] github.com/yuin/goldmark
+- [X] github.com/yuin/goldmark
 - [ ] github.com/yuin/goldmark-highlighting
 - [ ] gocloud.dev
-- [ ] golang.org/x/image
-- [ ] golang.org/x/net
+- [X] golang.org/x/image
+- [X] golang.org/x/net
 - [ ] golang.org/x/sync
-- [ ] golang.org/x/text
+- [X] golang.org/x/text
 - [ ] google.golang.org/api
-- [ ] gopkg.in/check.v1
-- [ ] gopkg.in/ini.v1
-- [ ] gopkg.in/yaml.v2
+- [X] gopkg.in/check.v1
+- [X] gopkg.in/ini.v1
+- [X] gopkg.in/yaml.v2
