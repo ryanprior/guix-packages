@@ -689,6 +689,30 @@ without sending data across the network, caching values locally (de-dup), and
 so on.")
     (license license:expat)))
 
+(define-public go-github-com-gomarkdown-markdown
+  (package
+    (name "go-github-com-gomarkdown-markdown")
+    (version "8c8b3816f167b780c855b6412793ffd5de35ef05")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gomarkdown/markdown")
+             (commit  version)))
+       (file-name (git-file-name name "master"))
+       (sha256
+        (base32
+         "141l462gxjqhk58s92h0v73wjvavgn9x8yfj9dmjq5s8ckxqfs8q"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/gomarkdown/markdown"))
+    (home-page "https://github.com/gomarkdown/markdown")
+    (synopsis "Markdown parser and HTML renderer for golang.")
+    (description
+     "This package provides a library for parsing Markdown documents and
+rendering them to HTML.  It supports common extensions.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
