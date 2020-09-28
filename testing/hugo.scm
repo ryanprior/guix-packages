@@ -713,6 +713,36 @@ so on.")
 rendering them to HTML.  It supports common extensions.")
     (license license:expat)))
 
+(define-public go-github-com-miekg-mmark
+  (package
+    (name "go-github-com-miekg-mmark")
+    (version "1.3.6")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/miekg/mmark")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0q2zrwa2vwk7a0zhmi000zpqrc01zssrj9c5n3573rg68fksg77m"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/miekg/mmark"))
+    (propagated-inputs
+     `(("go-github-com-burntsushi-toml" ,go-github-com-burntsushi-toml)
+       ("go-github-com-gomarkdown-markdown" ,go-github-com-gomarkdown-markdown)
+       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)))
+    (home-page "https://github.com/miekg/mmark")
+    (synopsis "Markdown processor for golang.")
+    (description
+     "This package provides an advanced markdown dialect that processes files
+to produce internet-drafts in XML RFC 7991 format.  Mmark can produce
+xml2rfc (aforementioned RFC 7991), RFC 7749 (xml2rfc version 2 - now
+deprecated), HTML5 output, markdown and manual pages.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
