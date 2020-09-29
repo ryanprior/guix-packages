@@ -52,11 +52,13 @@
   * This contains a dependency on Hugo, creating a circular dependency. hopefully it's not actually necessary for building Hugo.
 - [X] github.com/google/go-cmp
 - [X] github.com/gorilla/websocket
-- [ ] github.com/jdkato/prose
-  + [ ] github.com/jdkato/prose
-  + [ ] github.com/neurosnap/sentences
-  + [ ] gonum.org/v1/gonum
-  + [ ] gopkg.in/neurosnap/sentences.v1
+- [X] github.com/jdkato/prose
+  + [X] github.com/jdkato/prose
+  + [X] github.com/neurosnap/sentences
+  + [X] gonum.org/v1/gonum
+    + [X] gonum.org/v1/gonum
+    + [X] golang.org/x/exp
+    + [X] golang.org/x/tools
 - [X] github.com/kyokomi/emoji
 - [X] github.com/magefile/mage
 - [X] github.com/markbates/inflect
@@ -71,8 +73,16 @@
   + [X] github.com/nfnt/resize
   + [X] x/image
 - [X] github.com/nfnt/resize
-- [ ] github.com/nicksnyder/go-i18n
-- [ ] github.com/niklasfasching/go-org
+- [X] github.com/nicksnyder/go-i18n
+  + [X] github.com/nicksnyder/go-i18n
+  + [X] github.com/BurntSushi/toml
+  + [X] golang.org/x/text
+  + [X] gopkg.in/yaml.v2
+- [X] github.com/niklasfasching/go-org
+  + [X] github.com/alecthomas/chroma
+  + [X] golang.org/x/net
+  + [X] github.com/dlclark/regexp2
+  + [X] github.com/danwakefield/fnmatch
 - [X] github.com/olekukonko/tablewriter
 - [X] github.com/pelletier/go-toml
 - [X] github.com/pkg/errors

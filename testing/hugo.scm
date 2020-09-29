@@ -1009,7 +1009,7 @@ huge and this package follows the 80/20 rule.")
        ;; github.com/gohugoio/testmodBuilder -- circular dep??
        ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
        ("go-github-com-gorilla-websocket" ,go-github-com-gorilla-websocket)
-       ;; jdkato/prose
+       ("go-github-com-jdkato-prose" ,go-github-com-jdkato-prose)
        ("go-github-com-kyokomi-emoji" ,go-github-com-kyokomi-emoji)
        ("go-github-com-magefile-mage" ,go-github-com-magefile-mage)
        ("go-github-com-markbates-inflect" ,go-github-com-markbates-inflect)
@@ -1019,8 +1019,8 @@ huge and this package follows the 80/20 rule.")
        ("go-github-com-mitchellh-mapstructure" ,go-github-com-mitchellh-mapstructure)
        ("go-github-com-muesli-smartcrop" ,go-github-com-muesli-smartcrop)
        ("go-github-com-nfnt-resize" ,go-github-com-nfnt-resize)
-       ;; go-i18n
-       ;; go-org
+       ("go-github-com-nicksnyder-go-i18n")
+       ("go-github-com-niklasfasching-go-org" ,go-github-com-niklasfasching-go-org)
        ("go-github-com-olekukonko-tablewriter" ,go-github-com-olekukonko-tablewriter)
        ("go-github-com-pelletier-go-toml" ,go-github-com-pelletier-go-toml)
        ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)
