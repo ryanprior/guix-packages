@@ -588,6 +588,33 @@ modified arbitrarily or even disappear altogether.")
       (home-page "https://godoc.org/golang.org/x/exp")
       (license license:bsd-3))))
 
+(define-public go-gonum-org-v1-gonum
+  (package
+    (name "go-gonum-org-v1-gonum")
+    (version "0.8.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gonum/gonum")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "03iy9691qh3r9dzy764n65qbbvf4yfmj1kd6cqs6cynlkzhg90i9"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "gonum.org/v1/gonum"))
+    (propagated-inputs
+     `(("go-golang.org-x-exp" ,go-golang.org-x-exp)
+       ("go-golang-org-x-tools" ,go-golang-org-x-tools)))
+    (home-page "https://www.gonum.org/")
+    (synopsis "Numeric libraries for golang.")
+    (description
+     "Gonum is a set of numeric libraries for the Go programming language.  It
+contains libraries for matrices, statistics, optimization, and more.")
+    (license license:expat)))
+
 (define-public go-github-com-kyokomi-emoji
   (package
     (name "go-github-com-kyokomi-emoji")
