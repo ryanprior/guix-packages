@@ -905,6 +905,36 @@ with common interpolation methods.")
 based on Jonas Wagner's smartcrop.js.")
     (license license:expat)))
 
+(define-public go-github-com-nicksnyder-go-i18n
+  (package
+    (name "go-github-com-nicksnyder-go-i18n")
+    (version "1.10.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/nicksnyder/go-i18n")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1zf53fxngc2q9h0jcnf0kccz8h124rl954r92d1k55pk49l97fgx"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:tests? #f ; tests getting "open active.en.toml: permission denied"
+       #:import-path "github.com/nicksnyder/go-i18n/v2/goi18n"
+       #:unpack-path "github.com/nicksnyder/go-i18n"))
+    (inputs
+     `(("go-github-com-burntsushi-toml" ,go-github-com-burntsushi-toml)
+       ("go-golang-org-x-text" ,go-golang-org-x-text)
+       ("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)))
+    (home-page "https://github.com/nicksnyder/go-i18n")
+    (synopsis "Translate your Go program into multiple languages.")
+    (description
+     "This package is a Go library and command-line utility that helps you
+translate Go programs into multiple languages.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
