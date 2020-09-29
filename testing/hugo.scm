@@ -533,6 +533,30 @@ versions too.")
 implementation of the WebSocket protocol.")
     (license license:expat)))
 
+(define-public go-github-com-neurosnap-sentences
+  (package
+    (name "go-github-com-neurosnap-sentences")
+    (version "1.0.6")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/neurosnap/sentences")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1b64xv5anfbnq6354jaygxapwgkdhbszzi604b96sm682brwl0p7"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/neurosnap/sentences"))
+    (home-page "https://github.com/neurosnap/sentences")
+    (synopsis "Multilingual command line sentence tokenizer for golang.")
+    (description
+     "This command line utility will convert a blob of text into a list of
+sentences.")
+    (license license:expat)))
+
 (define-public go-github-com-kyokomi-emoji
   (package
     (name "go-github-com-kyokomi-emoji")
