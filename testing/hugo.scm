@@ -557,6 +557,37 @@ implementation of the WebSocket protocol.")
 sentences.")
     (license license:expat)))
 
+(define-public go-golang.org-x-exp
+  (let ((commit "c827fd4f18b9f31f0f90e954ffcf1b6a562ce30a")
+        (revision "0"))
+    (package
+      (name "go-golang.org-x-exp")
+      (version (git-version "0.0.0" revision commit))
+      (source (origin
+                (method git-fetch)
+                (uri (git-reference
+                      (url "https://github.com/golang/exp")
+                      (commit commit)))
+                (file-name (git-file-name name version))
+                (sha256
+                 (base32
+                  "0jy1vfk9z84bxj6qm03rdpd8dzy83lwb2gfmd4h4ic0s51lyf6gz"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "golang.org/x/exp"
+         ;; Source-only package
+         #:tests? #f
+         #:phases
+         (modify-phases %standard-phases
+           (delete 'build))))
+      (synopsis "Experimental and deprecated packages for golang.")
+      (description
+       "This package holds experimental and unreliable libraries for golang.
+Some may one day be promoted to the main golang packages, or they may be
+modified arbitrarily or even disappear altogether.")
+      (home-page "https://godoc.org/golang.org/x/exp")
+      (license license:bsd-3))))
+
 (define-public go-github-com-kyokomi-emoji
   (package
     (name "go-github-com-kyokomi-emoji")
