@@ -615,6 +615,35 @@ modified arbitrarily or even disappear altogether.")
 contains libraries for matrices, statistics, optimization, and more.")
     (license license:expat)))
 
+(define-public go-github-com-jdkato-prose
+  (package
+    (name "go-github-com-jdkato-prose")
+    (version "1.2.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/jdkato/prose")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0n9jv5qb8bv3dkmizbn3pjrkswjbz2xxcn8zyn5hrxnk7cjs62vr"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/jdkato/prose"))
+    (propagated-inputs
+     `(("go-github-com-neurosnap-sentences" ,go-github-com-neurosnap-sentences)
+       ("go-gonum-org-v1-gonum" ,go-gonum-org-v1-gonum)))
+    (home-page "https://github.com/jdkato/prose")
+    (synopsis "Library for text processing, including tokenization,
+part-of-speech tagging, and named-entity extraction.")
+    (description
+     "Prose is a natural language processing library in pure Go.  It supports
+tokenization, segmentation, part-of-speech tagging, and named-entity
+extraction.")
+    (license license:expat)))
+
 (define-public go-github-com-kyokomi-emoji
   (package
     (name "go-github-com-kyokomi-emoji")
