@@ -1022,6 +1022,32 @@ Litter to emit data during debug, and it's also suitable for “snapshot data”
 in unit tests since it produces deterministic output.")
     (license license:expat)))
 
+(define-public go-github-com-spf13-fsync
+  (package
+    (name "go-github-com-spf13-fsync")
+    (version "0.9.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/spf13/fsync")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1z6v7pvlqphq9lqk5sa80ynj3x21yk6s84i41hivgda73lzffg5n"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/spf13/fsync"))
+    (propagated-inputs
+     `(("go-github-com-spf13-afero" ,go-github-com-spf13-afero)))
+    (home-page "https://github.com/spf13/fsync")
+    (synopsis "Keeps files or directories in sync.")
+    (description
+     "This package performs minimal I/O to synchronize the states and contents
+of files and directories.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
