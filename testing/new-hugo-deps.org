@@ -88,16 +88,29 @@
 - [X] github.com/pkg/errors
 - [X] github.com/rogpeppe/go-internal
 - [X] github.com/russross/blackfriday
-- [ ] github.com/rwcarlsen/goexif
-- [ ] github.com/sanity-io/litter
+- [X] github.com/rwcarlsen/goexif
+- [X] github.com/sanity-io/litter
+  + [X] github.com/sanity-io/litter
+  + [X] github.com/davecgh/go-spew
+  + [X] github.com/pmezard/go-difflib
+  + [X] github.com/stretchr/testify
 - [X] github.com/spf13/afero
 - [X] github.com/spf13/cast
 - [X] github.com/spf13/cobra
-- [ ] github.com/spf13/fsync
+- [X] github.com/spf13/fsync
 - [X] github.com/spf13/jwalterweatherman
 - [X] github.com/spf13/pflag
 - [X] github.com/spf13/viper
-- [ ] github.com/tdewolff/minify/v2
+- [-] github.com/tdewolff/minify/v2
+  + [ ] github.com/tdewolff/minify/v2
+  + [X] github.com/cheekybits/is
+  + [X] github.com/dustin/go-humanize
+  + [X] github.com/fsnotify/fsnotify
+  + [X] github.com/matryer/try
+  + [X] github.com/spf13/pflag
+  + [ ] github.com/tdewolff/parse
+  + [ ] github.com/tdewolff/test
+  + [X] golang.org/x/sys
 - [X] github.com/yuin/goldmark
 - [ ] github.com/yuin/goldmark-highlighting
 - [ ] gocloud.dev

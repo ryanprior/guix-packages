@@ -1137,12 +1137,12 @@ so on.")
        ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)
        ("go-github-com-rogpeppe-go-internal" ,go-github-com-rogpeppe-go-internal)
        ("go-github-com-russross-blackfriday" ,go-github-com-russross-blackfriday)
-       ;; rwcarlsen/goexif
-       ;; sanity-io/litter
+       ("go-github-com-rwcarlsen-goexif" ,go-github-com-rwcarlsen-goexif)
+       ("go-github-com-sanity-io-litter" ,go-github-com-sanity-io-litter)
        ("go-github-com-spf13-afero" ,go-github-com-spf13-afero)
        ("go-github-com-spf13-cast" ,go-github-com-spf13-cast)
        ("go-github-com-spf13-cobra" ,go-github-com-spf13-cobra)
-       ;; spf13/fsync
+       ("go-github-com-spf13-fsync" ,go-github-com-spf13-fsync)
        ("go-github-com-spf13-jwalterweatherman" ,go-github-com-spf13-jwalterweatherman)
        ("go-github-com-spf13-pflag" ,go-github-com-spf13-pflag)
        ("go-github-com-spf13-viper" ,go-github-com-spf13-viper)
