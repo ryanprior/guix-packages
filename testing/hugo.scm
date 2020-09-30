@@ -992,6 +992,36 @@ huge and this package follows the 80/20 rule.")
        "This package provides decoding of basic exif and tiff encoded data.")
       (license license:expat))))
 
+(define-public go-github-com-sanity-io-litter
+  (package
+    (name "go-github-com-sanity-io-litter")
+    (version "1.2.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/sanity-io/litter")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0jr6v0k1ffimgzy5wdf17r0mrwn9cafhnrsyjxz5vqmigvykikw9"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/sanity-io/litter"))
+    (propagated-inputs
+     `(("go-github-com-davecgh-go-spew" ,go-github-com-davecgh-go-spew)
+       ("go-github-com-pmezard-go-difflib" ,go-github-com-pmezard-go-difflib)
+       ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)))
+    (home-page "https://github.com/sanity-io/litter")
+    (synopsis "Pretty printer library for Go data structures.")
+    (description
+     "This package prints Go literals, the better with which to litter your
+output.  Litter output is syntactically correct golang code.  You can use
+Litter to emit data during debug, and it's also suitable for “snapshot data”
+in unit tests since it produces deterministic output.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
