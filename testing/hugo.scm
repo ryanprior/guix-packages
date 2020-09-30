@@ -966,6 +966,32 @@ org-html-export.  The parser supports a reasonable subset of org-mode; it is
 huge and this package follows the 80/20 rule.")
     (license license:expat)))
 
+(define-public go-github-com-rwcarlsen-goexif
+  (let ((commit "9e8deecbddbd4989a3e8d003684b783412b41e7a")
+        (revision "0"))
+    (package
+      (name "go-github-com-rwcarlsen-goexif")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/rwcarlsen/goexif")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "1drqhzplg72lvrf3qmb9awbggnjqp23hwn2pgvksi3spv17kc9h2"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/rwcarlsen/goexif/exif"
+         #:unpack-path "github.com/rwcarlsen/goexif"))
+      (home-page "https://github.com/rwcarlsen/goexif")
+      (synopsis "Decode embedded EXIF meta data from image files.")
+      (description
+       "This package provides decoding of basic exif and tiff encoded data.")
+      (license license:expat))))
+
 (define-public hugo
   (package
     (name "hugo")
