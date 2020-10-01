@@ -1077,6 +1077,32 @@ without sending data across the network, caching values locally (de-dup), and
 so on.")
     (license license:expat)))
 
+(define-public go-github-com-tdewolff-test
+  (package
+    (name "go-github-com-tdewolff-test")
+    (version "1.0.6")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/tdewolff/test")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "12glhjb4cwp6yxwd17rwa6b4gxna3lm01bgc7yn9di58chc7lyh3"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:tests? #f ; tests broken
+       #:import-path "github.com/tdewolff/test"))
+    (home-page "https://github.com/tdewolff/test")
+    (synopsis "Provides Go test helper functions.")
+    (description
+     "Test is a helper package written in Go.  It implements a few functions
+that are useful for io testing, such as readers and writers that fail after N
+consecutive reads/writes.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
