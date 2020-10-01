@@ -109,7 +109,7 @@
   + [X] github.com/matryer/try
   + [X] github.com/spf13/pflag
   + [ ] github.com/tdewolff/parse
-  + [ ] github.com/tdewolff/test
+  + [X] github.com/tdewolff/test
   + [X] golang.org/x/sys
 - [X] github.com/yuin/goldmark
 - [ ] github.com/yuin/goldmark-highlighting
