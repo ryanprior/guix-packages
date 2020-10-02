@@ -1232,7 +1232,7 @@ an interface to implement any other minifier.")
        ("go-github-com-spf13-jwalterweatherman" ,go-github-com-spf13-jwalterweatherman)
        ("go-github-com-spf13-pflag" ,go-github-com-spf13-pflag)
        ("go-github-com-spf13-viper" ,go-github-com-spf13-viper)
-       ;; tdewolff/minify/v2
+       ("go-github-com-tdewolff-minify" ,go-github-com-tdewolff-minify)
        ("go-github-com-yuin-goldmark" ,go-github-com-yuin-goldmark)
        ;; yuin/goldmark-highlighting
        ;; gocloud.dev
