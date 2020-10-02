@@ -1103,6 +1103,32 @@ that are useful for io testing, such as readers and writers that fail after N
 consecutive reads/writes.")
     (license license:expat)))
 
+(define-public go-github-com-tdewolff-parse
+  (package
+    (name "go-github-com-tdewolff-parse")
+    (version "2.5.4")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/tdewolff/parse")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "185y4x0nd3d1x3444dqcbpcxw2y8h5d21yi38qyi2705km69fsjv"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/tdewolff/parse"))
+    (native-inputs
+     `(("go-github-com-tdewolff-test" ,go-github-com-tdewolff-test)))
+    (home-page "https://github.com/tdewolff/parse")
+    (synopsis "Go parsers for web formats.")
+    (description
+     "This package contains lexers and parsers written in Go for CSS, HTML,
+JavaScript, JSON, SVG, and XML.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
