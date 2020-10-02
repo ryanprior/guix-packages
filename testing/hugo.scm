@@ -1129,6 +1129,40 @@ consecutive reads/writes.")
 JavaScript, JSON, SVG, and XML.")
     (license license:expat)))
 
+
+(define-public go-github-com-tdewolff-minify
+  (package
+    (name "go-github-com-tdewolff-minify")
+    (version "2.9.5")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/tdewolff/minify")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0ixv403g919igi1i6rqvdgikvi6jqnf26n462ir2ap2qk7r1prgr"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/tdewolff/minify"))
+    (propagated-inputs
+     `(("go-github-com-cheekybits-is" ,go-github-com-cheekybits-is)
+       ("go-github-com-dustin-go-humanize" ,go-github-com-dustin-go-humanize)
+       ("go-github-com-fsnotify-fsnotify" ,go-github-com-fsnotify-fsnotify)
+       ("go-github-com-matryer-try" ,go-github-com-matryer-try)
+       ("go-github-com-spf13-pflag" ,go-github-com-spf13-pflag)
+       ("go-github-com-tdewolff-parse" ,go-github-com-tdewolff-parse)
+       ("go-github-com-tdewolff-test" ,go-github-com-tdewolff-test)
+       ("go-golang-org-x-sys" ,go-golang-org-x-sys)))
+    (home-page "https://github.com/tdewolff/minify")
+    (synopsis "Go minifiers for web formats.")
+    (description
+     "This package provides HTML5, CSS3, JS, JSON, SVG and XML minifiers and
+an interface to implement any other minifier.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
