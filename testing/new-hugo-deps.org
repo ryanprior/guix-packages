@@ -101,14 +101,14 @@
 - [X] github.com/spf13/jwalterweatherman
 - [X] github.com/spf13/pflag
 - [X] github.com/spf13/viper
-- [-] github.com/tdewolff/minify/v2
-  + [ ] github.com/tdewolff/minify/v2
+- [X] github.com/tdewolff/minify/v2
+  + [X] github.com/tdewolff/minify/v2
   + [X] github.com/cheekybits/is
   + [X] github.com/dustin/go-humanize
   + [X] github.com/fsnotify/fsnotify
   + [X] github.com/matryer/try
   + [X] github.com/spf13/pflag
-  + [ ] github.com/tdewolff/parse
+  + [X] github.com/tdewolff/parse
   + [X] github.com/tdewolff/test
   + [X] golang.org/x/sys
 - [X] github.com/yuin/goldmark
