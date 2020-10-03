@@ -1516,6 +1516,33 @@ metrics (i.e. response time, bytes written, and http status code) from your
 application's http.Handlers.")
     (license license:expat)))
 
+(define-public go-github-com-gorilla-handlers
+  (package
+    (name "go-github-com-gorilla-handlers")
+    (version "1.5.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gorilla/handlers")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "15gycdz9lkjnsvvichsbdf25vf6pi1sfn41khhz53iqf300l0w0s"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:tests? #f ; tests require network connection
+       #:import-path "github.com/gorilla/handlers"))
+    (propagated-inputs
+     `(("go-github-com-felixge-httpsnoop" ,go-github-com-felixge-httpsnoop)))
+    (home-page "https://github.com/gorilla/handlers")
+    (synopsis "CSRF prevention middleware for Go web applications & services.")
+    (description
+     "This package is a HTTP middleware library that provides cross-site
+request forgery (CSRF) protection.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
