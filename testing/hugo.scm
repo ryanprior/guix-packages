@@ -1187,6 +1187,31 @@ an interface to implement any other minifier.")
 concurrency-safe.")
     (license license:expat)))
 
+(define-public go-github-com-akavel-rsrc
+  (package
+    (name "go-github-com-akavel-rsrc")
+    (version "0.9.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/akavel/rsrc")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0lhxclsrv0sik5zi8x5sfm53bii1lw1bvz5f98vj1g9gl5llb4l7"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/akavel/rsrc"))
+    (home-page "https://github.com/akavel/rsrc")
+    (synopsis "Embed .ico & manifest resources in Go programs for Windows.")
+    (description
+     "The rsrc utility embeds binary resources in Go programs.  It generates a
+.syso file with specified resources embedded in .rsrc section, aimed for
+consumption by Go linker when building Windows excecutables.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
