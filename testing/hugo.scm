@@ -1438,6 +1438,32 @@ line is mapped onto the struct.")
 request forgery (CSRF) protection.")
     (license license:expat)))
 
+(define-public go-github-com-gorilla-securecookie
+  (package
+    (name "go-github-com-gorilla-securecookie")
+    (version "1.1.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gorilla/securecookie")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "16bqimpxs9vj5n59vm04y04v665l7jh0sddxn787pfafyxcmh410"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/gorilla/securecookie"))
+    (home-page "https://github.com/gorilla/securecookie")
+    (synopsis "Encodes and decodes secure cookie values for Go web applications.")
+    (description
+     "This package encodes and decodes authenticated and optionally encrypted
+cookie values.  Secure cookies can't be forged, because their values are
+validated using HMAC.  When encrypted, the content is also inaccessible to
+malicious eyes.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
