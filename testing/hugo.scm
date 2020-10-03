@@ -1543,6 +1543,42 @@ application's http.Handlers.")
 request forgery (CSRF) protection.")
     (license license:expat)))
 
+(define-public go-github-com-yuin-goldmark-highlighting
+  (let ((commit "60d527fdb691b855b41a5b21ac612baca3a1dc1a")
+        (revision "0"))
+    (package
+      (name "go-github-com-yuin-goldmark-highlighting")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/yuin/goldmark-highlighting")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "0l9ziiand3fagx5mimpplq45fnrnbfv6i4h546q3d3bpvm8d7cv3"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/yuin/goldmark-highlighting"))
+      (propagated-inputs
+       `(("go-github-com-geertjohan-go-rice" ,go-github-com-geertjohan-go-rice)
+         ("go-github-com-alecthomas-chroma" ,go-github-com-alecthomas-chroma)
+         ("go-github-com-alecthomas-kong-hcl" ,go-github-com-alecthomas-kong-hcl)
+         ("go-github-com-dlclark-regexp2" ,go-github-com-dlclark-regexp2)
+         ("go-github-com-gorilla-csrf" ,go-github-com-gorilla-csrf)
+         ("go-github-com-gorilla-handlers" ,go-github-com-gorilla-handlers)
+         ("go-github-com-gorilla-mux" ,go-github-com-gorilla-mux)
+         ("go-github-com-yuin-goldmark" ,go-github-com-yuin-goldmark)
+         ("go-github-com-danwakefield-fnmatch" ,go-github-com-danwakefield-fnmatch)))
+      (home-page "https://github.com/yuin/goldmark-highlighting")
+      (synopsis "Go minifiers for web formats.")
+      (description
+       "This package provides HTML5, CSS3, JS, JSON, SVG and XML minifiers and
+an interface to implement any other minifier.")
+      (license license:expat))))
+
 (define-public hugo
   (package
     (name "hugo")
