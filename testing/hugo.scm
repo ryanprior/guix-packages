@@ -1350,6 +1350,37 @@ may have been augmented with zip data.")
 an interface to implement any other minifier.")
     (license license:expat)))
 
+(define-public go-github-com-alecthomas-kong
+  (package
+    (name "go-github-com-alecthomas-kong")
+    (version "0.2.11")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/alecthomas/kong")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1x1i5knsf45bhpx5r76hfmb1pxvclbjmazm2g39qrax8l8i0k4m9"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/alecthomas/kong"))
+    (propagated-inputs
+     `(("go-github-com-davecgh-go-spew" ,go-github-com-davecgh-go-spew)
+       ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)
+       ("go-github-com-pmezard-go-difflib" ,go-github-com-pmezard-go-difflib)
+       ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)))
+    (home-page "https://github.com/alecthomas/kong")
+    (synopsis "Command-line parser for Go .")
+    (description
+     "Kong aims to support arbitrarily complex command-line structures with as
+little developer effort as possible.  To achieve that, command-lines are
+expressed as Go types, with the structure and tags directing how the command
+line is mapped onto the struct.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
