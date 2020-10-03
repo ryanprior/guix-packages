@@ -1262,6 +1262,31 @@ fragmentation.  This amount equals to the maximum total size of the byte
 buffers in concurrent use.")
     (license license:expat)))
 
+(define-public go-github-com-valyala-fasttemplate
+  (package
+    (name "go-github-com-valyala-fasttemplate")
+    (version "1.2.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/valyala/fasttemplate")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0bd1hxxg1bzx307adpd1s4yjaa6q51cqk4qvqskfflxvgll79vdn"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/valyala/fasttemplate"))
+    (propagated-inputs
+     `(("go-github-com-valyala-bytebufferpool" ,go-github-com-valyala-bytebufferpool)))
+    (home-page "https://github.com/valyala/fasttemplate")
+    (synopsis "Template engine for Go.")
+    (description
+     "This package substitutes template placeholders with provided values.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
