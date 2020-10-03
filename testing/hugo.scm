@@ -1236,6 +1236,32 @@ consumption by Go linker when building Windows excecutables.")
 write it out to an io.Writer in constant memory space.")
     (license license:expat)))
 
+(define-public go-github-com-valyala-bytebufferpool
+  (package
+    (name "go-github-com-valyala-bytebufferpool")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/valyala/bytebufferpool")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "01lqzjddq6kz9v41nkky7wbgk7f1cw036sa7ldz10d82g5klzl93"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/valyala/bytebufferpool"))
+    (home-page "https://github.com/valyala/bytebufferpool")
+    (synopsis "Anti-memory-waste byte buffer pool.")
+    (description
+     "This package provides a pool of byte buffers with anti-memory-waste
+protection.  The pool may waste limited amount of memory due to
+fragmentation.  This amount equals to the maximum total size of the byte
+buffers in concurrent use.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
