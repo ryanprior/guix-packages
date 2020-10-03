@@ -1212,6 +1212,30 @@ concurrency-safe.")
 consumption by Go linker when building Windows excecutables.")
     (license license:expat)))
 
+(define-public go-github-com-nkovacs-streamquote
+  (package
+    (name "go-github-com-nkovacs-streamquote")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/nkovacs/streamquote")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "08yddkjd0gkp8r6nw3r9arbcc2bmij73m8vvrqwl4704qiys3vyl"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/nkovacs/streamquote"))
+    (home-page "https://github.com/nkovacs/streamquote")
+    (synopsis "A streaming version of Go's strconv.Quote.")
+    (description
+     "This package provides a library to quote the data in an io.Reader and
+write it out to an io.Writer in constant memory space.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
