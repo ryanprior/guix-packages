@@ -1381,6 +1381,35 @@ expressed as Go types, with the structure and tags directing how the command
 line is mapped onto the struct.")
     (license license:expat)))
 
+(define-public go-github-com-alecthomas-kong-hcl
+  (package
+    (name "go-github-com-alecthomas-kong-hcl")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/alecthomas/kong-hcl")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0q95qix59jzp36a264sr9wgjvq6h8cv6kzmfxi3pgr262jg6avkm"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/alecthomas/kong-hcl"))
+    (propagated-inputs
+     `(("go-github-com-alecthomas-kong" ,go-github-com-alecthomas-kong)
+       ("go-github-com-alecthomas-repr" ,go-github-com-alecthomas-repr)
+       ("go-github-com-hashicorp-hcl" ,go-github-com-hashicorp-hcl)
+       ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)
+       ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)))
+    (home-page "https://github.com/alecthomas/kong-hcl")
+    (synopsis "Kong configuration loader for HCL.")
+    (description
+     "This package loads Kong configuration values from HCL files.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
