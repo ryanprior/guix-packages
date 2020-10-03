@@ -1163,6 +1163,30 @@ JavaScript, JSON, SVG, and XML.")
 an interface to implement any other minifier.")
     (license license:expat)))
 
+(define-public go-github-com-geertjohan-go-incremental
+  (package
+    (name "go-github-com-geertjohan-go-incremental")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/GeertJohan/go.incremental")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1ll6n84dk2yhkikxr5zch56qvm8q6jsz68xpdd3bph5fxkikgvfl"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/GeertJohan/go.incremental"))
+    (home-page "https://github.com/GeertJohan/go.incremental")
+    (synopsis "Concurency-safe incremental numbers.")
+    (description
+     "This package provides typed incremental counters that are
+concurrency-safe.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
