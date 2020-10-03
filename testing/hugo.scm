@@ -1410,6 +1410,34 @@ line is mapped onto the struct.")
      "This package loads Kong configuration values from HCL files.")
     (license license:expat)))
 
+(define-public go-github-com-gorilla-csrf
+  (package
+    (name "go-github-com-gorilla-csrf")
+    (version "1.7.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/gorilla/csrf")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0iryq0z48yi7crfbd8jxyn7lh1gsglpiglvjgnf23bz6xfisssav"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/gorilla/csrf"))
+    (propagated-inputs
+     `(
+       ;; gorilla/securecookie
+       ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)))
+    (home-page "https://github.com/gorilla/csrf")
+    (synopsis "CSRF prevention middleware for Go web applications & services.")
+    (description
+     "This package is a HTTP middleware library that provides cross-site
+request forgery (CSRF) protection.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
