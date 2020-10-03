@@ -1287,6 +1287,37 @@ buffers in concurrent use.")
      "This package substitutes template placeholders with provided values.")
     (license license:expat)))
 
+(define-public go-github-com-daaku-go-zipexe
+  (package
+    (name "go-github-com-daaku-go-zipexe")
+    (version "1.0.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/daaku/go.zipexe")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1lss8j1n9rmj3lb85r29q5ix72zx4g9r829v75v4b2m40rgi5w13"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/daaku/go.zipexe"))
+    (propagated-inputs
+     `(("go-github-com-geertjohan-go-incremental" ,go-github-com-geertjohan-go-incremental)
+       ("go-github-com-akavel-rsrc" ,go-github-com-akavel-rsrc)
+       ("go-github-com-davecgh-go-spew" ,go-github-com-davecgh-go-spew)
+       ("go-github.com-jessevdk-go-flags" ,go-github.com-jessevdk-go-flags)
+       ("go-github-com-nkovacs-streamquote" ,go-github-com-nkovacs-streamquote)
+       ("go-github-com-valyala-fasttemplate" ,go-github-com-valyala-fasttemplate)))
+    (home-page "https://github.com/daaku/go.zipexe")
+    (synopsis "Open an executable binary file as a zip file.")
+    (description
+     "This package opens a zip file, specially handling various binaries that
+may have been augmented with zip data.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
