@@ -112,8 +112,93 @@
   + [X] github.com/tdewolff/test
   + [X] golang.org/x/sys
 - [X] github.com/yuin/goldmark
-- [ ] github.com/yuin/goldmark-highlighting
+- [-] github.com/yuin/goldmark-highlighting
+  + [ ] github.com/yuin/goldmark-highlighting
+  + [X] github.com/GeertJohan/go.rice
+    + [X] github.com/GeertJohan/go.rice
+    + [X] github.com/GeertJohan/go.incremental
+    + [X] github.com/akavel/rsrc
+    + [X] github.com/daaku/go.zipexe
+      + [X] github.com/daaku/go.zipexe
+      + [X] github.com/GeertJohan/go.incremental
+      + [X] github.com/akavel/rsrc
+      + [X] github.com/davecgh/go-spew
+      + [X] github.com/jessevdk/go-flags
+      + [X] github.com/nkovacs/streamquote
+      + [X] github.com/valyala/fasttemplate
+        + [X] github.com/valyala/fasttemplate
+        + [X] github.com/valyala/bytebufferpool
+    + [X] github.com/davecgh/go-spew
+    + [X] github.com/jessevdk/go-flags
+    + [X] github.com/nkovacs/streamquote
+    + [X] github.com/valyala/fasttemplate
+  + [X] github.com/alecthomas/chroma
+  + [X] github.com/alecthomas/kong-hcl
+    + [X] github.com/alecthomas/kong-hcl
+    + [X] github.com/alecthomas/kong
+      + [X] github.com/alecthomas/kong
+      + [X] github.com/davecgh/go-spew
+      + [X] github.com/pkg/errors
+      + [X] github.com/pmezard/go-difflib
+      + [X] github.com/stretchr/testify
+    + [X] github.com/alecthomas/repr
+    + [X] github.com/hashicorp/hcl
+    + [X] github.com/pkg/errors
+    + [X] github.com/stretchr/testify
+  + [X] github.com/dlclark/regexp2
+  + [X] github.com/gorilla/csrf
+    + [X] github.com/gorilla/csrf
+    + [X] github.com/gorilla/securecookie
+    + [X] github.com/pkg/errors
+  + [X] github.com/gorilla/handlers
+    + [X] github.com/gorilla/handlers
+    + [X] github.com/felixge/httpsnoop
+  + [X] github.com/gorilla/mux
+  + [X] github.com/yuin/goldmark
+  + [X] github.com/danwakefield/fnmatch
 - [ ] gocloud.dev
+  + [ ] cloud.google.com/go
+  + [ ] cloud.google.com/go/firestore
+  + [ ] cloud.google.com/go/pubsub
+  + [ ] cloud.google.com/go/storage
+  + [ ] contrib.go.opencensus.io/exporter/aws
+  + [ ] contrib.go.opencensus.io/exporter/stackdriver
+  + [ ] contrib.go.opencensus.io/integrations/ocsql
+  + [ ] github.com/Azure/azure-amqp-common-go/v3
+  + [ ] github.com/Azure/azure-pipeline-go
+  + [ ] github.com/Azure/azure-sdk-for-go
+  + [ ] github.com/Azure/azure-service-bus-go
+  + [ ] github.com/Azure/azure-storage-blob-go
+  + [ ] github.com/Azure/go-amqp
+  + [ ] github.com/Azure/go-autorest/autorest
+  + [ ] github.com/Azure/go-autorest/autorest/azure/auth
+  + [ ] github.com/GoogleCloudPlatform/cloudsql-proxy
+  + [ ] github.com/aws/aws-sdk-go
+  + [ ] github.com/fsnotify/fsnotify
+  + [ ] github.com/go-sql-driver/mysql
+  + [ ] github.com/golang/protobuf
+  + [ ] github.com/google/go-cmp
+  + [ ] github.com/google/go-replayers/grpcreplay
+  + [ ] github.com/google/go-replayers/httpreplay
+  + [ ] github.com/google/martian
+  + [ ] github.com/google/uuid
+  + [ ] github.com/google/wire
+  + [ ] github.com/googleapis/gax-go
+  + [ ] github.com/googleapis/gax-go/v2
+  + [ ] github.com/lib/pq
+  + [ ] github.com/mattn/go-ieproxy
+  + [ ] github.com/mitchellh/mapstructure
+  + [ ] go.opencensus.io
+  + [ ] golang.org/x/crypto
+  + [ ] golang.org/x/net
+  + [ ] golang.org/x/oauth2
+  + [ ] golang.org/x/sync
+  + [ ] golang.org/x/sys
+  + [ ] golang.org/x/tools
+  + [ ] golang.org/x/xerrors
+  + [ ] google.golang.org/api
+  + [ ] google.golang.org/genproto
+  + [ ] google.golang.org/grpc
 - [X] golang.org/x/image
 - [X] golang.org/x/net
 - [ ] golang.org/x/sync

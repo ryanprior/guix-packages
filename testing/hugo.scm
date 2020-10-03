@@ -1650,7 +1650,7 @@ an interface to implement any other minifier.")
        ("go-github-com-spf13-viper" ,go-github-com-spf13-viper)
        ("go-github-com-tdewolff-minify" ,go-github-com-tdewolff-minify)
        ("go-github-com-yuin-goldmark" ,go-github-com-yuin-goldmark)
-       ;; yuin/goldmark-highlighting
+       ("go-github-com-yuin-goldmark-highlighting" ,go-github-com-yuin-goldmark-highlighting)
        ;; gocloud.dev
        ("go-golang-org-x-image" ,go-golang-org-x-image)
        ("go-golang-org-x-net" ,go-golang-org-x-net)
