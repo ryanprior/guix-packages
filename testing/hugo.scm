@@ -1318,6 +1318,38 @@ buffers in concurrent use.")
 may have been augmented with zip data.")
     (license license:expat)))
 
+(define-public go-github-com-geertjohan-go-rice
+  (package
+    (name "go-github-com-geertjohan-go-rice")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/GeertJohan/go.rice")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0m1pkqnx9glf3mlx5jdaby9yxccbl02jpjgpi4m7x1hb4s2gn6vx"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/GeertJohan/go.rice"))
+    (propagated-inputs
+     `(("go-github-com-geertjohan-go-incremental" ,go-github-com-geertjohan-go-incremental)
+       ("go-github-com-akavel-rsrc" ,go-github-com-akavel-rsrc)
+       ("go-github-com-daaku-go-zipexe" ,go-github-com-daaku-go-zipexe)
+       ("go-github-com-davecgh-go-spew" ,go-github-com-davecgh-go-spew)
+       ("go-github.com-jessevdk-go-flags" ,go-github.com-jessevdk-go-flags)
+       ("go-github-com-nkovacs-streamquote" ,go-github-com-nkovacs-streamquote)
+       ("go-github-com-valyala-fasttemplate" ,go-github-com-valyala-fasttemplate)))
+    (home-page "https://github.com/GeertJohan/go.rice")
+    (synopsis "Go minifiers for web formats.")
+    (description
+     "This package provides HTML5, CSS3, JS, JSON, SVG and XML minifiers and
+an interface to implement any other minifier.")
+    (license license:expat)))
+
 (define-public hugo
   (package
     (name "hugo")
