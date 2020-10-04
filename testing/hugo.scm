@@ -142,7 +142,7 @@ transforms one JSON document into another through a JMESPath expression.")
 (define-public go-github-com-aws-sdk
   (package
     (name "go-github-com-aws-sdk")
-    (version "1.34.27")
+    (version "1.35.2")
     (source
      (origin
        (method git-fetch)
@@ -152,7 +152,7 @@ transforms one JSON document into another through a JMESPath expression.")
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "1pfy76xy60hqcrgkg407gpxk0rmv0njdlzbpmvp2gzglnfm1rk5w"))))
+         "1ky5lw2s2zpslnnqcs6hgsrwvwbxwgflb5jwf16dd4aga3vrg10c"))))
     (build-system go-build-system)
     (arguments
      '(#:import-path "github.com/aws/aws-sdk-go/aws"
@@ -163,7 +163,7 @@ transforms one JSON document into another through a JMESPath expression.")
        ("go-github-com-pkg-errors" ,go-github-com-pkg-errors)
        ("go-golang-org-x-net" ,go-golang-org-x-net)))
     (home-page "https://github.com/aws/aws-sdk-go")
-    (synopsis "Library to access Amazon Web Services (AWS)")
+    (synopsis "Library to access Amazon Web Services (AWS).")
     (description
      "This is the official AWS SDK for the Go programming language.")
     (license license:asl2.0)))
