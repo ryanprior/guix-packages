@@ -2,7 +2,7 @@
 
 - [X] github.com/BurntSushi/locker
 - [X] github.com/BurntSushi/toml
-- [X] github.com/PuerkitoBio/purel
+- [X] github.com/PuerkitoBio/purell
   + [X] github.com/PuerkitoBio/purell
   + [X] github.com/PuerkitoBio/urlesc
   + [X] golang.org/x/net
@@ -11,10 +11,10 @@
 - [X] github.com/alecthomas/chroma
 - [X] github.com/alecthomas/repr
 - [X] github.com/armon/go-radix
-- [X] github.com/aws/aws-sdk-go
+- [X] github.com/aws/aws-sdk-go ->
   + [X] github.com/aws/aws-sdk-go
-  + [X] github.com/go-sql-driver/mysql
-  + [X] github.com/jmespath/go-jmespath
+  + [X] github.com/go-sql-driver/mysql ->
+  + [X] github.com/jmespath/go-jmespath ->
     + [X] github.com/davecgh/go-spew
     + [X] github.com/pmezard/go-difflib
     + [X] go.gopkg.in/yaml-v2
