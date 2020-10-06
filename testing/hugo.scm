@@ -264,7 +264,7 @@ filenames to info objects for a given revision of a Git repo.")
 (define-public go-github-com-evanw-esbuild
   (package
     (name "go-github-com-evanw-esbuild")
-    (version "0.7.5")
+    (version "0.7.9")
     (source
      (origin
        (method git-fetch)
@@ -274,18 +274,19 @@ filenames to info objects for a given revision of a Git repo.")
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "126q9s21d7569cv3whik19p23xs6zf5lv56pqmz9bw87lw2bvrjp"))))
+         "1dagj0sqnrp73mkgb9dian67k5cir0d3b1fmngnr76h5y0cqphfd"))))
     (build-system go-build-system)
     (arguments
      '(#:import-path "github.com/evanw/esbuild/cmd/esbuild"
        #:unpack-path "github.com/evanw/esbuild"))
-    (propagated-inputs
+    (inputs
      `(("go-golang-org-x-sys" ,go-golang-org-x-sys)))
     (home-page "https://github.com/evanw/esbuild")
-    (synopsis "An extremely fast JavaScript bundler and minifier.")
+    (synopsis "Unified build tool for JavaScript and TypeScript")
     (description
-     "This is a JavaScript bundler and minifier.  It packages up JavaScript
-and TypeScript code for distribution on the web.")
+     "This is a bundler, transpiler and minifier.  It packages up JavaScript
+and TypeScript code, along with JSON and other data, for distribution on the
+web.")
     (license license:expat)))
 
 (define-public go-github-com-fortytw2-leaktest
