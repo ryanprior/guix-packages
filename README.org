@@ -164,8 +164,16 @@ up there.
 #+HTML: <details>
 #+HTML: <summary>Linter for Python source code.</summary>
 
-- Bug tracker :: https://issues.guix.gnu.org/41580
+- Issue tracker :: https://issues.guix.gnu.org/41580
 #+HTML: </details>
+
+*** [[proposed/hugo.scm][esbuild]]
+#+HTML: <details>
+#+HTML: <summary>Bundler and minifier tool for JavaScript and TypeScript.</summary>
+
+- Issue tracker :: https://issues.guix.gnu.org/43840
+#+HTML: </details>
+
 ** Testing 🏗📦🚧
 - [[testing/harvey.scm][Harvey]] checks a given set of colors for WCAG contrast compliance.
 - [[testing/hugo.scm][Hugo]] is a fast static site generator.
