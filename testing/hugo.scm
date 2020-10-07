@@ -1,6 +1,7 @@
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
 (define-module (testing hugo)
+  #:use-module (proposed hugo)
   #:use-module (gnu packages golang)
   #:use-module (gnu packages version-control)
   #:use-module (gnu packages web)
@@ -260,34 +261,6 @@ filenames to info objects for a given revision of a Git repo.")
          "0qchy411jm9q2l9mf7x3ry2ycaqp9xdhf2nx14qrpzcxfigv2705"))))
     (propagated-inputs
      `(("go-golang.org-x-xerrors" ,go-golang.org-x-xerrors)))))
-
-(define-public go-github-com-evanw-esbuild
-  (package
-    (name "go-github-com-evanw-esbuild")
-    (version "0.7.9")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/evanw/esbuild")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
-       (sha256
-        (base32
-         "1dagj0sqnrp73mkgb9dian67k5cir0d3b1fmngnr76h5y0cqphfd"))))
-    (build-system go-build-system)
-    (arguments
-     '(#:import-path "github.com/evanw/esbuild/cmd/esbuild"
-       #:unpack-path "github.com/evanw/esbuild"))
-    (inputs
-     `(("go-golang-org-x-sys" ,go-golang-org-x-sys)))
-    (home-page "https://github.com/evanw/esbuild")
-    (synopsis "Unified build tool for JavaScript and TypeScript")
-    (description
-     "This is a bundler, transpiler and minifier.  It packages up JavaScript
-and TypeScript code, along with JSON and other data, for distribution on the
-web.")
-    (license license:expat)))
 
 (define-public go-github-com-fortytw2-leaktest
   (package
@@ -1613,7 +1586,7 @@ an interface to implement any other minifier.")
        ("go-github-com-bep-tmc" ,go-github-com-bep-tmc)
        ("go-github-com-disintegration-gift" ,go-github-com-disintegration-gift)
        ("go-github-com-dustin-go-humanize" ,go-github-com-dustin-go-humanize)
-       ("go-github-com-evanw-esbuild" ,go-github-com-evanw-esbuild)
+       ("esbuild" ,esbuild)
        ("go-github-com-fortytw2-leaktest" ,go-github-com-fortytw2-leaktest)
        ("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)
        ("go-github-com-fsnotify-fsnotify" ,go-github-com-fsnotify-fsnotify)
