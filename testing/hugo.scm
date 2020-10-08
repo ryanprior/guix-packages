@@ -1628,7 +1628,7 @@ an interface to implement any other minifier.")
        ;; gocloud.dev
        ("go-golang-org-x-image" ,go-golang-org-x-image)
        ("go-golang-org-x-net" ,go-golang-org-x-net)
-       ;; x/sync
+       ("go-golang.org-x-sync-errgroup" ,go-golang.org-x-sync-errgroup)
        ("go-golang-org-x-text" ,go-golang-org-x-text)
        ;; google.golang.org/api
        ("go-gopkg-in-check-v1" ,go-gopkg-in-check-v1)
