@@ -1602,6 +1602,34 @@ an interface to implement any other minifier.")
 products.")
     (license license:asl2.0)))
 
+(define-public go-gocloud-dev
+  (package
+    (name "go-gocloud-dev")
+    (version "0.20.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/google/go-cloud")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0zmqm8k4gxvivhpq3gpdqf9lnm9qj1ryyg9nm0rh3cvman5y07ci"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "gocloud.dev"))
+    (propagated-inputs
+     `(
+       ;; lots of deps go here
+       ))
+    (home-page "https://gocloud.dev")
+    (synopsis "A set of portable APIs for programming AWS, GCP and Azure.")
+    (description
+     "Go CDK provides commonly used, vendor-neutral generic APIs that you can
+deploy across cloud providers.")
+    (license license:asl2.0)))
+
 (define-public hugo
   (package
     (name "hugo")
