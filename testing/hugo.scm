@@ -1553,6 +1553,55 @@ request forgery (CSRF) protection.")
 an interface to implement any other minifier.")
       (license license:expat))))
 
+(define-public go-cloud-google-com-go
+  (package
+    (name "go-cloud-google-com-go")
+    (version "0.68.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/googleapis/google-cloud-go")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "008h1d2k77m61zzdjra1pm8cxjhpcb2f7aa6rfcqxnh3a0b6qzjs"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "cloud.google.com/go"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (propagated-inputs
+     `(
+       ;; lots of deps go here
+       ;; golang/mock
+       ("go-github-com-golang-protobuf-proto" ,go-github-com-golang-protobuf-proto)
+       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
+       ;; google/martian/v3
+       ;; google/pprof
+       ;; googleapis/gax-go/v2
+       ;; jstemmer/go-junit-report
+       ;; go.opencensus.io
+       ;; x/lint
+       ("go-golang-org-x-net" ,go-golang-org-x-net)
+       ("go-golang-org-x-oauth2" ,go-golang-org-x-oauth2)
+       ("go-golang-org-x-text" ,go-golang-org-x-text)
+       ("go-golang-org-x-tools" ,go-golang-org-x-tools)
+       ;; google.golang.org/api
+       ;; google.golang.org/genproto
+       ;; google.golang.org/grpc
+       ))
+    (home-page "https://cloud.google.com/")
+    (synopsis "Google Cloud client libraries for Go")
+    (description
+     "This package provides client libraries for dozens of Google cloud
+products.")
+    (license license:asl2.0)))
+
 (define-public hugo
   (package
     (name "hugo")
