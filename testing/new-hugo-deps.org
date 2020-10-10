@@ -156,8 +156,24 @@
   + [X] github.com/gorilla/mux
   + [X] github.com/yuin/goldmark
   + [X] github.com/danwakefield/fnmatch
-- [ ] gocloud.dev
-  + [ ] cloud.google.com/go
+- [-] gocloud.dev
+  + [-] cloud.google.com/go
+    + [ ] github.com/golang/mock
+    + [X] github.com/golang/protobuf
+    + [X] github.com/google/go-cmp
+    + [ ] github.com/google/martian/v3
+    + [ ] github.com/google/pprof
+    + [ ] github.com/googleapis/gax-go/v2
+    + [ ] github.com/jstemmer/go-junit-report
+    + [ ] go.opencensus.io
+    + [ ] golang.org/x/lint
+    + [X] golang.org/x/net
+    + [X] golang.org/x/oauth2
+    + [X] golang.org/x/text
+    + [X] golang.org/x/tools
+    + [ ] google.golang.org/api
+    + [ ] google.golang.org/genproto
+    + [ ] google.golang.org/grpc
   + [ ] cloud.google.com/go/firestore
   + [ ] cloud.google.com/go/pubsub
   + [ ] cloud.google.com/go/storage
@@ -201,7 +217,7 @@
   + [ ] google.golang.org/grpc
 - [X] golang.org/x/image
 - [X] golang.org/x/net
-- [ ] golang.org/x/sync
+- [X] golang.org/x/sync
 - [X] golang.org/x/text
 - [ ] google.golang.org/api
 - [X] gopkg.in/check.v1
