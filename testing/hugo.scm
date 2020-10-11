@@ -1622,6 +1622,33 @@ products.")
     (propagated-inputs
      `(
        ;; lots of deps go here
+       ("go-cloud-google-com-go" ,go-cloud-google-com-go)
+       ;;
+       ("go-github-com-aws-sdk" ,go-github-com-aws-sdk)
+       ("go-github-com-fsnotify-fsnotify" ,go-github-com-fsnotify-fsnotify)
+       ("go-github-com-go-sql-driver-mysql" ,go-github-com-go-sql-driver-mysql)
+       ;;
+       ;; protobuf
+       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
+       ;; go-replayers
+       ;; martian
+       ("go-github-com-google-uuid" ,go-github-com-google-uuid)
+       ;; google/wire
+       ;; googleapis/gax-go
+       ("go-github-com-lib-pq" ,go-github-com-lib-pq)
+       ;; go-ieproxy
+       ("go-github-com-mitchellh-mapstructure" ,go-github-com-mitchellh-mapstructure)
+       ;; opencensus
+       ("go-golang-org-x-crypto" ,go-golang-org-x-crypto)
+       ("go-golang-org-x-net" ,go-golang-org-x-net)
+       ("go-golang-org-x-oauth2" ,go-golang-org-x-oauth2)
+       ("go-golang-org-x-sync" ,go-golang-org-x-sync)
+       ("go-golang-org-x-sys" ,go-golang-org-x-sys)
+       ("go-golang-org-x-tools" ,go-golang-org-x-tools)
+       ;; x/xerrors
+       ;; google.golang.org/api
+       ;; google.golang.org/genproto
+       ;; google.golang.org/grpc
        ))
     (home-page "https://gocloud.dev")
     (synopsis "A set of portable APIs for programming AWS, GCP and Azure.")
