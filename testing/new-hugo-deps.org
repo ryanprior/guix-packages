@@ -189,28 +189,28 @@
   + [ ] github.com/Azure/go-autorest/autorest
   + [ ] github.com/Azure/go-autorest/autorest/azure/auth
   + [ ] github.com/GoogleCloudPlatform/cloudsql-proxy
-  + [ ] github.com/aws/aws-sdk-go
-  + [ ] github.com/fsnotify/fsnotify
-  + [ ] github.com/go-sql-driver/mysql
+  + [X] github.com/aws/aws-sdk-go
+  + [X] github.com/fsnotify/fsnotify
+  + [X] github.com/go-sql-driver/mysql
   + [ ] github.com/golang/protobuf
   + [ ] github.com/google/go-cmp
   + [ ] github.com/google/go-replayers/grpcreplay
   + [ ] github.com/google/go-replayers/httpreplay
   + [ ] github.com/google/martian
-  + [ ] github.com/google/uuid
+  + [X] github.com/google/uuid
   + [ ] github.com/google/wire
   + [ ] github.com/googleapis/gax-go
   + [ ] github.com/googleapis/gax-go/v2
-  + [ ] github.com/lib/pq
+  + [X] github.com/lib/pq
   + [ ] github.com/mattn/go-ieproxy
-  + [ ] github.com/mitchellh/mapstructure
+  + [X] github.com/mitchellh/mapstructure
   + [ ] go.opencensus.io
-  + [ ] golang.org/x/crypto
-  + [ ] golang.org/x/net
-  + [ ] golang.org/x/oauth2
-  + [ ] golang.org/x/sync
-  + [ ] golang.org/x/sys
-  + [ ] golang.org/x/tools
+  + [X] golang.org/x/crypto
+  + [X] golang.org/x/net
+  + [X] golang.org/x/oauth2
+  + [X] golang.org/x/sync
+  + [X] golang.org/x/sys
+  + [X] golang.org/x/tools
   + [ ] golang.org/x/xerrors
   + [ ] google.golang.org/api
   + [ ] google.golang.org/genproto
