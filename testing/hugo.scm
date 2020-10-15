@@ -327,24 +327,44 @@ tests.")
        (sha256
         (base32
          "0xk3m2ynbydzx87dz573ihwc4ryq0r545vz937szz175ivgfrhh3"))
+       (modules '((guix build utils)))
        (snippet
         '(begin
-           ((@ (guix build utils) delete-file-recursively) "libsass_src")
+           (delete-file-recursively "libsass_src")
            #t))))
     (build-system go-build-system)
     (arguments
-     '(#:build-flags '("-tags" "dev")
-       #:import-path "github.com/bep/golibsass/libsass"
+     '(#:import-path "github.com/bep/golibsass/libsass"
        #:unpack-path "github.com/bep/golibsass"
+       ;; The dev build tag modifies the build to link to system libsass
+       ;; instead of including the bundled one (which we remove.)
+       ;; https://github.com/bep/golibsass/blob/v0.7.0/internal/libsass/a__cgo_dev.go
+       #:build-flags '("-tags" "dev")
        #:phases
        (modify-phases %standard-phases
+         (add-before 'build 'generate-bindings
+           ;; Generate bindings for system libsass, replacing the
+           ;; pre-generated bindings.
+           (lambda* (#:key inputs unpack-path #:allow-other-keys)
+             (mkdir-p (string-append "src/" unpack-path "/internal/libsass"))
+             (let ((libsass-src (string-append (assoc-ref inputs "libsass-src") "/src")))
+               (substitute* (string-append "src/" unpack-path "/gen/main.go")
+                 (("filepath.Join\\(rootDir, \"libsass_src\", \"src\"\\)")
+                  (string-append "\"" libsass-src "\""))
+                 (("../../libsass_src/src/")
+                  libsass-src)))
+             (invoke "go" "generate" (string-append unpack-path "/gen"))
+             #t))
          (replace 'check
-           (lambda* (#:key import-path #:allow-other-keys)
-             (invoke "go" "test" import-path "-tags" "dev"))))))
+           (lambda* (#:key tests? import-path #:allow-other-keys)
+             (if tests?
+                 (invoke "go" "test" import-path "-tags" "dev"))
+             #t)))))
     (propagated-inputs
      `(("libsass" ,libsass)))
     (native-inputs
-     `(("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)))
+     `(("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)
+       ("libsass-src" ,(package-source libsass))))
     (home-page "https://github.com/bep/golibsass")
     (synopsis "Easy to use Go bindings for LibSass")
     (description
