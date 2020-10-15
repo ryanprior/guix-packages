@@ -109,7 +109,7 @@ sparse nodes.")
     (synopsis "MySQL driver for golang")
     (description
      "This is a pure Go implementaton of the MySQL API, compatible with
-golang's database/sql package.")
+golang's @code{database/sql} package.")
     (license license:mpl2.0)))
 
 (define-public go-github-com-jmespath-go-jmespath
