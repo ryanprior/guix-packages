@@ -216,8 +216,8 @@ timeframe on which it will change.")
     (home-page "https://github.com/bep/gitmap")
     (synopsis "Creates a map from filenames to info objects in a Git repo.")
     (description
-     "Gitmap provides a fairly fast method to create a map from all the
-filenames to info objects for a given revision of a Git repo.")
+     "Gitmap creates a map from filenames to info objects for a given revision
+of a Git repository.")
     (license license:expat)))
 
 (define-public go-golang.org-x-xerrors
