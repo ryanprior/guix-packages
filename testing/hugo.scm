@@ -31,7 +31,7 @@
     (synopsis "Implements query escaping as per RFC 3986")
     (description
      "This package escapes queries as per RFC 3986.  It contains some parts of
-the net/url package, modified so as to allow some reserved characters
+the @code{net/url} package, modified so as to allow some reserved characters
 incorrectly escaped by net/url.")
     (license license:expat)))
 
