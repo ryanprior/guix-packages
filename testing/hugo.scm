@@ -59,8 +59,8 @@ incorrectly escaped by net/url.")
     (home-page "https://github.com/PuerkitoBio/purell")
     (synopsis "Normalizes URLs")
     (description
-     "Purell is a tiny Go library to normalize URLs.  It returns a pure URL; a
-Pure-ell.  Based on the Wikipedia article for URLs and RFC 3986.")
+     "This package provides a library to normalize URLs.  It returns a pure
+URL (a Pure-ell.)  Based on the Wikipedia article for URLs and RFC 3986.")
     (license license:expat)))
 
 (define-public go-github-com-armon-go-radix
