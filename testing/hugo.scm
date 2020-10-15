@@ -283,7 +283,7 @@ of a Git repository.")
     (synopsis "Goroutine leak detector.")
     (description
      "This package takes a snapshot of running goroutines at the start of a
-test, and at the end—compares the two et voilà.")
+test and at the end, to assist in detecting memory leaks.")
     (license license:expat)))
 
 (define-public go-github-com-frankban-quicktest
