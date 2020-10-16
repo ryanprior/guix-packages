@@ -365,7 +365,7 @@ test and at the end, to assist in detecting memory leaks.")
      `(("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)
        ("libsass-src" ,(package-source libsass))))
     (home-page "https://github.com/bep/golibsass")
-    (synopsis "Easy to use Go bindings for LibSass")
+    (synopsis "Golang bindings for LibSass")
     (description
      "This package provides SCSS compiler support for Go applications.")
     (license license:expat)))
