@@ -394,10 +394,10 @@ test and at the end, to assist in detecting memory leaks.")
        ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
        ("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)))
     (home-page "https://github.com/bep/tmc")
-    (synopsis "Debouncer written in Go")
+    (synopsis "Serialization library for golang.")
     (description
-     "This package removes high-frequency signals from an input, limiting the
-timeframe on which it will change.")
+     "This package provides serialization with text-based formats like JSON
+and YAML and custom type adapters for marshalling and unmarshalling.")
     (license license:expat)))
 
 (define-public go-github-com-disintegration-gift
