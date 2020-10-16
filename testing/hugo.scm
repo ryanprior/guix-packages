@@ -307,10 +307,9 @@ test and at the end, to assist in detecting memory leaks.")
      `(("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
        ("go-github-com-kr-pretty" ,go-github-com-kr-pretty)))
     (home-page "https://github.com/frankban/quicktest")
-    (synopsis "Quick helpers for testing Go applications")
+    (synopsis "Helpers for testing Go applications")
     (description
-     "Package quicktest provides a collection of Go helpers for writing
-tests.")
+     "This package provides a collection of Go helpers for writing tests.")
     (license license:expat)))
 
 (define-public go-github-com-bep-golibsass
