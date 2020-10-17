@@ -522,10 +522,10 @@ version 3.")
     (arguments
      '(#:import-path "github.com/gorilla/websocket"))
     (home-page "https://github.com/gorilla/websocket")
-    (synopsis "A fast, well-tested and widely used WebSocket implementation for Go")
+    (synopsis "WebSocket implementation for Golang")
     (description
-     "The Gorilla WebSocket package provides a complete and tested
-implementation of the WebSocket protocol.")
+     "This package implements of the WebSocket protocol in golang.  It passes
+the Autobahn Test Suite for WebSocket standard compliance.")
     (license license:expat)))
 
 (define-public go-github-com-neurosnap-sentences
