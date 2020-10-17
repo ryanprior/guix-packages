@@ -420,7 +420,9 @@ and YAML and custom type adapters for marshalling and unmarshalling.")
     (home-page "https://github.com/disintegration/gift")
     (synopsis "Go image filtering toolkit")
     (description
-     "This package provides a set of useful image processing filters.")
+     "This package provides a set of image processing filters and
+transformations including crop, flip, resize, rotate, blur, pixelate, and
+adjustments for brightness, contrast and color balance.")
     (license license:expat)))
 
 (define-public go-github-com-dustin-go-humanize
