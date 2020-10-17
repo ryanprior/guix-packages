@@ -500,9 +500,8 @@ struct.")
     (home-page "https://github.com/getkin/kin-openapi")
     (synopsis "OpenAPI 3.0 implementation for Go.")
     (description
-     "This package handles OpenAPI files.  It targets the latest OpenAPI
-version (currently 3), but the project contains support for older OpenAPI
-versions too.")
+     "This package handles OpenAPI files.  It targets the OpenAPI spec up to
+version 3.")
     (license license:expat)))
 
 (define-public go-github-com-gorilla-websocket
