@@ -470,8 +470,9 @@ adjustments for brightness, contrast and color balance.")
     (home-page "https://github.com/ghodss/yaml")
     (synopsis "Marshal and unmarshal YAML in Golang.")
     (description
-     "This package converts YAML to JSON using go-yaml and then uses
-json.Marshal and json.Unmarshal to convert to or from the struct.")
+     "This package converts YAML to JSON using @code{go-yaml} and then uses
+@code{json.Marshal} and @code{json.Unmarshal} to convert to or from the
+struct.")
     (license license:expat)))
 
 (define-public go-github-com-getkin-kin-openapi
