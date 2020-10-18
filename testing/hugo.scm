@@ -1745,6 +1745,32 @@ library.")
 written in pure golang.")
     (license license:expat)))
 
+(define-public go-github-com-ianlancetaylor-demangle
+  (let ((commit "28f6c0f3b63983aaa99575ca3b693afff7996387")
+        (revision "0"))
+    (package
+      (name "go-github-com-ianlancetaylor-demangle")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/ianlancetaylor/demangle")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "0rsq3622gd40f1x1l7caidsxrmzg1993ich2higwd94fqbxs1r83"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/ianlancetaylor/demangle"))
+      (home-page "https://github.com/ianlancetaylor/demangle")
+      (synopsis "Demangler for C++ symbols.")
+      (description
+       "This package demangles C++ symbol names.  For example, @code{_Z3fooc}
+might demangle to @code{foo(char)}.")
+      (license license:expat))))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
