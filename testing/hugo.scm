@@ -1859,6 +1859,37 @@ source Go project.")
 @{cmd/go} tool, to assist in writing tools with similar semantics.")
     (license license:expat)))
 
+(define-public go-golang-org-x-tools-0.5
+  (let ((commit "9647ced2713a54c8e24f17480b65cf5a3cef1708")
+        (revision "0"))
+    (package
+      (name "go-golang-org-x-tools")
+      (version (git-version "0.5.1" revision commit))
+      (source (origin
+                (method git-fetch)
+                (uri (git-reference
+                      (url "https://go.googlesource.com/tools")
+                      (commit commit)))
+                (file-name (string-append "go.googlesource.com-tools-"
+                                          version "-checkout"))
+                (sha256
+                 (base32
+                  "1vnidc8kaisdyprylsibddpdksm84c6qr528768yvi93crdmddls"))))
+      (build-system go-build-system)
+      (arguments
+       `(#:import-path "golang.org/x/tools"
+         ;; Source-only package
+         #:tests? #f
+         #:phases
+         (modify-phases %standard-phases
+           ;; Source-only package
+           (delete 'build))))
+      (synopsis "Tools that support the Go programming language")
+      (description "This package provides miscellaneous tools that support the
+Go programming language.")
+      (home-page "https://go.googlesource.com/tools/")
+      (license license:bsd-3))))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
