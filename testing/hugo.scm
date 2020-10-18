@@ -1665,6 +1665,33 @@ responses, verifying that pingbacks happen when you think they should, and
 unwrapping encrypted traffic.")
     (license license:asl2.0)))
 
+(define-public go-github-com-chzyer-logex
+  (package
+    (name "go-github-com-chzyer-logex")
+    (version "1.1.10")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/chzyer/logex")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "08pbjj3wx9acavlwyr055isa8a5hnmllgdv5k6ra60l5y1brmlq4"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/chzyer/logex"
+       ;; tests have hard-coded values that are broken with recent versions of go
+       #:tests? #f))
+    (home-page "https://github.com/chzyer/logex")
+    (synopsis "Logging library for golang")
+    (description
+     "This package provides a library for logging events in golang.  It
+supports error tracing, log levels, and wrapping by the standard log
+library.")
+    (license license:expat)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
