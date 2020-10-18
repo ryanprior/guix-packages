@@ -1600,7 +1600,7 @@ an interface to implement any other minifier.")
      `(("golang.org/x/crypto" ,go-golang-org-x-crypto)
        ("golang.org/x/tools" ,go-golang-org-x-tools)
        ("golang.org/x/xerrors" ,go-golang-org-x-xerrors)))
-    (home-page "https://0ldgbx2zpprbsfn6p8pfgs4nn87gwbfcv2z0fa7n8alwsq2yw78q")
+    (home-page "https://pkg.go.dev/mod/golang.org/x/mod")
     (synopsis "Library for golang module mechanics.")
     (description
      "This package provides tools that work directly with, and manipulate, Go
@@ -1628,7 +1628,7 @@ modules.")
     (inputs
      `(("golang.org/x/mod" ,go-golang-org-x-mod)
        ("golang.org/x/tools" ,go-golang-org-x-tools)))
-    (home-page "https://1zb4n285mv85dh3y2f8fqbs30h2dhzw7vbczr6z0zg2gqr6vzg0q")
+    (home-page "https://github.com/golang/mock")
     (synopsis "Mocking framework for golang.")
     (description
      "This package provides a framework for creating or automatically
