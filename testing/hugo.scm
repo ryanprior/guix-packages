@@ -1635,6 +1635,36 @@ modules.")
 generating mock interfaces, useful for testing.")
     (license license:asl2.0)))
 
+(define-public go-github-com-google-martian
+  (package
+    (name "go-github-com-google-martian")
+    (version "3.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/google/martian")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0ngvs4l6a06s8scnliq9i5pwvwpzfpa5wf9skg0gcvysli1rm3fm"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/google/martian"))
+    (inputs
+     `(("golang.org/x/net" ,go-golang-org-x-net)))
+    (home-page "https://github.com/google/martian")
+    (synopsis "Library for building custom HTTP/S proxies")
+    (description
+     "Martian Proxy is a programmable HTTP proxy designed to be used for
+testing.  It assists in verification that all (or some subset) of requests are
+secure, mocking external services at the network layer, injecting headers,
+modifying cookies or performing other mutations of HTTP requests and
+responses, verifying that pingbacks happen when you think they should, and
+unwrapping encrypted traffic.")
+    (license license:asl2.0)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
