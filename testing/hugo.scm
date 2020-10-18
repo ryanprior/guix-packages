@@ -220,11 +220,11 @@ timeframe on which it will change.")
 of a Git repository.")
     (license license:expat)))
 
-(define-public go-golang.org-x-xerrors
+(define-public go-golang-org-x-xerrors
   (let ((commit "5ec99f83aff198f5fbd629d6c8d8eb38a04218ca")
         (revision "0"))
     (package
-      (name "go-golang.org-x-xerrors")
+      (name "go-golang-org-x-xerrors")
       (version (git-version "0.0.0" revision commit))
       (source (origin
                 (method git-fetch)
@@ -260,7 +260,7 @@ of a Git repository.")
         (base32
          "0qchy411jm9q2l9mf7x3ry2ycaqp9xdhf2nx14qrpzcxfigv2705"))))
     (propagated-inputs
-     `(("go-golang.org-x-xerrors" ,go-golang.org-x-xerrors)))))
+     `(("go-golang-org-x-xerrors" ,go-golang.org-x-xerrors)))))
 
 (define-public go-github-com-fortytw2-leaktest
   (package
@@ -552,11 +552,11 @@ the Autobahn Test Suite for WebSocket standard compliance.")
 sentences.")
     (license license:expat)))
 
-(define-public go-golang.org-x-exp
+(define-public go-golang-org-x-exp
   (let ((commit "c827fd4f18b9f31f0f90e954ffcf1b6a562ce30a")
         (revision "0"))
     (package
-      (name "go-golang.org-x-exp")
+      (name "go-golang-org-x-exp")
       (version (git-version "0.0.0" revision commit))
       (source (origin
                 (method git-fetch)
@@ -601,7 +601,7 @@ modified arbitrarily or even disappear altogether.")
     (arguments
      '(#:import-path "gonum.org/v1/gonum"))
     (propagated-inputs
-     `(("go-golang.org-x-exp" ,go-golang.org-x-exp)
+     `(("go-golang-org-x-exp" ,go-golang-org-x-exp)
        ("go-golang-org-x-tools" ,go-golang-org-x-tools)))
     (home-page "https://www.gonum.org/")
     (synopsis "Numeric libraries for golang.")
