@@ -161,9 +161,40 @@
     + [X] github.com/golang/mock
     + [X] github.com/golang/protobuf
     + [X] github.com/google/go-cmp
-    + [ ] github.com/google/martian/v3
-    + [ ] github.com/google/pprof
-    + [ ] github.com/googleapis/gax-go/v2
+    + [X] github.com/google/martian/v3
+    + [X] github.com/google/pprof
+      + [X] github.com/google/pprof
+      + [X] github.com/chzyer/logex
+      + [X] github.com/chzyer/test
+      + [X] github.com/chzyer/readline
+      + [X] github.com/ianlancetaylor/demangle
+      + [X] golang.org/x/sys
+    + [-] github.com/googleapis/gax-go
+      + [ ] github.com/googleapis/gax-go
+      + [X] github.com/golang/protobuf
+      + [X] golang.org/x/exp
+      + [X] golang.org/x/lint
+      + [X] golang.org/x/tools
+      + [-] google.golang.org/grpc
+        + [ ] google.golang.org/grpc
+        + [ ] github.com/cncf/udpa/go
+        + [ ] github.com/envoyproxy/go-control-plane
+        + [ ] github.com/golang/glog
+        + [X] github.com/golang/protobuf
+        + [X] github.com/google/go-cmp
+        + [X] github.com/google/uuid
+        + [X] golang.org/x/net
+        + [X] golang.org/x/oauth2
+        + [X] golang.org/x/sys
+        + [ ] google.golang.org/genproto
+      + [X] honnef.co/go/tools
+        + [X] honnef.co/go/tools
+        + [X] github.com/BurntSushi/toml
+        + [X] github.com/google/renameio
+        + [X] github.com/kisielk/gotool
+        + [X] github.com/rogpeppe/go-internal
+        + [X] golang.org/x/mod
+        + [X] golang.org/x/tools
     + [ ] github.com/jstemmer/go-junit-report
     + [ ] go.opencensus.io
     + [ ] golang.org/x/lint

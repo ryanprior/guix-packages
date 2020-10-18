@@ -2023,13 +2023,11 @@ conventions.")
        (modify-phases %standard-phases
          (delete 'build))))
     (propagated-inputs
-     `(
-       ;; lots of deps go here
-       ("github.com/golang/mock" ,go-github-com-golang-mock)
-       ("go-github-com-golang-protobuf-proto" ,go-github-com-golang-protobuf-proto)
-       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
-       ;; google/martian/v3
-       ;; google/pprof
+     `(("github.com/golang/mock" ,go-github-com-golang-mock)
+       ("github.com/golang/protobuf" ,go-github-com-golang-protobuf-proto)
+       ("github.com/google/go-cmp" ,go-github-com-google-go-cmp-cmp)
+       ("github.com/google/martian/v3" ,go-github-com-google-martian)
+       ("github.com/google/pprof" ,go-github-com-google-pprof)
        ;; googleapis/gax-go/v2
        ;; jstemmer/go-junit-report
        ;; go.opencensus.io
