@@ -1804,6 +1804,37 @@ might demangle to @code{foo(char)}.")
 analyze the data.  It can generate both text and graphical reports.")
       (license license:asl2.0))))
 
+(define-public go-golang-org-x-lint
+  (let ((commit "738671d3881b9731cc63024d5d88cf28db875626")
+        (revision "0"))
+    (package
+      (name "go-golang-org-x-lint")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/golang/lint")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "0jkiz4py59jjnkyxbxifpf7bsar11lbgmj5jiq2kic5k03shkn9c"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "golang.org/x/lint"
+         ;; tests don't pass
+         #:tests? #f))
+      (inputs
+       `(("golang.org/x/tools" ,go-golang-org-x-tools)))
+      (home-page "https://github.com/golang/lint")
+      (synopsis "Linter for golang source code.")
+      (description
+       "This tool prints out style mistakes and makes suggestions.  It is
+concerned with coding style, seeking to match the accepted style of the open
+source Go project.")
+      (license license:expat))))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
