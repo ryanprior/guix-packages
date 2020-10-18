@@ -1968,6 +1968,38 @@ offer simplifications, and enforce style rules.")
      "This package implements a general RPC framework for web, mobile and HTTP/2.")
     (license license:asl2.0)))
 
+(define-public go-github-com-googleapis-gax-go
+  (package
+    (name "go-github-com-googleapis-gax-go")
+    (version "2.0.5")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/googleapis/gax-go")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1lxawwngv6miaqd25s3ba0didfzylbwisd2nz7r4gmbmin6jsjrx"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/googleapis/gax-go"))
+    (propagated-inputs
+     `(("github.com/golang/protobuf" ,go-github-com-golang-protobuf-proto)
+       ("golang.org/x/exp" ,go-golang-org-x-exp)
+       ("golang.org/x/lint" ,go-golang-org-x-lint)
+       ("golang.org/x/tools" ,go-golang-org-x-tools)
+       ("google.golang.org/grpc" ,grpc)
+       ("honnef.co/go/tools" ,go-honnef-co-go-tools)))
+    (home-page "https://godoc.org/github.com/googleapis/gax-go")
+    (synopsis "Google API Extensions for Go.")
+    (description
+     "Google API Extensions for Go is a set of modules which aids the
+development of APIs for clients and servers based on gRPC and Google API
+conventions.")
+    (license license:expat)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
