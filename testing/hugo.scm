@@ -1606,6 +1606,35 @@ an interface to implement any other minifier.")
      "This package provides tools that work directly with, and manipulate, Go
 modules.")
     (license license:expat)))
+
+(define-public go-github-com-golang-mock
+  (package
+    (name "go-github-com-golang-mock")
+    (version "1.4.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/golang/mock")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1zb4n285mv85dh3y2f8fqbs30h2dhzw7vbczr6z0zg2gqr6vzg0q"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/golang/mock/gomock"
+       #:unpack-path "github.com/golang/mock"))
+    (inputs
+     `(("golang.org/x/mod" ,go-golang-org-x-mod)
+       ("golang.org/x/tools" ,go-golang-org-x-tools)))
+    (home-page "https://1zb4n285mv85dh3y2f8fqbs30h2dhzw7vbczr6z0zg2gqr6vzg0q")
+    (synopsis "Mocking framework for golang.")
+    (description
+     "This package provides a framework for creating or automatically
+generating mock interfaces, useful for testing.")
+    (license license:asl2.0)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
