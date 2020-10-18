@@ -1890,6 +1890,42 @@ Go programming language.")
       (home-page "https://go.googlesource.com/tools/")
       (license license:bsd-3))))
 
+(define-public go-honnef-co-go-tools
+  (package
+    (name "go-honnef-co-go-tools")
+    (version "0.0.1-2020.1.6")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/dominikh/go-tools")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1r83gx7k4fiz3wlshhniz1i39xv492nni1nvfxjfqgnmkavb6r4x"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "honnef.co/go/tools"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (inputs
+     `(("github.com/BurntSushi/toml" ,go-github-com-burntsushi-toml)
+       ("github.com/google/renameio" ,go-github-com-google-renameio)
+       ("github.com/kisielk/gotool" ,go-github-com-kisielk-gotool)
+       ("github.com/rogpeppe/go-internal" ,go-github-com-rogpeppe-go-internal)
+       ("golang.org/x/mod" ,go-golang-org-x-mod)
+       ("golang.org/x/tools" ,go-golang-org-x-tools-0.5)))
+    (home-page "https://staticcheck.io/")
+    (synopsis "Linter for the Go programming language.")
+    (description
+     "This tool uses static analysis to find bugs and performance issues,
+offer simplifications, and enforce style rules.")
+    (license license:expat)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
