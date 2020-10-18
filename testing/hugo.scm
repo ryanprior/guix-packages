@@ -1574,6 +1574,38 @@ request forgery (CSRF) protection.")
 an interface to implement any other minifier.")
       (license license:expat))))
 
+(define-public go-golang-org-x-mod
+  (package
+    (name "go-golang-org-x-mod")
+    (version "0.3.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/golang/mod")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0ldgbx2zpprbsfn6p8pfgs4nn87gwbfcv2z0fa7n8alwsq2yw78q"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "golang.org/x/mod"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (propagated-inputs
+     `(("golang.org/x/crypto" ,go-golang-org-x-crypto)
+       ("golang.org/x/tools" ,go-golang-org-x-tools)
+       ("golang.org/x/xerrors" ,go-golang-org-x-xerrors)))
+    (home-page "https://0ldgbx2zpprbsfn6p8pfgs4nn87gwbfcv2z0fa7n8alwsq2yw78q")
+    (synopsis "Library for golang module mechanics.")
+    (description
+     "This package provides tools that work directly with, and manipulate, Go
+modules.")
+    (license license:expat)))
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
