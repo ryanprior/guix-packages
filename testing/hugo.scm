@@ -1,8 +1,8 @@
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
 (define-module (testing hugo)
-  #:use-module (proposed hugo)
   #:use-module (gnu packages golang)
+  #:use-module (gnu packages rpc)
   #:use-module (gnu packages version-control)
   #:use-module (gnu packages web)
   #:use-module (guix build-system go)
