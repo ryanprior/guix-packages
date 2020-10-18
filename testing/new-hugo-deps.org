@@ -112,8 +112,8 @@
   + [X] github.com/tdewolff/test
   + [X] golang.org/x/sys
 - [X] github.com/yuin/goldmark
-- [-] github.com/yuin/goldmark-highlighting
-  + [ ] github.com/yuin/goldmark-highlighting
+- [X] github.com/yuin/goldmark-highlighting
+  + [X] github.com/yuin/goldmark-highlighting
   + [X] github.com/GeertJohan/go.rice
     + [X] github.com/GeertJohan/go.rice
     + [X] github.com/GeertJohan/go.incremental
@@ -158,7 +158,7 @@
   + [X] github.com/danwakefield/fnmatch
 - [-] gocloud.dev
   + [-] cloud.google.com/go
-    + [ ] github.com/golang/mock
+    + [X] github.com/golang/mock
     + [X] github.com/golang/protobuf
     + [X] github.com/google/go-cmp
     + [ ] github.com/google/martian/v3

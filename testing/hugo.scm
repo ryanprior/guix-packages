@@ -1660,7 +1660,7 @@ generating mock interfaces, useful for testing.")
     (propagated-inputs
      `(
        ;; lots of deps go here
-       ;; golang/mock
+       ("github.com/golang/mock" ,go-github-com-golang-mock)
        ("go-github-com-golang-protobuf-proto" ,go-github-com-golang-protobuf-proto)
        ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
        ;; google/martian/v3
