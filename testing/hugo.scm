@@ -1771,6 +1771,39 @@ written in pure golang.")
 might demangle to @code{foo(char)}.")
       (license license:expat))))
 
+(define-public go-github-com-google-pprof
+  (let ((commit "8ef5528bdba278d96081925d3d835926abc9d367")
+        (revision "0"))
+    (package
+      (name "go-github-com-google-pprof")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/google/pprof")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "0ncj96hxgdg9bx5c21gfwv19vy9crvz14hvi2wliqj4mhs6pj7a1"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/google/pprof"))
+      (inputs
+       `(("github.com/chzyer/logex" ,go-github-com-chzyer-logex)
+         ("github.com/chzyer/readline" ,go-github-com-chzyer-readline)
+         ("github.com/chzyer/test" ,go-github-com-chzyer-test)
+         ("github.com/ianlancetaylor/demangle" ,go-github-com-ianlancetaylor-demangle)
+         ("golang.org/x/sys" ,go-golang-org-x-sys)))
+      (home-page "https://github.com/google/pprof")
+      (synopsis "Tool for visualization and analysis of profiling data")
+      (description
+       "This tool reads a collection of profiling samples in
+@code{profile.proto} format and generates reports to visualize and help
+analyze the data.  It can generate both text and graphical reports.")
+      (license license:asl2.0))))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
