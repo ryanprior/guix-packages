@@ -1719,6 +1719,32 @@ library.")
        "This package provides functions for testing golang code.")
       (license license:expat))))
 
+(define-public go-github-com-chzyer-readline
+  (package
+    (name "go-github-com-chzyer-readline")
+    (version "1.4")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/chzyer/readline")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1qd2qhjps26x4pin2614w732giy89p22b2qww4wg15zz5g2365nk"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/chzyer/readline"))
+    (native-inputs
+     `(("github.com/chzyer/test" ,go-github-com-chzyer-test)))
+    (home-page "https://github.com/chzyer/readline")
+    (synopsis "Implementation of GNU readline-like library in golang.")
+    (description
+     "This package provides line editing functions similar to GNU's readline,
+written in pure golang.")
+    (license license:expat)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
