@@ -1926,6 +1926,14 @@ Go programming language.")
 offer simplifications, and enforce style rules.")
     (license license:expat)))
 
+(define-public staticcheck
+  (package
+    (inherit go-honnef-co-go-tools)
+    (name "staticcheck")
+    (arguments
+     `(#:import-path "honnef.co/go/tools/cmd/staticcheck"
+       #:unpack-path "honnef.co/go/tools"))))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
