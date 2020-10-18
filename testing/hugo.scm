@@ -1835,6 +1835,30 @@ concerned with coding style, seeking to match the accepted style of the open
 source Go project.")
       (license license:expat))))
 
+(define-public go-github-com-kisielk-gotool
+  (package
+    (name "go-github-com-kisielk-gotool")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/kisielk/gotool")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "14af2pa0ssyp8bp2mvdw184s5wcysk6akil3wzxmr05wwy951iwn"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/kisielk/gotool"))
+    (home-page "https://github.com/kisielk/gotool")
+    (synopsis "Utility functions used to implement the standard @code{cmd/go} tool.")
+    (description
+     "This package contains utility functions used to implement the standard
+@{cmd/go} tool, to assist in writing tools with similar semantics.")
+    (license license:expat)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
