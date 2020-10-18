@@ -1692,6 +1692,33 @@ supports error tracing, log levels, and wrapping by the standard log
 library.")
     (license license:expat)))
 
+(define-public go-github-com-chzyer-test
+  (let ((commit "a1ea475d72b168a29f44221e0ad031a842642302")
+        (revision "0"))
+    (package
+      (name "go-github-com-chzyer-test")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/chzyer/test")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "0rns2aqk22i9xsgyap0pq8wi4cfaxsri4d9q6xxhhyma8jjsnj2k"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/chzyer/test"))
+      (propagated-inputs
+       `(("github.com/chzyer/logex" ,go-github-com-chzyer-logex)))
+      (home-page "https://github.com/chzyer/test")
+      (synopsis "Test utilities for golang")
+      (description
+       "This package provides functions for testing golang code.")
+      (license license:expat))))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
