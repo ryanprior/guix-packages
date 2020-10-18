@@ -1934,6 +1934,40 @@ offer simplifications, and enforce style rules.")
      `(#:import-path "honnef.co/go/tools/cmd/staticcheck"
        #:unpack-path "honnef.co/go/tools"))))
 
+(define-public go-google-golang-org-grpc
+  (package
+    (name "go-google-golang-org-grpc")
+    (version "1.32.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/grpc/grpc-go")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1bw145v7d9378xsvzkd66hi6drq6l4my5rshhb1zpiqh05gimacp"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/grpc/grpc-go"))
+    (propagated-inputs
+     `(("github.com/cncf/udpa/go" "TODO")
+       ("github.com/envoyproxy/go-control-plane" "TODO")
+       ("github.com/golang/glog" "TODO")
+       ("github.com/golang/protobuf" ,go-github-com-golang-protobuf-proto)
+       ("github.com/google/go-cmp" ,go-github-com-google-go-cmp-cmp)
+       ("github.com/google/uuid" ,go-github-com-google-uuid)
+       ("golang.org/x/net" ,go-golang-org-x-net)
+       ("golang.org/x/oauth2" ,go-golang-org-x-oauth2)
+       ("golang.org/x/sys" ,go-golang-org-x-sys)
+       ("google.golang.org/genproto" "TODO")))
+    (home-page "https://github.com/grpc/grpc-go")
+    (synopsis "The Go language implementation of gRPC, an HTTP/2 based RPC.")
+    (description
+     "This package implements a general RPC framework for web, mobile and HTTP/2.")
+    (license license:asl2.0)))
+
 (define-public go-cloud-google-com-go
   (package
     (name "go-cloud-google-com-go")
