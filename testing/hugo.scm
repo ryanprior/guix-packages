@@ -1936,6 +1936,30 @@ offer simplifications, and enforce style rules.")
      `(#:import-path "honnef.co/go/tools/cmd/staticcheck"
        #:unpack-path "honnef.co/go/tools"))))
 
+(define-public go-github-com-iancoleman-strcase
+  (package
+    (name "go-github-com-iancoleman-strcase")
+    (version "0.1.2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/iancoleman/strcase")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0hxz1i4m82qkw0m4zlkhw427yid4isn6k5cp2q1627sg6jwlk63r"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/iancoleman/strcase"))
+    (home-page "https://github.com/iancoleman/strcase")
+    (synopsis "Convert text to @code{snake_case} or @code{camelCase}.")
+    (description
+     "This package provides functions to convert a string to various cases,
+e.g. snake case, camel case, or 8 others.")
+    (license license:expat)))
+
 (define-public go-google-golang-org-grpc
   (package
     (name "go-google-golang-org-grpc")
