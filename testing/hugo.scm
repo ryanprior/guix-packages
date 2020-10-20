@@ -2019,6 +2019,14 @@ data serialization format.")
 platform-neutral, extensible mechanism for serializing structured data.")
     (license license:expat)))
 
+(define-public protoc-gen-go
+  (package
+    (inherit go-google-golang-org-protobuf)
+    (name "protoc-gen-go")
+    (arguments
+     '(#:import-path "google.golang.org/protobuf/cmd/protoc-gen-go"
+       #:unpack-path "google.golang.org/protobuf"))))
+
 (define-public go-google-golang-org-grpc
   (package
     (name "go-google-golang-org-grpc")
