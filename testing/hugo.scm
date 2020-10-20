@@ -1987,6 +1987,38 @@ data serialization format.")
     (home-page "https://github.com/golang/protobuf")
     (license license:bsd-3)))
 
+(define-public go-google-golang-org-protobuf
+  (package
+    (name "go-google-golang-org-protobuf")
+    (version "1.25.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/protocolbuffers/protobuf-go")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0apfl42x166dh96zfq5kvv4b4ax9xljik6bq1mnvn2240ir3mc23"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "google.golang.org/protobuf"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (propagated-inputs
+     `(("github.com/golang/protobuf" ,go-github-com-golang-protobuf)
+       ("github.com/google/go-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)))
+    (home-page "https://github.com/protocolbuffers/protobuf-go")
+    (synopsis "Go support for Google's protocol buffers.")
+    (description
+     "Go implementation for protocol buffers, which is a language-neutral,
+platform-neutral, extensible mechanism for serializing structured data.")
+    (license license:expat)))
+
 (define-public go-google-golang-org-grpc
   (package
     (name "go-google-golang-org-grpc")
