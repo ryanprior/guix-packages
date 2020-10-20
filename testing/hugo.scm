@@ -1960,6 +1960,33 @@ offer simplifications, and enforce style rules.")
 e.g. snake case, camel case, or 8 others.")
     (license license:expat)))
 
+(define-public go-github-com-golang-protobuf
+  (package
+    (name "go-github-com-golang-protobuf-proto")
+    (version "1.4.2")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/golang/protobuf")
+                    (commit (string-append "v" version))))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "0m5z81im4nsyfgarjhppayk4hqnrwswr3nix9mj8pff8x9jvcjqw"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/golang/protobuf"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (synopsis "Go support for Protocol Buffers")
+    (description "This package provides Go support for the Protocol Buffers
+data serialization format.")
+    (home-page "https://github.com/golang/protobuf")
+    (license license:bsd-3)))
+
 (define-public go-google-golang-org-grpc
   (package
     (name "go-google-golang-org-grpc")
