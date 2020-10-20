@@ -262,7 +262,7 @@ of a Git repository.")
         (base32
          "0qchy411jm9q2l9mf7x3ry2ycaqp9xdhf2nx14qrpzcxfigv2705"))))
     (propagated-inputs
-     `(("go-golang-org-x-xerrors" ,go-golang.org-x-xerrors)))))
+     `(("go-golang-org-x-xerrors" ,go-golang-org-x-xerrors)))))
 
 (define-public go-github-com-fortytw2-leaktest
   (package
