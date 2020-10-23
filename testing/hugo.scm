@@ -633,8 +633,7 @@ contains libraries for matrices, statistics, optimization, and more.")
      `(("go-github-com-neurosnap-sentences" ,go-github-com-neurosnap-sentences)
        ("go-gonum-org-v1-gonum" ,go-gonum-org-v1-gonum)))
     (home-page "https://github.com/jdkato/prose")
-    (synopsis "Library for text processing, including tokenization,
-part-of-speech tagging, and named-entity extraction.")
+    (synopsis "Library for text processing in golang.")
     (description
      "Prose is a natural language processing library in pure Go.  It supports
 tokenization, segmentation, part-of-speech tagging, and named-entity
