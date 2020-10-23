@@ -550,7 +550,7 @@ the Autobahn Test Suite for WebSocket standard compliance.")
     (home-page "https://github.com/neurosnap/sentences")
     (synopsis "Multilingual command line sentence tokenizer for golang.")
     (description
-     "This command line utility will convert a blob of text into a list of
+     "The @code{sentences} tool converts a blob of text into a list of
 sentences.")
     (license license:expat)))
 
