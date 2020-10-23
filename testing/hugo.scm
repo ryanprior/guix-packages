@@ -897,8 +897,8 @@ with common interpolation methods.")
     (home-page "https://github.com/muesli/smartcrop")
     (synopsis "Finds good image crops for arbitrary crop sizes.")
     (description
-     "Smartcrop implements an algorithm to find good crops for images.  It's
-based on Jonas Wagner's smartcrop.js.")
+     "Smartcrop implements an algorithm to find aesthetic crops for images.
+It's based on Jonas Wagner's @code{smartcrop.js}.")
     (license license:expat)))
 
 (define-public go-github-com-nicksnyder-go-i18n
