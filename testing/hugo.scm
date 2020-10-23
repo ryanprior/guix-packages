@@ -737,7 +737,7 @@ bootstrapped.")
        ("go-github-com-rogpeppe-go-internal" ,go-github-com-rogpeppe-go-internal)
        ("go-github-com-stretchr-testify" ,go-github-com-stretchr-testify)))
     (home-page "https://github.com/gobuffalo/envy")
-    (synopsis "Makes working with environment variables in Go trivial.")
+    (synopsis "Use and manage environment variables in golang.")
     (description
      "Envy provides convenience methods for working with environment
 variables.")
