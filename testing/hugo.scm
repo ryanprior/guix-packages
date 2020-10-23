@@ -659,9 +659,9 @@ extraction.")
     (arguments
      '(#:import-path "github.com/kyokomi/emoji"))
     (home-page "https://github.com/kyokomi/emoji")
-    (synopsis "Emoji terminal output for golang")
+    (synopsis "Write emoji to the terminal using golang")
     (description
-     "The emoji package provides methods for interpolating emoji into strings
+     "The @code{emoji} package provides methods for interpolating emoji into strings
 and character sequences.")
     (license license:expat)))
 
