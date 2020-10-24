@@ -1040,8 +1040,8 @@ deterministic output.")
     (home-page "https://github.com/spf13/fsync")
     (synopsis "Keeps files or directories in sync.")
     (description
-     "This package performs minimal I/O to synchronize the states and contents
-of files and directories.")
+     "This package calculates the minimal I/O to synchronize the states and
+contents of files and directories, and performs that synchronization.")
     (license license:expat)))
 
 (define-public go-github-com-matryer-try
