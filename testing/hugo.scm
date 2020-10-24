@@ -1012,10 +1012,10 @@ huge and this package follows the 80/20 rule.")
     (home-page "https://github.com/sanity-io/litter")
     (synopsis "Pretty printer library for Go data structures.")
     (description
-     "This package prints Go literals, the better with which to litter your
-output.  Litter output is syntactically correct golang code.  You can use
-Litter to emit data during debug, and it's also suitable for “snapshot data”
-in unit tests since it produces deterministic output.")
+     "This package prints Golang literals values.  The output is syntactically
+correct golang code.  You can use @code{Litter} to emit data during debug, and
+it's also suitable for “snapshot data” in unit tests since it produces
+deterministic output.")
     (license license:expat)))
 
 (define-public go-github-com-spf13-fsync
