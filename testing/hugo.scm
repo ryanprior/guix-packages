@@ -958,8 +958,7 @@ translate Go programs into multiple languages.")
     (description
      "This package parses org-mode files and provides HTML export with
 sensible output.  It does not exactly reproduce the output of
-org-html-export.  The parser supports a reasonable subset of org-mode; it is
-huge and this package follows the 80/20 rule.")
+org-html-export.  The parser supports a subset of org-mode.")
     (license license:expat)))
 
 (define-public go-github-com-rwcarlsen-goexif
