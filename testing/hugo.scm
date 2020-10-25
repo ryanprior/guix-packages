@@ -1064,12 +1064,10 @@ contents of files and directories, and performs that synchronization.")
     (native-inputs
      `(("go-github-com-cheekybits-is" ,go-github-com-cheekybits-is)))
     (home-page "https://github.com/matryer/try")
-    (synopsis "Get hash values for arbitrary values in golang.")
+    (synopsis "Retry library for golang.")
     (description
-     "This package can be used to key values in a hash (for use in a map, set,
-etc.) that are complex.  The most common use case is comparing two values
-without sending data across the network, caching values locally (de-dup), and
-so on.")
+     "This package provides a facility to run a function and retry on error,
+up to to a configurable maximum number of retries.")
     (license license:expat)))
 
 (define-public go-github-com-tdewolff-test
