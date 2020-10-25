@@ -1307,8 +1307,8 @@ buffers in concurrent use.")
     (home-page "https://github.com/daaku/go.zipexe")
     (synopsis "Open an executable binary file as a zip file.")
     (description
-     "This package opens a zip file, specially handling various binaries that
-may have been augmented with zip data.")
+     "This package opens a zip file, with special handling for binaries that
+are augmented with zip data.")
     (license license:expat)))
 
 (define-public go-github-com-geertjohan-go-rice
