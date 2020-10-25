@@ -1337,10 +1337,10 @@ are augmented with zip data.")
        ("go-github-com-nkovacs-streamquote" ,go-github-com-nkovacs-streamquote)
        ("go-github-com-valyala-fasttemplate" ,go-github-com-valyala-fasttemplate)))
     (home-page "https://github.com/GeertJohan/go.rice")
-    (synopsis "Go minifiers for web formats.")
+    (synopsis "Bundle static resource data with an executable.")
     (description
-     "This package provides HTML5, CSS3, JS, JSON, SVG and XML minifiers and
-an interface to implement any other minifier.")
+     "This tool loads static resource data, like HTML or images, and bundles
+them together with an executable file.")
     (license license:expat)))
 
 (define-public go-github-com-alecthomas-kong
