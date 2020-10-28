@@ -1,0 +1,111 @@
+* Contributed packages 📦📦📦
+
+Here is a directory of packages I've contributed to Guix.
+
+*** [[contributed/ruby.scm][Ruby 2.7.1]]
+#+HTML: <details>
+#+HTML: <summary>A programming language interpreter</summary>
+
+- Package :: https://guix.gnu.org/packages/ruby-2.7.1/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41036
+#+HTML: </details>
+
+*** [[contributed/visidata.scm][VisiData]]
+#+HTML: <details>
+#+HTML: <summary>Terminal spreadsheet multitool for discovering and arranging data.</summary>
+
+- Package :: https://guix.gnu.org/packages/visidata-1.5.2/
+- Issue tracker :: https://issues.guix.gnu.org/issue/40757
+#+HTML: </details>
+
+*** [[contributed/pantheon.scm][Granite]]
+#+HTML: <details>
+#+HTML: <summary>An extension to gtk+ used in elementary OS applications.</summary>
+
+- Package :: https://guix.gnu.org/packages/granite-5.4.0/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+#+HTML: </details>
+
+*** [[contributed/pantheon.scm][Pantheon Calculator]]
+#+HTML: <details>
+#+HTML: <summary>Desktop calculator.</summary>
+
+- Package :: https://guix.gnu.org/packages/pantheon-calculator-1.5.5/
+- Issue tracker :: https://issues.guix.gnu.org/issue/41293
+#+HTML: </details>
+
+*** [[contributed/importmagic.scm][importmagic]]
+#+HTML: <details>
+#+HTML: <summary>Library for adding, removing and managing Python imports</summary>
+
+- Package :: https://guix.gnu.org/packages/python-importmagic-0.1.7/
+- Issue tracker :: https://issues.guix.gnu.org/41366
+#+HTML: </details>
+
+*** [[contributed/importmagic.scm][epc]]
+#+HTML: <details>
+#+HTML: <summary>Remote procedure call (RPC) stack for Emacs Lisp and Python</summary>
+
+- Package :: https://guix.gnu.org/packages/python-epc-0.0.5/
+- Issue tracker :: https://issues.guix.gnu.org/41366
+#+HTML: </details>
+
+*** [[contributed/importmagic.scm][sexpdata]]
+#+HTML: <details>
+#+HTML: <summary>S-expression parser for Python</summary>
+
+- Package :: https://guix.gnu.org/packages/python-sexpdata-0.0.3/
+- Issue tracker :: https://issues.guix.gnu.org/41366
+#+HTML: </details>
+
+*** [[contributed/proton.scm][protonvpn-cli]]
+#+HTML: <details>
+#+HTML: <summary>Command-line client for ProtonVPN.</summary>
+
+- Package :: https://guix.gnu.org/packages/protonvpn-cli-2.2.2/
+- Issues ::
+  + https://issues.guix.gnu.org/41431
+  + https://issues.guix.gnu.org/41679
+#+HTML: </details>
+
+*** [[proposed/shells.scm][Oil]]
+#+HTML: <details>
+#+HTML: <summary>A Unix shell and programming language. It's our upgrade path from Bash.</summary>
+
+- Package :: https://guix.gnu.org/packages/oil-0.8.pre6/
+- Issue tracker ::
+  | https://issues.guix.gnu.org/issue/41010 | renamed & upgraded package |
+  | https://issues.guix.gnu.org/issue/41940 | upgrade to 0.8pre6         |
+  | https://issues.guix.gnu.org/issue/43526 | upgrade to 0.8.0           |
+#+HTML: </details>
+*** [[proposed/vala-language-server.scm][vala-0.48]]
+#+HTML: <details>
+#+HTML: <summary>A programming language centered around gobject.</summary>
+
+- Package :: https://guix.gnu.org/packages/vala-0.48.6/
+- Issue tracker :: https://issues.guix.gnu.org/41639
+#+HTML: </details>
+
+*** [[proposed/vala-language-server.scm][vala-language-server]]
+#+HTML: <details>
+#+HTML: <summary>Code intelligence for the Vala language.</summary>
+
+- Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
+- Issue tracker :: https://issues.guix.gnu.org/41639
+#+HTML: </details>
+*** [[proposed/vlang.scm][v]]
+#+HTML: <details>
+#+HTML: <summary>Compiler for the v systems programming language.</summary>
+
+- Package :: https://guix.gnu.org/packages/v-0.1.27/
+- Issue tracker :: https://issues.guix.info/41415
+#+HTML: </details>
+
+*** [[proposed/quickjs.scm][quickjs]]
+#+HTML: <details>
+#+HTML: <summary>Small embeddable Javascript runtime.</summary>
+
+- Package :: https://guix.gnu.org/en/packages/quickjs-2020-09-06/
+- Bug tracker :: https://issues.guix.gnu.org/issue/43391
+#+HTML: </details>
+
