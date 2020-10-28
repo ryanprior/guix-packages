@@ -12,7 +12,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/visidata.scm][VisiData]]
 #+HTML: <details>
-#+HTML: <summary>Terminal spreadsheet multitool for discovering and arranging data.</summary>
+#+HTML: <summary>Terminal spreadsheet multitool for discovering and arranging data.<br/><a href="https://repology.org/project/visidata/versions"><img src="https://repology.org/badge/version-for-repo/gnuguix/visidata.svg" alt="GNU Guix package for visidata"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/visidata-1.5.2/
 - Issue tracker :: https://issues.guix.gnu.org/issue/40757
