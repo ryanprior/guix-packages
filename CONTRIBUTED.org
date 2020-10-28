@@ -20,7 +20,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/pantheon.scm][Granite]]
 #+HTML: <details>
-#+HTML: <summary>An extension to gtk+ used in elementary OS applications.</summary>
+#+HTML: <summary>An extension to gtk+ used in elementary OS applications.<br/><a href="https://repology.org/project/granite/versions"><img src="https://repology.org/badge/version-for-repo/gnuguix/granite.svg" alt="GNU Guix package for granite"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/granite-5.4.0/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
