@@ -222,24 +222,6 @@ timeframe on which it will change.")
 of a Git repository.")
     (license license:expat)))
 
-(define-public go-github-com-google-go-cmp-cmp-0.5.2
-  (package
-    (inherit go-github-com-google-go-cmp-cmp)
-    (name "go-github-com-google-go-cmp-cmp")
-    (version "0.5.2")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/google/go-cmp")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
-       (sha256
-        (base32
-         "0qchy411jm9q2l9mf7x3ry2ycaqp9xdhf2nx14qrpzcxfigv2705"))))
-    (propagated-inputs
-     `(("go-golang-org-x-xerrors" ,go-golang-org-x-xerrors)))))
-
 (define-public go-github-com-fortytw2-leaktest
   (package
     (name "go-github-com-fortytw2-leaktest")
@@ -282,7 +264,7 @@ test and at the end, to assist in detecting memory leaks.")
     (arguments
      '(#:import-path "github.com/frankban/quicktest"))
     (propagated-inputs
-     `(("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
+     `(("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
        ("go-github-com-kr-pretty" ,go-github-com-kr-pretty)))
     (home-page "https://github.com/frankban/quicktest")
     (synopsis "Helpers for testing Go applications")
@@ -369,7 +351,7 @@ test and at the end, to assist in detecting memory leaks.")
     (propagated-inputs
      `(("go-github-com-bep-debounce" ,go-github-com-bep-debounce)
        ("go-github-com-frankban-quicktest" ,go-github-com-frankban-quicktest)
-       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
+       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
        ("go-gopkg-in-yaml-v2" ,go-gopkg-in-yaml-v2)))
     (home-page "https://github.com/bep/tmc")
     (synopsis "Serialization library for golang.")
@@ -1983,7 +1965,7 @@ data serialization format.")
          (delete 'build))))
     (propagated-inputs
      `(("github.com/golang/protobuf" ,go-github-com-golang-protobuf)
-       ("github.com/google/go-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)))
+       ("github.com/google/go-cmp" ,go-github-com-google-go-cmp-cmp)))
     (home-page "https://github.com/protocolbuffers/protobuf-go")
     (synopsis "Go support for Google's protocol buffers.")
     (description
@@ -2208,7 +2190,7 @@ deploy across cloud providers.")
        ("go-github-com-ghodss-yaml" ,go-github-com-ghodss-yaml)
        ("go-github-com-gobwas-glob" ,go-github-com-gobwas-glob)
        ;; github.com/gohugoio/testmodBuilder -- circular dep??
-       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp-0.5.2)
+       ("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
        ("go-github-com-gorilla-websocket" ,go-github-com-gorilla-websocket)
        ("go-github-com-jdkato-prose" ,go-github-com-jdkato-prose)
        ("go-github-com-kyokomi-emoji" ,go-github-com-kyokomi-emoji)
