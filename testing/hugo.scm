@@ -246,32 +246,6 @@ of a Git repository.")
 test and at the end, to assist in detecting memory leaks.")
     (license license:expat)))
 
-(define-public go-github-com-frankban-quicktest
-  (package
-    (name "go-github-com-frankban-quicktest")
-    (version "1.11.0")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/frankban/quicktest")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
-       (sha256
-        (base32
-         "0fbxrd6xgxq2r6v4cv6qrlpkhpdaxqb28hnw1hjf4lvcv4kibj6x"))))
-    (build-system go-build-system)
-    (arguments
-     '(#:import-path "github.com/frankban/quicktest"))
-    (propagated-inputs
-     `(("go-github-com-google-go-cmp-cmp" ,go-github-com-google-go-cmp-cmp)
-       ("go-github-com-kr-pretty" ,go-github-com-kr-pretty)))
-    (home-page "https://github.com/frankban/quicktest")
-    (synopsis "Helpers for testing Go applications")
-    (description
-     "This package provides a collection of Go helpers for writing tests.")
-    (license license:expat)))
-
 (define-public go-github-com-bep-golibsass
   (package
     (name "go-github-com-bep-golibsass")
