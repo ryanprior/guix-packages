@@ -4,7 +4,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/ruby.scm][Ruby 2.7.1]]
 #+HTML: <details>
-#+HTML: <summary>A programming language interpreter<br/><a href="https://repology.org/project/ruby/versions"><img src="https://repology.org/badge/version-for-repo/gnuguix/ruby.svg" alt="GNU Guix package for ruby"></a></summary>
+#+HTML: <summary>A programming language interpreter<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=ruby"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=ruby" alt="GNU Guix package for ruby"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/ruby-2.7.1/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41036
@@ -12,7 +12,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/visidata.scm][VisiData]]
 #+HTML: <details>
-#+HTML: <summary>Terminal spreadsheet multitool for discovering and arranging data.<br/><a href="https://repology.org/project/visidata/versions"><img src="https://repology.org/badge/version-for-repo/gnuguix/visidata.svg" alt="GNU Guix package for visidata"></a></summary>
+#+HTML: <summary>Terminal spreadsheet multitool for discovering and arranging data.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=visidata"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=visidata" alt="GNU Guix package for visidata"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/visidata-1.5.2/
 - Issue tracker :: https://issues.guix.gnu.org/issue/40757
@@ -20,7 +20,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/pantheon.scm][Granite]]
 #+HTML: <details>
-#+HTML: <summary>An extension to gtk+ used in elementary OS applications.<br/><a href="https://repology.org/project/granite/versions"><img src="https://repology.org/badge/version-for-repo/gnuguix/granite.svg" alt="GNU Guix package for granite"></a></summary>
+#+HTML: <summary>An extension to gtk+ used in elementary OS applications.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=granite"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=granite" alt="GNU Guix package for granite"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/granite-5.4.0/
 - Issue tracker :: https://issues.guix.gnu.org/issue/41293
@@ -36,7 +36,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/importmagic.scm][importmagic]]
 #+HTML: <details>
-#+HTML: <summary>Library for adding, removing and managing Python imports</summary>
+#+HTML: <summary>Library for adding, removing and managing Python imports<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=python-importmagic"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=python-importmagic" alt="GNU Guix package for python-importmagic"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/python-importmagic-0.1.7/
 - Issue tracker :: https://issues.guix.gnu.org/41366
@@ -44,7 +44,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/importmagic.scm][epc]]
 #+HTML: <details>
-#+HTML: <summary>Remote procedure call (RPC) stack for Emacs Lisp and Python</summary>
+#+HTML: <summary>Remote procedure call (RPC) stack for Emacs Lisp and Python<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=python-epc"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=python-epc" alt="GNU Guix package for python-epc"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/python-epc-0.0.5/
 - Issue tracker :: https://issues.guix.gnu.org/41366
@@ -52,7 +52,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/importmagic.scm][sexpdata]]
 #+HTML: <details>
-#+HTML: <summary>S-expression parser for Python</summary>
+#+HTML: <summary>S-expression parser for Python<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=python-sexpdata"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=python-sexpdata" alt="GNU Guix package for python-sexpdata"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/python-sexpdata-0.0.3/
 - Issue tracker :: https://issues.guix.gnu.org/41366
@@ -60,7 +60,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[contributed/proton.scm][protonvpn-cli]]
 #+HTML: <details>
-#+HTML: <summary>Command-line client for ProtonVPN.</summary>
+#+HTML: <summary>Command-line client for ProtonVPN.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=protonvpn-cli"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=protonvpn-cli" alt="GNU Guix package for protonvpn-cli"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/protonvpn-cli-2.2.2/
 - Issues ::
@@ -70,7 +70,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[proposed/shells.scm][Oil]]
 #+HTML: <details>
-#+HTML: <summary>A Unix shell and programming language. It's our upgrade path from Bash.</summary>
+#+HTML: <summary>A Unix shell and programming language. It's our upgrade path from Bash.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=oil"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=oil" alt="GNU Guix package for oil"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/oil-0.8.pre6/
 - Issue tracker ::
@@ -80,7 +80,7 @@ Here is a directory of packages I've contributed to Guix.
 #+HTML: </details>
 *** [[proposed/vala-language-server.scm][vala-0.48]]
 #+HTML: <details>
-#+HTML: <summary>A programming language centered around gobject.</summary>
+#+HTML: <summary>A programming language centered around gobject.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala" alt="GNU Guix package for vala"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/vala-0.48.6/
 - Issue tracker :: https://issues.guix.gnu.org/41639
@@ -88,14 +88,14 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[proposed/vala-language-server.scm][vala-language-server]]
 #+HTML: <details>
-#+HTML: <summary>Code intelligence for the Vala language.</summary>
+#+HTML: <summary>Code intelligence for the Vala language.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala-language-server"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala-language-server" alt="GNU Guix package for vala-language-server"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
 - Issue tracker :: https://issues.guix.gnu.org/41639
 #+HTML: </details>
 *** [[proposed/vlang.scm][v]]
 #+HTML: <details>
-#+HTML: <summary>Compiler for the v systems programming language.</summary>
+#+HTML: <summary>Compiler for the v systems programming language.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vlang"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vlang" alt="GNU Guix package for vlang"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/v-0.1.27/
 - Issue tracker :: https://issues.guix.info/41415
@@ -103,7 +103,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[proposed/quickjs.scm][quickjs]]
 #+HTML: <details>
-#+HTML: <summary>Small embeddable Javascript runtime.</summary>
+#+HTML: <summary>Small embeddable Javascript runtime.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=quickjs"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=quickjs" alt="GNU Guix package for quickjs"></a></summary>
 
 - Package :: https://guix.gnu.org/en/packages/quickjs-2020-09-06/
 - Bug tracker :: https://issues.guix.gnu.org/issue/43391
@@ -111,7 +111,7 @@ Here is a directory of packages I've contributed to Guix.
 
 *** [[proposed/hugo.scm][esbuild]]
 #+HTML: <details>
-#+HTML: <summary>Bundler and minifier tool for JavaScript and TypeScript.<br/><a href="https://repology.org/project/esbuild/versions"><img src="https://repology.org/badge/version-for-repo/gnuguix/esbuild.svg" alt="GNU Guix package"></a></summary>
+#+HTML: <summary>Bundler and minifier tool for JavaScript and TypeScript.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=esbuild"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=esbuild" alt="GNU Guix package for esbuild"></a></summary>
 
 - Package :: https://guix.gnu.org/en/packages/esbuild-0.7.16
 - Issue tracker :: https://issues.guix.gnu.org/43840
