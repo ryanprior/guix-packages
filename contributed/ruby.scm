@@ -47,6 +47,7 @@
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages ragel)
   #:use-module (gnu packages rsync)
+  #:use-module (gnu packages ruby)
   #:use-module (gnu packages sqlite)
   #:use-module (gnu packages tls)
   #:use-module (gnu packages version-control)
@@ -64,73 +65,19 @@
 ;; TODO package unf_ext-0.0.7.6
 ;; irb wants these things >:3
 
-(define-public ruby-2.5
-  (package
-    (name "ruby")
-    (version "2.5.3")
-    (source
-     (origin
-       (method url-fetch)
-       (uri (string-append "http://cache.ruby-lang.org/pub/ruby/"
-                           (version-major+minor version)
-                           "/ruby-" version ".tar.xz"))
-       (sha256
-        (base32
-         "0vrhrw7kcz9mg0jkqnihkcxqy5k05v8k1j0y2735z8wfk8sx1j8w"))
-       (modules '((guix build utils)))
-       (snippet `(begin
-                   ;; Remove bundled libffi
-                   (delete-file-recursively "ext/fiddle/libffi-3.2.1")
-                   #t))))
-    (build-system gnu-build-system)
-    (arguments
-     `(#:test-target "test"
-       #:phases
-       (modify-phases %standard-phases
-         (add-before 'configure 'replace-bin-sh-and-remove-libffi
-           (lambda _
-             (substitute* '("Makefile.in"
-                            "ext/pty/pty.c"
-                            "io.c"
-                            "lib/mkmf.rb"
-                            "process.c"
-                            "test/rubygems/test_gem_ext_configure_builder.rb"
-                            "test/rdoc/test_rdoc_parser.rb"
-                            "test/ruby/test_rubyoptions.rb"
-                            "test/ruby/test_process.rb"
-                            "test/ruby/test_system.rb"
-                            "tool/rbinstall.rb")
-               (("/bin/sh") (which "sh")))
-             #t)))))
-    (inputs
-     `(("readline" ,readline)
-       ("openssl" ,openssl)
-       ("libffi" ,libffi)
-       ("gdbm" ,gdbm)
-       ("zlib" ,zlib)))
-    (native-search-paths
-     (list (search-path-specification
-            (variable "GEM_PATH")
-            (files (list (string-append "lib/ruby/vendor_ruby"))))))
-    (synopsis "Programming language interpreter")
-    (description "Ruby is a dynamic object-oriented programming language with
-a focus on simplicity and productivity.")
-    (home-page "https://www.ruby-lang.org")
-    (license license:ruby)))
-
 (define-public ruby-2.7
   (package
-    (inherit ruby-2.5)
-    (version "2.7.1")
+    (inherit ruby)
+    (version "2.7.2")
     (source
      (origin
        (method url-fetch)
-       (uri (string-append "http://cache.ruby-lang.org/pub/ruby/"
+       (uri (string-append "https://cache.ruby-lang.org/pub/ruby/"
                            (version-major+minor version)
                            "/ruby-" version ".tar.gz"))
        (sha256
         (base32
-         "0674x98f542y02r7n2yv2qhmh97blqhi2mvh2dn5f000vlxlh66l"))
+         "1m63461mxi3fg4y3bspbgmb0ckbbb1ldgf9xi0piwkpfsk80cmvf"))
        (modules '((guix build utils)))
        (snippet `(begin
                    ;; Remove bundled libffi
@@ -138,6 +85,7 @@ a focus on simplicity and productivity.")
                    #t))))
     (arguments
      `(#:test-target "test"
+       #:configure-flags '("--enable-shared") ; dynamic linking
        #:phases
        (modify-phases %standard-phases
          (add-before 'configure 'replace-bin-sh-and-remove-libffi
@@ -159,7 +107,3 @@ a focus on simplicity and productivity.")
              #t)))))
     (native-inputs
      `(("autoconf" ,autoconf)))))
-
-(define-public ruby ruby-2.7)
-
-ruby

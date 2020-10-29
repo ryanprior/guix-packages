@@ -6,12 +6,6 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
 
 ** Proposed packages 🚚📦📨
 
-*** [[proposed/ruby.scm][Ruby 2.7.2]]
-#+HTML: <details>
-#+HTML: <summary>A programming language interpreter</summary>
-
-- Issue tracker :: https://issues.guix.gnu.org/issue/44300
-#+HTML: </details>
 *** [[proposed/pantheon.scm][Sideload]]
 #+HTML: <details>
 #+HTML: <summary>An application for installing Flatpaks.</summary>
