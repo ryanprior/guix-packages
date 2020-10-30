@@ -70,7 +70,7 @@ Here is a directory of packages I've contributed to Guix.
   + https://issues.guix.gnu.org/41679
 #+HTML: </details>
 
-*** [[proposed/shells.scm][Oil]]
+*** [[contributed/shells.scm][Oil]]
 #+HTML: <details>
 #+HTML: <summary>A Unix shell and programming language. It's our upgrade path from Bash.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=oil"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=oil" alt="GNU Guix package for oil"></a></summary>
 
@@ -80,7 +80,7 @@ Here is a directory of packages I've contributed to Guix.
   | https://issues.guix.gnu.org/issue/41940 | upgrade to 0.8pre6         |
   | https://issues.guix.gnu.org/issue/43526 | upgrade to 0.8.0           |
 #+HTML: </details>
-*** [[proposed/vala-language-server.scm][vala-0.48]]
+*** [[contributed/vala-language-server.scm][vala-0.48]]
 #+HTML: <details>
 #+HTML: <summary>A programming language centered around gobject.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala" alt="GNU Guix package for vala"></a></summary>
 
@@ -88,14 +88,14 @@ Here is a directory of packages I've contributed to Guix.
 - Issue tracker :: https://issues.guix.gnu.org/41639
 #+HTML: </details>
 
-*** [[proposed/vala-language-server.scm][vala-language-server]]
+*** [[contributed/vala-language-server.scm][vala-language-server]]
 #+HTML: <details>
 #+HTML: <summary>Code intelligence for the Vala language.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala-language-server"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala-language-server" alt="GNU Guix package for vala-language-server"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
 - Issue tracker :: https://issues.guix.gnu.org/41639
 #+HTML: </details>
-*** [[proposed/vlang.scm][v]]
+*** [[contributed/vlang.scm][v]]
 #+HTML: <details>
 #+HTML: <summary>Compiler for the v systems programming language.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vlang"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vlang" alt="GNU Guix package for vlang"></a></summary>
 
@@ -103,7 +103,7 @@ Here is a directory of packages I've contributed to Guix.
 - Issue tracker :: https://issues.guix.info/41415
 #+HTML: </details>
 
-*** [[proposed/quickjs.scm][quickjs]]
+*** [[contributed/quickjs.scm][quickjs]]
 #+HTML: <details>
 #+HTML: <summary>Small embeddable Javascript runtime.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=quickjs"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=quickjs" alt="GNU Guix package for quickjs"></a></summary>
 
@@ -111,7 +111,7 @@ Here is a directory of packages I've contributed to Guix.
 - Bug tracker :: https://issues.guix.gnu.org/issue/43391
 #+HTML: </details>
 
-*** [[proposed/hugo.scm][esbuild]]
+*** [[contributed/hugo.scm][esbuild]]
 #+HTML: <details>
 #+HTML: <summary>Bundler and minifier tool for JavaScript and TypeScript.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=esbuild"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=esbuild" alt="GNU Guix package for esbuild"></a></summary>
 
