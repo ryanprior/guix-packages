@@ -1,6 +1,6 @@
 ;;; Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
-(define-module (contributed hugo)
+(define-module (proposed esbuild)
   #:use-module (gnu packages golang)
   #:use-module (guix build-system go)
   #:use-module (guix git-download)
