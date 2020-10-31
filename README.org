@@ -14,13 +14,6 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
 
 #+HTML: </details>
 
-*** [[proposed/pantheon.scm][Sideload]]
-#+HTML: <details>
-#+HTML: <summary>An application for installing Flatpaks.</summary>
-
-- Issue tracker :: https://issues.guix.gnu.org/issue/41293
-
-#+HTML: </details>
 *** [[proposed/pantheon.scm][Appstream]]
 #+HTML: <details>
 #+HTML: <summary>The foundation to build software-center applications.</summary>

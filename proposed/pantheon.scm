@@ -1,5 +1,4 @@
 (define-module (proposed pantheon)
-  #:use-module (contributed pantheon)
   #:use-module (gnu packages cmake)
   #:use-module (gnu packages databases)
   #:use-module (gnu packages freedesktop)
@@ -23,67 +22,6 @@
   #:use-module ((guix licenses) :prefix license:)
   #:use-module (guix packages)
   #:use-module (guix utils))
-
-(define-public sideload
-  (package
-    (name "sideload")
-    (version "1.1.1")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/elementary/sideload.git")
-             (commit version)))
-       (file-name (git-file-name name version))
-       (sha256
-        (base32
-         "0mlc3nm2navzxm8k1rwpbw4w6mv30lmhqybm8jqxd4v8x7my73vq"))))
-    (build-system meson-build-system)
-    (arguments
-     `(#:glib-or-gtk? #t
-       #:configure-flags (list (string-append "-Dflatpak="
-                                              (assoc-ref %build-inputs "flatpak")
-                                              "/include"))
-       #:phases
-       (modify-phases %standard-phases
-         (add-before 'install 'set-environment-variables
-           (lambda _
-             ;; Disable compiling schemas and updating desktop databases
-             (setenv "DESTDIR" "/")
-             #t))
-         (add-after 'install 'install-symlinks
-           (lambda* (#:key outputs #:allow-other-keys)
-             (let* ((out (assoc-ref outputs "out"))
-                    (bin (string-append out "/bin/io.elementary.sideload"))
-                    (link (string-append out "/bin/sideload")))
-               (symlink bin link)
-               #t))))))
-    (inputs
-     `(("flatpak" ,flatpak)
-       ("granite" ,granite)
-       ("gtk" ,gtk+)
-       ("hicolor-icon-theme" ,hicolor-icon-theme)
-       ("libostree" ,libostree)))
-    (propagated-inputs
-     ;; Sideload needs these in the environment to fetch data securely from
-     ;; Flatpak remotes.
-     `(("gnupg" ,gnupg)
-       ("gpgme" ,gpgme)))
-    (native-inputs
-     `(("gettext" ,gettext-minimal)
-       ("glib" ,glib)
-       ("glib:bin" ,glib "bin")
-       ("gobject-introspection" ,gobject-introspection)
-       ("libgee" ,libgee)
-       ("libxml2" ,libxml2)
-       ("pkg-config" ,pkg-config)
-       ("vala" ,vala)))
-    (home-page "https://github.com/elementary/sideload")
-    (synopsis "Graphical application to side-load Flatpaks")
-    (description "Sideload handles flatpakref files, like those you might find
-on Flathub or another third-party website providing a Flatpak app for
-download.")
-    (license license:gpl3+)))
 
 (define-public appstream
   (package
