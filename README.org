@@ -6,6 +6,14 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
 
 ** Proposed packages 🚚📦📨
 
+*** [[proposed/pantheon.scm][granite 5.5.0]]
+#+HTML: <details>
+#+HTML: <summary>An extension to gtk+ used in elementary OS applications.</summary>
+
+- Issue tracker :: https://issues.guix.gnu.org/issue/44357
+
+#+HTML: </details>
+
 *** [[proposed/esbuild.scm][esbuild 0.8.0]]
 #+HTML: <details>
 #+HTML: <summary>Bundler and transpiler for js & ts.</summary>

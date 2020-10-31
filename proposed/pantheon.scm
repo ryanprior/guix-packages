@@ -23,6 +23,43 @@
   #:use-module (guix packages)
   #:use-module (guix utils))
 
+(define-public granite
+  (package
+    (name "granite")
+    (version "5.5.0")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/elementary/granite")
+                    (commit version)))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "13qfhq8xndikk6kmybibs6a4ddyp6mhvbsp2yy4qr7aiiyxf7mna"))))
+    (build-system meson-build-system)
+    (arguments
+     `(#:phases
+       (modify-phases %standard-phases
+         (add-after 'unpack 'disable-icon-cache
+           (lambda _
+             (setenv "DESTDIR" "/")
+             #t)))))
+    (inputs
+     `(("glib" ,glib)
+       ("gtk" ,gtk+)
+       ("libgee" ,libgee)))
+    (native-inputs
+     `(("gettext" ,gettext-minimal)
+       ("gobject-introspection" ,gobject-introspection)
+       ("pkg-config" ,pkg-config)
+       ("vala" ,vala)))
+    (home-page "https://github.com/elementary/granite")
+    (synopsis "Library that extends GTK with common widgets and utilities")
+    (description "Granite is a companion library for GTK+ and GLib.  Among other
+things, it provides complex widgets and convenience functions designed for use
+in apps built for the Pantheon desktop.")
+    (license license:lgpl3+)))
+
 (define-public appstream
   (package
     (name "appstream")
