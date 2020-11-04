@@ -6,14 +6,6 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
 
 ** Proposed packages 🚚📦📨
 
-*** [[proposed/esbuild.scm][esbuild 0.8.0]]
-#+HTML: <details>
-#+HTML: <summary>Bundler and transpiler for js & ts.</summary>
-
-- Issue tracker :: https://issues.guix.gnu.org/issue/44325
-
-#+HTML: </details>
-
 *** [[proposed/pantheon.scm][Appstream]]
 #+HTML: <details>
 #+HTML: <summary>The foundation to build software-center applications.</summary>
