@@ -28,21 +28,31 @@
 (define-public granite
   (package
     (name "granite")
-    (version "5.3.1")
+    (version "5.5.0")
     (source (origin
-              (method url-fetch)
-              (uri (string-append "https://github.com/elementary/granite/archive/"
-                                  version ".tar.gz"))
-              (sha256 (base32 "1dash69rii1zpr2smmc89gkwnl6jj4sfpkin9r1afy20xcf8fhrh"))))
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/elementary/granite")
+                    (commit version)))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "13qfhq8xndikk6kmybibs6a4ddyp6mhvbsp2yy4qr7aiiyxf7mna"))))
     (build-system meson-build-system)
+    (arguments
+     `(#:phases
+       (modify-phases %standard-phases
+         (add-after 'unpack 'disable-icon-cache
+           (lambda _
+             (setenv "DESTDIR" "/")
+             #t)))))
     (inputs
-     `(("gtk" ,gtk+)
-       ("gtk+-bin" ,gtk+ "bin"))) ; for gtk-update-icon-cache
+     `(("glib" ,glib)
+       ("gtk" ,gtk+)
+       ("libgee" ,libgee)))
     (native-inputs
      `(("gettext" ,gettext-minimal)
-       ("glib" ,glib)
        ("gobject-introspection" ,gobject-introspection)
-       ("libgee" ,libgee)
        ("pkg-config" ,pkg-config)
        ("vala" ,vala)))
     (home-page "https://github.com/elementary/granite")
