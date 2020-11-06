@@ -96,7 +96,9 @@ Here is a directory of packages I've contributed to Guix.
 #+HTML: <summary>A programming language centered around gobject.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala" alt="GNU Guix package for vala"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/vala-0.48.6/
-- Issue tracker :: https://issues.guix.gnu.org/41639
+- Issues ::
+  + https://issues.guix.gnu.org/41639
+  + https://issues.guix.gnu.org/44474
 #+HTML: </details>
 
 *** [[contributed/vala-language-server.scm][vala-language-server]]
@@ -104,7 +106,9 @@ Here is a directory of packages I've contributed to Guix.
 #+HTML: <summary>Code intelligence for the Vala language.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala-language-server"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala-language-server" alt="GNU Guix package for vala-language-server"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
-- Issue tracker :: https://issues.guix.gnu.org/41639
+- Issues ::
+  + https://issues.guix.gnu.org/41639
+  + https://issues.guix.gnu.org/44474
 #+HTML: </details>
 *** [[contributed/vlang.scm][v]]
 #+HTML: <details>
