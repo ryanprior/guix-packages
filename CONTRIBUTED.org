@@ -130,5 +130,6 @@ Here is a directory of packages I've contributed to Guix.
 - Issues ::
   + https://issues.guix.gnu.org/issue/43840
   + https://issues.guix.gnu.org/issue/44325
+  + https://issues.guix.gnu.org/issue/44475
 #+HTML: </details>
 
