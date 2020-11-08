@@ -91,11 +91,11 @@ Here is a directory of packages I've contributed to Guix.
   | https://issues.guix.gnu.org/issue/41940 | upgrade to 0.8pre6         |
   | https://issues.guix.gnu.org/issue/43526 | upgrade to 0.8.0           |
 #+HTML: </details>
-*** [[contributed/vala-language-server.scm][vala-0.48]]
+*** [[contributed/vala-language-server.scm][vala-0.50]]
 #+HTML: <details>
 #+HTML: <summary>A programming language centered around gobject.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala" alt="GNU Guix package for vala"></a></summary>
 
-- Package :: https://guix.gnu.org/packages/vala-0.48.6/
+- Package :: https://guix.gnu.org/packages/vala-0.50.1/
 - Issues ::
   + https://issues.guix.gnu.org/41639
   + https://issues.guix.gnu.org/44474
