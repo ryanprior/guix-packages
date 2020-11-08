@@ -105,7 +105,7 @@ Here is a directory of packages I've contributed to Guix.
 #+HTML: <details>
 #+HTML: <summary>Code intelligence for the Vala language.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=vala-language-server"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=vala-language-server" alt="GNU Guix package for vala-language-server"></a></summary>
 
-- Package :: https://guix.gnu.org/packages/vala-language-server-0.48/
+- Package :: https://guix.gnu.org/packages/vala-language-server-0.48.1/
 - Issues ::
   + https://issues.guix.gnu.org/41639
   + https://issues.guix.gnu.org/44474
