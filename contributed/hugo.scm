@@ -38,7 +38,7 @@ representation suitable for computing diffs.")
 (define-public esbuild
   (package
     (name "esbuild")
-    (version "0.8.0")
+    (version "0.8.4")
     (source
      (origin
        (method git-fetch)
@@ -48,7 +48,7 @@ representation suitable for computing diffs.")
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "17qzmadjixjivwbxbj20683j3n6igk7bx7v4k5bs2rqfvigdx2ps"))
+         "0aaqyfnl4dncrpw8n2sqkkavx7ki7i2r9pdi82pp9syql3b5495y"))
        (modules '((guix build utils)))
        (snippet
         '(begin
