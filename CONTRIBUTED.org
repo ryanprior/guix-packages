@@ -97,6 +97,7 @@ Here is a directory of packages I've contributed to Guix.
 
 - Package :: https://guix.gnu.org/packages/vala-0.50.1/
 - Issues ::
+  + https://issues.guix.gnu.org/44757
   + https://issues.guix.gnu.org/41639
   + https://issues.guix.gnu.org/44474
 #+HTML: </details>
