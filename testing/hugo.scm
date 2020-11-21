@@ -5,6 +5,7 @@
   #:use-module (gnu packages golang)
   #:use-module (gnu packages protobuf)
   #:use-module (gnu packages rpc)
+  #:use-module (gnu packages syncthing)
   #:use-module (gnu packages version-control)
   #:use-module (gnu packages web)
   #:use-module (guix build-system go)
