@@ -2,9 +2,11 @@
 
 (define-module (testing fossa)
   #:use-module (gnu packages base)
+  #:use-module (gnu packages check)
   #:use-module (gnu packages golang)
   #:use-module (guix build-system go)
   #:use-module (testing hugo)
+  #:use-module (testing summon)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages))
