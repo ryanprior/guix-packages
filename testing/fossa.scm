@@ -228,6 +228,37 @@ behavior-driven development.")
      "This package extends the standard golang testing system with plugins.")
     (license license:expat)))
 
+(define-public go-github-com-aphistic-golf
+  (let ((commit "02c07f170c5a8a0300a199a10bb04a55c721c017")
+        (revision "0"))
+    (package
+      (name "go-github-com-aphistic-golf")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/aphistic/golf")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "1qixab9bb29wqbr4nc5j3g25hq1j7am93f181rkj7a4qacncx763"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/aphistic/golf"
+         ;; tests may be broken
+         #:tests? #f))
+      (native-inputs
+       `(("go-github-com-aphistic-sweet@0.3.0" ,go-github-com-aphistic-sweet)))
+      (propagated-inputs
+       `(("go-github-com-google-uuid@1.1.1" ,go-github-com-google-uuid)))
+      (home-page "https://github.com/aphistic/golf")
+      (synopsis "Graylog log client for golang.")
+      (description
+       "This is a client library to send messages in the Graylog Extended Log Format.")
+      (license license:expat))))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
