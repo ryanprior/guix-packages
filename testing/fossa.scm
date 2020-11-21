@@ -75,6 +75,35 @@ Features include:
 from the Testify library.")
     (license license:expat)))
 
+(define-public go-github-com-apex-logs
+  (package
+    (name "go-github-com-apex-logs")
+    (version "0.9.23")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/apex/logs")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0dm4bqwnjlb5xgpym3qwmn3gxr05p29fjd6i8vdbc34cj6lyc35h"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/apex/logs"
+       ;;; Tests require network.
+       #:tests? #f))
+    (native-inputs
+     `(("go-github-com-stretchr-testify@1.6.1" ,go-github-com-stretchr-testify-1.6)
+       ("go-github-com-tj-assert@0.0.3" ,go-github-com-tj-assert)))
+    (home-page "https://github.com/apex/logs")
+    (synopsis "Client library for the Apex Logs web service.")
+    (description
+     "This library provides a client interface to the Apex Logs structured log
+management product.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
