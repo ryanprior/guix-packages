@@ -278,9 +278,9 @@ behavior-driven development.")
      '(#:import-path "github.com/apex/log"))
     (home-page "https://github.com/apex/log")
     (propagated-inputs
-     `(;; apex/logs
-       ;; aphistic/golf
-       ;; aphistic/sweet
+     `(("go-github-com-apex-logs@0.9.23" ,go-github-com-apex-logs)
+       ("go-github-com-aphistic-golf@0.0.0-0.02c07f1" ,go-github-com-aphistic-golf)
+       ("go-github-com-aphistic-sweet@0.3.0" ,go-github-com-aphistic-sweet)
        ("github.com/aws/aws-sdk-go" ,go-github-com-aws-sdk)
        ;; aybabtme/rgbterm
        ("go-github-com-fatih-color@1.8.0" ,go-github-com-fatih-color)
