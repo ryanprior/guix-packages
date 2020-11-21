@@ -167,6 +167,37 @@ tests written in an expressive style typical of the behavior driven
 development (BDD) testing methodology.")
     (license license:expat)))
 
+(define-public go-github-com-onsi-gomega
+  (package
+    (name "go-github-com-onsi-gomega")
+    (version "1.10.3")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/onsi/gomega")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1jvp5wlny86ncsqak5rz70qfn61y3ajc64w0hrj4840zgh90zb06"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/onsi/gomega"))
+    (propagated-inputs
+     `(("go-google-golang-org-protobuf@1.25.0" ,go-google-golang-org-protobuf)
+       ("go-github-com-onsi-ginkgo" ,go-github-com-onsi-ginkgo-source)
+       ("go-gopkg-in-yaml-v2@2.2.2" ,go-gopkg-in-yaml-v2)
+       ("go-golang-org-x-net@0.0.0-4.ba9fcec" ,go-golang-org-x-net)
+       ("go-golang-org-x-xerrors@0.0.0-0.5ec99f8" ,go-golang-org-x-xerrors)))
+    (home-page "http://onsi.github.io/gomega/")
+    (synopsis "Matcher library for golang.")
+    (description
+     "This library provides functions that match structured data against
+various types of patterns.  It is part of the Ginkgo framework for
+behavior-driven development.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
