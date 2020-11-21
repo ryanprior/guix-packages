@@ -104,6 +104,34 @@ from the Testify library.")
 management product.")
     (license license:expat)))
 
+(define-public go-github-com-nxadm-tail
+  (package
+    (name "go-github-com-nxadm-tail")
+    (version "1.4.5")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/nxadm/tail")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "034smp88zi8l8pa9h45q64z4x8waf411s46ds3pkh5fpvgpxlyg6"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/nxadm/tail"))
+    (propagated-inputs
+     `(("go-github-com-fsnotify-fsnotify@1.4.9" ,go-github-com-fsnotify-fsnotify)
+       ("go-golang-org-x-sys@0.0.0-7.0598657" ,go-golang-org-x-sys)
+       ("go-gopkg.in-tomb.v2@0.0.0-0.d5d1b58" ,go-gopkg.in-tomb.v2)))
+    (home-page "https://github.com/nxadm/tail")
+    (synopsis "Library for reading from continuously appended log files.")
+    (description
+     "This library provides facilities for continuously reading and processing
+data as it as appended to a log file.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
