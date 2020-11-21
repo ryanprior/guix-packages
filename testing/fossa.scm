@@ -198,6 +198,36 @@ various types of patterns.  It is part of the Ginkgo framework for
 behavior-driven development.")
     (license license:expat)))
 
+(define-public go-github-com-aphistic-sweet
+  (package
+    (name "go-github-com-aphistic-sweet")
+    (version "0.3.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/aphistic/sweet")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1irr6gdy2dj6ysla84rhk2lhn8i00yzn0gq6q7mqpx3rka5lxrv2"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/aphistic/sweet"))
+    (propagated-inputs
+     `(("go-github-com-mattn-go-colorable@0.0.0-0.efa5899" ,go-github-com-mattn-go-colorable)
+       ("go-github-com-mgutz-ansi@0.0.0-0.9520e82" ,go-github-com-mgutz-ansi)
+       ("go-github-com-onsi-gomega@1.10.3" ,go-github-com-onsi-gomega)
+       ("go-github-com-mattn-go-isatty@0.0.11" ,go-github-com-mattn-go-isatty)
+       ("go-github-com-sergi-go-diff@1.1.0" ,go-github-com-sergi-go-diff)
+       ("go-golang-org-x-crypto@0.0.0-5.2aa609c" ,go-golang-org-x-crypto)))
+    (home-page "https://github.com/aphistic/sweet")
+    (synopsis "Pluggable test runner for golang.")
+    (description
+     "This package extends the standard golang testing system with plugins.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
