@@ -11,6 +11,42 @@
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages))
 
+(define-public go-github-com-stretchr-testify-1.6
+  (package
+    (name "go-github-com-stretchr-testify")
+    (version "1.6.1")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/stretchr/testify")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1yhiqqzjvi63pf01rgzx68gqkkvjx03fvl5wk30br5l6s81s090l"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/stretchr/testify"))
+    (propagated-inputs
+     `(("github.com/davecgh/go-spew" ,go-github-com-davecgh-go-spew)
+       ("github.com/pmezard/go-difflib" ,go-github-com-pmezard-go-difflib)
+       ("github.com/stretchr/objx" ,go-github-com-stretchr-objx)
+       ("go-gopkg-in-yaml-v3@3" ,go-gopkg-in-yaml-v3)))
+    (home-page "https://github.com/stretchr/testify")
+    (synopsis "Go helper library for tests and invariant checking")
+    (description "This package provide many tools for testifying that your
+code will behave as you intend.
+
+Features include:
+@itemize
+@item Easy assertions
+@item Mocking
+@item HTTP response trapping
+@item Testing suite interfaces and functions.
+@end itemize")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
