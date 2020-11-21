@@ -47,6 +47,34 @@ Features include:
 @end itemize")
     (license license:expat)))
 
+(define-public go-github-com-tj-assert
+  (package
+    (name "go-github-com-tj-assert")
+    (version "0.0.3")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/tj/assert")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1j5swk3fjq1h5fpqkipddz2ccnbidr7qrpm5dpdaflg9q5jnc673"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/tj/assert"))
+    (propagated-inputs
+     `(("go-github-com-davecgh-go-spew@1.1.1" ,go-github-com-davecgh-go-spew)
+       ("go-github-com-stretchr-testify@1.6.1" ,go-github-com-stretchr-testify-1.6)
+       ("go-gopkg-in-yaml-v3@3" ,go-gopkg-in-yaml-v3)))
+    (home-page "https://github.com/tj/assert")
+    (synopsis "Assertion helper library for golang.")
+    (description
+     "This library provides a facility to make assertions for testing, copied
+from the Testify library.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
