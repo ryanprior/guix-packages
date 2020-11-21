@@ -132,6 +132,41 @@ management product.")
 data as it as appended to a log file.")
     (license license:expat)))
 
+(define-public go-github-com-onsi-ginkgo-source
+  (package
+    (name "go-github-com-onsi-ginkgo")
+    (version "1.14.2")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/onsi/ginkgo")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1pvslbfrpzc8n99x33gyvk9aaz6lvdyyg6cj3axjzkyjxmh6d5kc"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/onsi/ginkgo"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (propagated-inputs
+     `(("go-github-com-fsnotify-fsnotify@1.4.9" ,go-github-com-fsnotify-fsnotify)
+       ("go-github-com-nxadm-tail@1.4.5" ,go-github-com-nxadm-tail)
+       ("go-golang-org-x-sys@0.0.0-7.0598657" ,go-golang-org-x-sys)
+       ("go-golang-org-x-text@0.3.2" ,go-golang-org-x-text)))
+    (home-page "onsi.github.io/ginkgo/")
+    (synopsis "Behavior-driven development framework for golang.")
+    (description
+     "This framework extends golang's testing facilities with behavior-driven
+tests written in an expressive style typical of the behavior driven
+development (BDD) testing methodology.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
