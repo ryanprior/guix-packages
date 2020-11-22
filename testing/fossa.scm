@@ -362,6 +362,32 @@ supports 192-bit UUIDs and 128-bit RFC-4122 V4 UUID strings.")
 Amazon IAM.")
     (license license:expat)))
 
+(define-public go-github-com-tj-go-buffer
+  (package
+    (name "go-github-com-tj-go-buffer")
+    (version "1.2.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/tj/go-buffer")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0xs8dz8m5qy1n80qcpalvfzdjxdr7djmagmhp7mm87rmjkwn05lk"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/tj/go-buffer"))
+    (propagated-inputs
+     `(("go-github-com-tj-assert@0.0.3" ,go-github-com-tj-assert)))
+    (home-page "https://github.com/tj/go-buffer")
+    (synopsis "Buffer library for batching I/O.")
+    (description
+     "This library provides a generic golang buffering facility for batching
+expensive I/O, such as writing logs.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
