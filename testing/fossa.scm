@@ -309,6 +309,30 @@ in terminals that support many colors.")
 format that is easy to read and to grep.")
     (license license:expat)))
 
+(define-public go-github-com-rogpeppe-fastuuid
+  (package
+    (name "go-github-com-rogpeppe-fastuuid")
+    (version "1.2.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/rogpeppe/fastuuid")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "028acdg63zkxpjz3l639nlhki2l0canr2v5jglrmwa1wpjqcfff8"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/rogpeppe/fastuuid"))
+    (home-page "https://github.com/rogpeppe/fastuuid")
+    (synopsis "Fast generator for 192-bit UUIDs.")
+    (description
+     "This golang library rapidly generates sequential unique identifiers.  It
+supports 192-bit UUIDs and 128-bit RFC-4122 V4 UUID strings.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
