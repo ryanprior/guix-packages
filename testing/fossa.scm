@@ -259,6 +259,32 @@ behavior-driven development.")
        "This is a client library to send messages in the Graylog Extended Log Format.")
       (license license:expat))))
 
+(define-public go-github-com-aybabtme-rgbterm
+  (let ((commit "cc83f3b3ce5911279513a46d6d3316d67bedaa54")
+        (revision "0"))
+    (package
+      (name "go-github-com-aybabtme-rgbterm")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/aybabtme/rgbterm")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "0wvmxvjn64968ikvnxrflb1x8rlcwzpfl53fzbxff2axbx9lq50q"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/aybabtme/rgbterm"))
+      (home-page "https://godoc.org/github.com/aybabtme/rgbterm")
+      (synopsis "Colorized text package for golang.")
+      (description
+       "This library provides convenience functions to make use of color codes
+in terminals that support many colors.")
+      (license license:expat))))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
