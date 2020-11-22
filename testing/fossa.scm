@@ -419,6 +419,36 @@ expensive I/O, such as writing logs.")
 ElasticSearch API.")
       (license license:expat))))
 
+(define-public go-github-com-tj-go-kinesis
+  (let ((commit "08b17f58cb1b2ace14a61c0619a6bf2e2245ccd6")
+        (revision "0"))
+    (package
+      (name "go-github-com-tj-go-kinesis")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/tj/go-kinesis")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "108c6p5j6rhhc2cnc2v5368yfsw73y6lzlvz02vpvvjph8rhmld4"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/tj/go-kinesis"))
+      (propagated-inputs
+       `(("go-github-com-apex-log@1.9.0" ,go-github-com-apex-log) ;; circular dependency, yikes!
+         ("go-github-com-aws-sdk@1.35.2" ,go-github-com-aws-sdk)
+         ("go-github-com-jpillora-backoff@0.0.0-0.06c7a16" ,go-github-com-jpillora-backoff)))
+      (home-page "https://github.com/tj/go-kinesis")
+      (synopsis "Library to produces batches of data to send to AWS Kinesis.")
+      (description
+       "This library facilitates sending batches of items to AWS Kinesis for
+processing to reduce I/O overhead.")
+      (license license:expat))))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
