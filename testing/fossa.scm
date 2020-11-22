@@ -333,6 +333,35 @@ format that is easy to read and to grep.")
 supports 192-bit UUIDs and 128-bit RFC-4122 V4 UUID strings.")
     (license license:expat)))
 
+;; TODO this package is deprecated upstream, is there a way to mark that in
+;; Guix?
+(define-public go-github-com-smartystreets-go-aws-auth
+  (package
+    (name "go-github-com-smartystreets-go-aws-auth")
+    (version "1.0.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/smartystreets/go-aws-auth")
+             (commit version)))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "07lri72f5ywi6h8pd9yf34mv3mqwy2pfdzc78wr14sk8v7i77bfh"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/smartystreets/go-aws-auth"))
+    (propagated-inputs
+     `(("go-github.com-smartystreets-assertions@1.8.1" ,go-github.com-smartystreets-assertions)
+       ("go-github.com-smartystreets-gunit@1.0.0" ,go-github.com-smartystreets-gunit)))
+    (home-page "https://github.com/smartystreets/go-aws-auth")
+    (synopsis "Tool to sign requests to Amazon Web Services.")
+    (description
+     "This library provides golang helpers to sign requests to AWS using
+Amazon IAM.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
