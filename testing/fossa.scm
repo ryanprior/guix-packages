@@ -285,6 +285,30 @@ behavior-driven development.")
 in terminals that support many colors.")
       (license license:expat))))
 
+(define-public go-github-com-go-logfmt-logfmt
+  (package
+    (name "go-github-com-go-logfmt-logfmt")
+    (version "0.5.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/go-logfmt/logfmt")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "0mcvgimnf6a15hhpmmv42kzbsn618f0zi2j3np49xkq1113d7yyj"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/go-logfmt/logfmt"))
+    (home-page "https://github.com/go-logfmt/logfmt")
+    (synopsis "Structured data library for plaintext logs in golang.")
+    (description
+     "This package provides marshalling and unmarshalling of data into a log
+format that is easy to read and to grep.")
+    (license license:expat)))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
