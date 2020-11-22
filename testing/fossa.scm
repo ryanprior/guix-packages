@@ -388,6 +388,37 @@ Amazon IAM.")
 expensive I/O, such as writing logs.")
     (license license:expat)))
 
+(define-public go-github-com-tj-go-elastic
+  (let ((commit "36157cbbebc210c55c1c8a82c8655ccbb9f41aa0")
+        (revision "0"))
+    (package
+      (name "go-github-com-tj-go-elastic")
+      (version (git-version "0.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/tj/go-elastic")
+               (commit commit)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "1r94vc4hbfvqvjz74n4mvsw4dy3vbyzlivb90kyn8vn76a4wqk69"))))
+      (build-system go-build-system)
+      (arguments
+       '(#:import-path "github.com/tj/go-elastic"
+         ;; tests require network
+         #:tests? #f))
+      (propagated-inputs
+       `(("go-github-com-smartystreets-go-aws-auth@1.0.0" ,go-github-com-smartystreets-go-aws-auth)
+         ("go-github-com-stretchr-testify@1.5.1" ,go-github-com-stretchr-testify)))
+      (home-page "https://github.com/tj/go-elastic")
+      (synopsis "ElasticSearch client for golang.")
+      (description
+       "This package provides a lightweight golang client for a subset of the
+ElasticSearch API.")
+      (license license:expat))))
+
 (define-public go-github-com-apex-log
   (package
     (name "go-github-com-apex-log")
