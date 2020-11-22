@@ -472,21 +472,21 @@ processing to reduce I/O overhead.")
        ("go-github-com-aphistic-golf@0.0.0-0.02c07f1" ,go-github-com-aphistic-golf)
        ("go-github-com-aphistic-sweet@0.3.0" ,go-github-com-aphistic-sweet)
        ("github.com/aws/aws-sdk-go" ,go-github-com-aws-sdk)
-       ;; aybabtme/rgbterm
+       ("go-github-com-aybabtme-rgbterm@0.0.0-0.cc83f3b" ,go-github-com-aybabtme-rgbterm)
        ("go-github-com-fatih-color@1.8.0" ,go-github-com-fatih-color)
-       ;; go-logfmt/logfmt
+       ("go-github-com-go-logfmt-logfmt@0.5.0" ,go-github-com-go-logfmt-logfmt)
        ("github.com/golang/protobuf" ,go-github-com-golang-protobuf)
        ("go-github-com-google-uuid@1.1.1" ,go-github-com-google-uuid)
        ("go-github-com-jpillora-backoff@0.0.0-0.06c7a16" ,go-github-com-jpillora-backoff)
        ("go-github-com-kr-pretty@0.2.0" ,go-github-com-kr-pretty)
        ("go-github-com-mattn-go-colorable@0.0.0-0.efa5899" ,go-github-com-mattn-go-colorable)
        ("go-github-com-pkg-errors@0.9.1" ,go-github-com-pkg-errors)
-       ;; rogpeppe/fastuuid
-       ;; smartystreets/go-aws-auth
+       ("go-github-com-rogpeppe-fastuuid@1.2.0" ,go-github-com-rogpeppe-fastuuid)
+       ("go-github-com-smartystreets-go-aws-auth@1.0.0" ,go-github-com-smartystreets-go-aws-auth)
        ("go-github.com-smartystreets-gunit@1.0.0" ,go-github.com-smartystreets-gunit)
        ("go-github-com-stretchr-testify@1.5.1" ,go-github-com-stretchr-testify)
-       ;; tj/assert
-       ;; tj/go-buffer
+       ("go-github-com-tj-assert@0.0.3" ,go-github-com-tj-assert)
+       ("go-github-com-tj-go-buffer@1.2.0" ,go-github-com-tj-go-buffer)
        ;; tj/go-elastic
        ;; tj/go-kinesis
        ;; tj/go-spin
