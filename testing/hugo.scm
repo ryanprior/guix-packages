@@ -159,8 +159,12 @@ transforms one JSON document into another through a JMESPath expression.")
          "1ky5lw2s2zpslnnqcs6hgsrwvwbxwgflb5jwf16dd4aga3vrg10c"))))
     (build-system go-build-system)
     (arguments
-     '(#:import-path "github.com/aws/aws-sdk-go/aws"
-       #:unpack-path "github.com/aws/aws-sdk-go"))
+     '(#:import-path "github.com/aws/aws-sdk-go"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
     (propagated-inputs
      `(("go-github-com-go-sql-driver-mysql" ,go-github-com-go-sql-driver-mysql)
        ("go-github-com-jmespath-go-jmespath" ,go-github-com-jmespath-go-jmespath)
