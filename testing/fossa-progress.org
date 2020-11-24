@@ -46,8 +46,8 @@
     * [X] github.com/stretchr/testify@1.6.1
     * [X] github.com/tj/assert@0.0.3
     * [X] github.com/tj/go-buffer@1.1.0
-    * [ ] github.com/tj/go-elastic@0.0.0-20171221160941-36157cbbebc2
-    * [ ] github.com/tj/go-kinesis@0.0.0-20171128231115-08b17f58cb1b
+    * [X] github.com/tj/go-elastic@0.0.0-20171221160941-36157cbbebc2
+    * [X] github.com/tj/go-kinesis@0.0.0-20171128231115-08b17f58cb1b
     * [ ] github.com/tj/go-spin@1.1.0
     * [X] golang.org/x/net@0.0.0-20190620200207-3b0461eec859 // indirect
     * [X] golang.org/x/text@0.3.2 // indirect

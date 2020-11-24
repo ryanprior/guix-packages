@@ -468,7 +468,7 @@ with tracing, debugging and testing.")
       (arguments
        '(#:import-path "github.com/tj/go-kinesis"))
       (propagated-inputs
-       `(("go-github-com-apex-log@1.9.0" ,go-github-com-apex-log) ;; circular dependency, yikes!
+       `(("go-github-com-apex-log@1.9.0" ,go-github-com-apex-log-source)
          ("go-github-com-aws-sdk@1.35.2" ,go-github-com-aws-sdk)
          ("go-github-com-jpillora-backoff@0.0.0-0.06c7a16" ,go-github-com-jpillora-backoff)))
       (home-page "https://github.com/tj/go-kinesis")
@@ -516,8 +516,8 @@ processing to reduce I/O overhead.")
        ("go-github-com-stretchr-testify@1.5.1" ,go-github-com-stretchr-testify)
        ("go-github-com-tj-assert@0.0.3" ,go-github-com-tj-assert)
        ("go-github-com-tj-go-buffer@1.2.0" ,go-github-com-tj-go-buffer)
-       ;; tj/go-elastic
-       ;; tj/go-kinesis
+       ("go-github-com-tj-go-elastic@0.0.0-0.36157cb" ,go-github-com-tj-go-elastic)
+       ("go-github-com-tj-go-kinesis@0.0.0-0.08b17f5" ,go-github-com-tj-go-kinesis)
        ;; tj/go-spin
        ("go-golang-org-x-net@0.0.0-4.ba9fcec" ,go-golang-org-x-net)
        ("go-golang-org-x-text@0.3.2" ,go-golang-org-x-text)
