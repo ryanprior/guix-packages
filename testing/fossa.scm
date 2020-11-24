@@ -419,6 +419,35 @@ expensive I/O, such as writing logs.")
 ElasticSearch API.")
       (license license:expat))))
 
+(define-public go-github-com-apex-log-source
+  (package
+    (name "go-github-com-apex-log-source")
+    (version "1.9.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/apex/log")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "1ibqkncnb8wcwilg2kyfyl5541g69rg551iy6m61q6iwdn5vfhi2"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:import-path "github.com/apex/log"
+       ;; Source-only package
+       #:tests? #f
+       #:phases
+       (modify-phases %standard-phases
+         (delete 'build))))
+    (home-page "https://github.com/apex/log")
+    (synopsis "Structured logging library for golang.")
+    (description
+     "This library provides structured logging facilities for golang to help
+with tracing, debugging and testing.")
+    (license license:expat)))
+
 (define-public go-github-com-tj-go-kinesis
   (let ((commit "08b17f58cb1b2ace14a61c0619a6bf2e2245ccd6")
         (revision "0"))
