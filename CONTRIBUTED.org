@@ -135,6 +135,7 @@ Here is a directory of packages I've contributed to Guix.
 
 - Package :: https://guix.gnu.org/en/packages/esbuild-0.8.4
 - Issues ::
+  + https://issues.guix.gnu.org/issue/44897
   + https://issues.guix.gnu.org/issue/44879
   + https://issues.guix.gnu.org/issue/44859
   + https://issues.guix.gnu.org/issue/44812
