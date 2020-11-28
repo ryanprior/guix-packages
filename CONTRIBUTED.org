@@ -7,7 +7,7 @@ Here is a directory of packages I've contributed to Guix.
 #+HTML: <summary>A programming language interpreter<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=ruby"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=ruby" alt="GNU Guix package for ruby"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/ruby-2.7.2/
-- Issue tracker :: 
+- Issue tracker ::
   + https://issues.guix.gnu.org/issue/41036
   + https://issues.guix.gnu.org/issue/44300
 #+HTML: </details>
@@ -143,4 +143,26 @@ Here is a directory of packages I've contributed to Guix.
   + https://issues.guix.gnu.org/issue/44475
   + https://issues.guix.gnu.org/issue/44325
   + https://issues.guix.gnu.org/issue/43840
+#+HTML: </details>
+
+*** Various golang libraries
+**** [[contributed/hugo.scm][golibsass]]
+#+HTML: <details>
+#+HTML: <summary>Golang bindings for libsass.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=go-github-com-bep-golibsass"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=go-github-com-bep-golibsass" alt="GNU Guix package for go-github-com-bep-golibsass"></a></summary>
+
+- Issue :: https://issues.guix.gnu.org/43937
+#+HTML: </details>
+
+**** [[contributed/hugo.scm][frankban/quicktest]]
+#+HTML: <details>
+#+HTML: <summary>Testing library.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=go-github-com-frankban-quicktest"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=go-github-com-frankban-quicktest" alt="GNU Guix package for go-github-com-frankban-quicktest"></a></summary>
+
+- Issue :: https://issues.guix.gnu.org/43937
+#+HTML: </details>
+
+**** [[contributed/hugo.scm][golang.org/x/xerrors]]
+#+HTML: <details>
+#+HTML: <summary>New error codes.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=go-golang-org-x-xerrors"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=go-golang-org-x-xerrors" alt="GNU Guix package for go-golang-org-x-xerrors"></a></summary>
+
+- Issue :: https://issues.guix.gnu.org/43937
 #+HTML: </details>
