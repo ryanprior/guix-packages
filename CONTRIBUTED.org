@@ -195,3 +195,9 @@ Here is a directory of packages I've contributed to Guix.
 - Issue :: https://issues.guix.gnu.org/43785
 #+HTML: </details>
 
+**** [[contributed/hugo.scm][github.com/aws/sdk-go]]
+#+HTML: <details>
+#+HTML: <summary>Amazon web SDK.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=go-github-com-aws-sdk"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=go-github-com-aws-sdk" alt="GNU Guix package for go-github-com-aws-sdk"></a></summary>
+
+- Issue :: https://issues.guix.gnu.org/43785
+#+HTML: </details>
