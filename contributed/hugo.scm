@@ -187,3 +187,29 @@ tests.")
     (description
      "This package provides SCSS compiler support for Go applications.")
     (license license:expat)))
+
+(define-public go-github-com-go-sql-driver-mysql
+  (package
+    (name "go-github-com-go-sql-driver-mysql")
+    (version "1.5.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/go-sql-driver/mysql")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32
+         "11x0m9yf3kdnf6981182r824psgxwfaqhn3x3in4yiidp0w0hk3v"))))
+    (build-system go-build-system)
+    (arguments
+     '(#:tests? #f ;; tests require a network connection
+       #:import-path "github.com/go-sql-driver/mysql"))
+    (home-page "https://github.com/go-sql-driver/mysql")
+    (synopsis "MySQL driver for golang")
+    (description
+     "This is a pure Go implementaton of the MySQL API, compatible with
+golang's database/sql package.")
+    (license license:mpl2.0)))
+
