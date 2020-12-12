@@ -152,6 +152,13 @@ Here is a directory of packages I've contributed to Guix.
 - Issue :: https://issues.guix.gnu.org/44978
 #+HTML: </details>
 
+*** [[contributed/vlang.scm][tiny-bignum]]
+#+HTML: <details>
+#+HTML: <summary>Tiny embeddable arbitrary-precision numerical library.<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=tiny-bignum"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=tiny-bignum" alt="GNU Guix package for tiny-bignum"></a></summary>
+
+- Issue :: https://issues.guix.gnu.org/44978
+#+HTML: </details>
+
 *** Various golang libraries
 **** [[contributed/hugo.scm][golibsass]]
 #+HTML: <details>
