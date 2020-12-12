@@ -10,6 +10,26 @@
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages))
 
+(define-public cjson
+  (package
+    (name "cjson")
+    (version "1.7.14")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/DaveGamble/cJSON")
+                    (commit (string-append "v" version))))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32 "1rlnailhjm180zb6pc17jwphjwivw8kfpqgixjfgq4iyryq46sah"))))
+    (build-system cmake-build-system)
+    (arguments
+     `(#:configure-flags '("-DENABLE_CJSON_UTILS=On")))
+    (home-page "https://github.com/DaveGamble/cJSON")
+    (synopsis "JSON parser written in ANSI C")
+    (description "This library provides a portable embeddable JSON parser.")
+    (license license:expat)))
+
 (define-public v
   (package
    (name "v")
