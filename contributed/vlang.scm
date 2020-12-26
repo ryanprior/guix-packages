@@ -6,6 +6,7 @@
   #:use-module (gnu packages gcc)
   #:use-module (gnu packages glib)
   #:use-module (guix build-system gnu)
+  #:use-module (guix build-system cmake)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages))
