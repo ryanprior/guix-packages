@@ -4,6 +4,9 @@
     "version": "1.0.0",
     "source": "https://github.com/antonmedv/countdown/archive/v1.0.0.tar.gz",
     "build-system": "go",
+    "arguments": {
+      "import-path": "github.com/antonmedv/countdown"
+    },
     "home-page": "https://github.com/antonmedv/countdown",
     "synopsis": "Counts to zero with a text user interface.",
     "description": "Countdown provides a fancy text display while it counts down to zero from a starting point you provide.  The user can pause and resume the countdown from the text user interface.",
