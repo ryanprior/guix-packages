@@ -2,14 +2,16 @@
 
 Here is a directory of packages I've contributed to Guix.
 
-*** [[contributed/ruby.scm][Ruby 2.7.2]]
+*** [[contributed/ruby.scm][Ruby 2.7.2]] & 3.0.0
 #+HTML: <details>
 #+HTML: <summary>A programming language interpreter<br/><a href="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=project_versions&name=ruby"><img src="https://repology.org/tools/project-by?repo=gnuguix&name_type=binname&target_page=badge_version_for_repo&name=ruby" alt="GNU Guix package for ruby"></a></summary>
 
 - Package :: https://guix.gnu.org/packages/ruby-2.7.2/
+- Package :: https://guix.gnu.org/packages/ruby-3.0.0/
 - Issue tracker ::
-  + https://issues.guix.gnu.org/issue/41036
-  + https://issues.guix.gnu.org/issue/44300
+  + https://issues.guix.gnu.org/45434
+  + https://issues.guix.gnu.org/41036
+  + https://issues.guix.gnu.org/44300
 #+HTML: </details>
 
 *** [[contributed/visidata.scm][VisiData]]
