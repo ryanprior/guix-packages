@@ -1,0 +1,50 @@
+From 64e7c548843c7938fcfa6b697108d28aa26f4d69 Mon Sep 17 00:00:00 2001
+From: Ryan Prior <rprior@protonmail.com>
+Date: Thu, 31 Dec 2020 02:31:38 -0600
+Subject: [PATCH] v.util: accomodate reproducible build environments like guix,
+ by not recompiling cmd/tools when mtime < 1024 (#7702)
+
+---
+ vlib/v/util/util.v | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+diff --git a/vlib/v/util/util.v b/vlib/v/util/util.v
+index 811b71585..1ed32bacf 100644
+--- a/vlib/v/util/util.v
++++ b/vlib/v/util/util.v
+@@ -179,7 +179,10 @@ pub fn should_recompile_tool(vexe string, tool_source string) bool {
+ 	if !os.exists(tool_exe) {
+ 		should_compile = true
+ 	} else {
+-		if os.file_last_mod_unix(tool_exe) <= os.file_last_mod_unix(vexe) {
++		mtime_vexe := os.file_last_mod_unix(vexe)
++		mtime_tool_exe := os.file_last_mod_unix(tool_exe)
++		mtime_tool_source := os.file_last_mod_unix(tool_source)
++		if mtime_tool_exe <= mtime_vexe {
+ 			// v was recompiled, maybe after v up ...
+ 			// rebuild the tool too just in case
+ 			should_compile = true
+@@ -192,10 +195,19 @@ pub fn should_recompile_tool(vexe string, tool_source string) bool {
+ 				should_compile = false
+ 			}
+ 		}
+-		if os.file_last_mod_unix(tool_exe) <= os.file_last_mod_unix(tool_source) {
++		if mtime_tool_exe <= mtime_tool_source {
+ 			// the user changed the source code of the tool, or git updated it:
+ 			should_compile = true
+ 		}
++		// GNU Guix and possibly other environments, have bit for bit reproducibility in mind,
++		// including filesystem attributes like modification times, so they set the modification
++		// times of executables to a small number like 0, 1 etc. In this case, we should not
++		// recompile even if other heuristics say that we should. Users in such environments,
++		// have to explicitly do: `v cmd/tools/vfmt.v`, and/or install v from source, and not
++		// use the system packaged one, if they desire to develop v itself.
++		if mtime_vexe < 1024 && mtime_tool_exe < 1024 {
++			should_compile = false
++		}
+ 	}
+ 	return should_compile
+ }
+-- 
+2.29.2
+
