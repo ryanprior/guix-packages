@@ -6,6 +6,13 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
 
 ** Proposed packages 🚚📦📨
 
+*** vlang 0.2
+#+HTML: <details>
+#+HTML: <summary>A big milestone for the young v compiler.</summary>
+
+- Issue tracker :: https://issues.guix.gnu.org/45601
+
+#+HTML: </details>
 *** [[proposed/pantheon.scm][Appstream]]
 #+HTML: <details>
 #+HTML: <summary>The foundation to build software-center applications.</summary>
