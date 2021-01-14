@@ -1,0 +1,9 @@
+#+TITLE: Miscellaneous
+
+Here's a Guile snippet for finding packages that use a certain build system, eg the ~ruby-build-system~:
+
+#+begin_example scheme
+$ ./pre-inst-env guile
+scheme@(guile-user)> (use-modules (guix build-system ruby) (gnu packages) (guix packages))
+scheme@(guile-user)> (fold-packages (lambda (package result) (if (eq? (package-build-system package) ruby-build-system) (cons (package-name package) result) result)) '())
+#+end_example
