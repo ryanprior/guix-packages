@@ -277,3 +277,23 @@ recursively, like @code{mkdir -p}.")
     (description "This package provides a nodejs API to remove directories
 recursively, like @code{rm -rf}.")
     (license license:expat)))
+
+(define-public node-glob
+  (package
+    (name "node-glob")
+    (version "7.1.6")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/isaacs/node-glob")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32 "1m4bkcbnya5kd8vj2k9r0g37lpg5fpwkdv25gziv8vgknvrph2gc"))))
+    (build-system node-build-system)
+    (home-page "https://github.com/isaacs/node-glob/")
+    (synopsis "File globbing for nodejs.")
+    (description
+     "This package provides file glob expansion for nodejs, as per @code{sh}.")
+    (license license:isc)))
