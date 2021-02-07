@@ -60,6 +60,7 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
 - [[testing/summon.scm][summon & summon-conjur]] are tools for automatic secrets management
   
   I wrote a detailed intro for these packages [[https://discuss.cyberarkcommons.org/t/summon-in-gnu-guix/999][on the CyberArk Commons forum for Conjur]].
+- A number of [[./testing/node.scm][node]] related packages
 ** Forbidden 📦😈📖
 *** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
 These packages allow you invoke a c compiler as ~cc~, helpful in certain build
