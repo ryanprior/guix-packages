@@ -3,6 +3,8 @@
 GNU Guix --- Functional package management for GNU
 Copyright © 2020 Ryan Prior <rprior@protonmail.com>
 
+#+html: <details>
+#+html: <summary>Copyright info</summary>
 This file is not part of GNU Guix.
 
 GNU Guix is free software; you can redistribute it and/or modify it under the
@@ -16,6 +18,7 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with GNU
 Guix. If not, see <http://www.gnu.org/licenses/>.
+#+html: </details>
 
 * Packages
 ** visidata
@@ -25,33 +28,23 @@ of a spreadsheet, the efficiency of the terminal, and the power of Python, into
 a lightweight utility which can handle millions of rows.
 
 - name :: visidata
-- version :: 1.5.2
+- version :: 2.2.1
 - home-page :: https://www.visidata.org/
 - synopsis :: Terminal spreadsheet multitool for discovering and arranging data
-- license ::
-  + license:gpl3
-  + license:expat
-    :COMMENT:
-    (visidata/vdtui.py)
-    :END:
+- license :: gpl3
 
 *** Source
-**** origin
-:PROPERTIES:
-:method:   url-fetch
-:base32-sha256-hash: 10adfyn4gkisvciqawgh2lakkhhnjjxiyp7mzbgcwkq1b3sigpf1
-:END:
-
-- uri ::
-#+name: uri
-#+begin_src guile
-(pypi-uri "visidata" version)
+#+begin_src scheme
+  (origin
+    (method url-fetch)
+    (uri (pypi-uri "visidata" version))
+    (sha256
+     (base32
+      "181klx7223q6a600k9iqxrfxpq5w73h1g2ks1cfsnmlv7i6s9v9f")))
 #+end_src
 
 *** Build system
-:PROPERTIES:
-:type: python-build-system
-:END:
+This package uses the ~python-build-system~.
 
 **** inputs
 | package name     | symbol           |
@@ -68,27 +61,26 @@ a lightweight utility which can handle millions of rows.
 | python-xlrd      | python-xlrd      |
 
 **** arguments
-
-#+name: #:tests?
-#+begin_src guile
-#f
+***** ~#:phases~
+#+begin_src scheme
+  (modify-phases %standard-phases
+    (replace 'check
+      (lambda* (#:key tests? #:allow-other-keys)
+        (when tests? (invoke "pytest"))
+        #t)))
 #+end_src
-* Guile Modules
-** gnu
-*** packages
-- visidata
-- databases
-- python-science
-- python-web
-- python-xyz
-- time
-- xml
-** guix
-*** build-system
-- python
-*** licenses
-:PROPERTIES:
-:prefix: license:
-:END:
-*** packages
 
+* Guile Modules
+#+begin_src scheme
+  (define-module (gnu packages visidata)
+    #:use-module (gnu packages check)
+    #:use-module (gnu packages time)
+    #:use-module (gnu packages python-web)
+    #:use-module (gnu packages python-xyz)
+    #:use-module (gnu packages xml)
+    #:use-module (guix build-system python)
+    #:use-module (guix build utils)
+    #:use-module (guix download)
+    #:use-module ((guix licenses) #:prefix license:)
+    #:use-module (guix packages))
+#+end_src
