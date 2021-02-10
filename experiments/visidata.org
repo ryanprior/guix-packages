@@ -47,18 +47,16 @@ a lightweight utility which can handle millions of rows.
 This package uses the ~python-build-system~.
 
 **** inputs
-| package name     | symbol           |
-|------------------+------------------|
-| python-dateutil  | python-dateutil  |
-| python-fonttools | python-fonttools |
-| python-h5py      | python-h5py      |
-| python-lxml      | python-lxml      |
-| python-openpyxl  | python-openpyxl  |
-| python-pandas    | python-pandas    |
-| python-psycopg2  | python-psycopg2  |
-| python-pyyaml    | python-pyyaml    |
-| python-requests  | python-requests  |
-| python-xlrd      | python-xlrd      |
+- python-dateutil
+- python-fonttools
+- python-h5py
+- python-lxml
+- python-openpyxl
+- python-pandas
+- python-psycopg2
+- python-pyyaml
+- python-requests
+- python-xlrd
 
 **** arguments
 ***** ~#:phases~
