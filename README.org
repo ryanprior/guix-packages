@@ -62,6 +62,7 @@ Browse the directory of packages I've contributed [[CONTRIBUTED.org][over here]]
   I wrote a detailed intro for these packages [[https://discuss.cyberarkcommons.org/t/summon-in-gnu-guix/999][on the CyberArk Commons forum for Conjur]].
 - A number of [[./testing/node.scm][node]] related packages
 - [[./testing/rome.scm][rome]] is a toolchain for building and testing JavaScript and TypeScript
+- [[./testing/comby.scm][comby]] rewrites code using a rule-based parser engine
 ** Forbidden 📦😈📖
 *** [[proposed/wrap-cc.scm][Wrappers for c compilers]]
 These packages allow you invoke a c compiler as ~cc~, helpful in certain build
