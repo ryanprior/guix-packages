@@ -15,3 +15,20 @@ scheme@(guile-user)> (fold-packages (lambda (package result) (if (eq? (package-b
 #+begin_src scheme
   (fold-service-types (lambda (s r) (cons (service-type-name s) r)) '())
 #+end_src
+
+*** Find all extensions for a service type:
+
+For a given service type, eg ~connman-service-type~, you can get its extensions:
+
+#+begin_src scheme
+  (service-type-extensions connman-service-type)
+#+end_src
+
+These do not have names or much human-readable metadata, but the targets are service-types which have names, so that may be more helpful:
+
+#+begin_src scheme
+  (map (compose service-type-name service-extension-target)
+       (service-type-extensions connman-service-type))
+#+end_src
+
+This is much more readable.
