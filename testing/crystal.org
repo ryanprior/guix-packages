@@ -29,3 +29,15 @@
   + [ ] ruby-graphviz-1.0.9
   + [ ] ruby-llvm-3.3.0.alpha
   + [ ] ruby-prof-0.13.0 (have 1.4.1)
+
+* Questions
+
+- Should we package these as standalone Guix packages or should they be hidden
+  ~crystal-bootstrap-*~ packages?
+- Is it preferable to have 160 bootstrap packages, one for each stage, or one
+  big bootstrap package with 160 ~build-*~ stages, or somewhere inbetween?
+- Each stage needs a different checkout of the git repository - can we
+  preserve info in ~.git~ such that we can checkout again during the build, or
+  do we want to have each checkout be an independent input to the package?
+- How best can we use Guile macros to clean up the large amount of code
+  implied by executing 160 stages of bootstrap logic?
