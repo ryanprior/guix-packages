@@ -3,6 +3,9 @@
   + [ ] ruby-1.9.3-p551
   + [ ] libevent-2.1.10-stable (have 2.1.11 - maybe compat?)
   + [ ] llvm-3.3 (already have 3.5.2)
+  + [X] llvm-3.9.1 (already have 3.5.2)
+  + [ ] pcl-1.12
+  + [X] llvm-3.5.2
 - Bootstrap Gem Dependencies
   + [ ] bundler-1.17.1 (have 2.1.4)
   + [ ] mime-types-1.25 (have 3.1)
