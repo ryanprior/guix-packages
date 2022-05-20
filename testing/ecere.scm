@@ -21,7 +21,7 @@
 (define-public ecere-sdk
   (package
    (name "ecere-sdk")
-   (version "0.44.15")
+   (version "53ec01de1c42cf342a35dc125a4fef01ffb5fced")
    (source
     (origin
      (method git-fetch)
@@ -29,52 +29,35 @@
            (url "https://github.com/ecere/ecere-sdk.git")
            (commit version)))
      (file-name (git-file-name name version))
-     (sha256 (base32 "0idxqihy17pxkxr9mkfi9lm4jkid64gxn1n87fyfcdv6y6vfsdq2"))))
+     (sha256 (base32 "1sm9c656a2zdls7whc63p6h68fwlrkpm44bnj3k4q50ln2vfchaa"))))
    (build-system gnu-build-system)
    (arguments
     `(#:tests? #f
-      #:validate-runpath? #f
       #:make-flags
-      (list "prefix="
-            (string-append "DESTDIR=" %output)
-            (string-append "DESTLIBDIR=" %output "/lib")
+      (list (string-append "prefix=" %output)
+            (string-append "LIBDIR=" %output "/lib")
+            (string-append "LDFLAGS=-Wl,-rpath=" %output "/lib")
             "CC=gcc"
             "ENABLE_SSL=y"
             (string-append "CFLAGS=-I"
                            (assoc-ref %build-inputs "freetype")
-                           "/include/freetype2"))
+                           "/include/freetype2")
+            )
       #:phases
       (modify-phases %standard-phases
+        (delete 'strip)
         (replace 'install
           (lambda* (#:key outputs #:allow-other-keys)
             (let ((out (assoc-ref outputs "out")))
               (invoke "make"
                       "V=1"
                       "install"
-                      (string-append "DESTDIR=" out)
-                      (string-append "DESTLIBDIR=" out "/lib")
-                      "prefix=")))))))
+                      "prefix="
+                      (string-append "DESTDIR=" out))))))))
    (inputs
-    `(
-       ("alsa-lib" ,alsa-lib)
-       ("curl" ,curl)
-       ("libffi" ,libffi)
-       ("fontconfig" ,fontconfig)
-       ("freetype" ,freetype)
-       ("giflib" ,giflib)
-       ("libjpeg" ,libjpeg-turbo)
-       ("ncurses" ,ncurses)
-       ("libpng" ,libpng-1.2)
-       ("sqlite" ,sqlite)
-       ("libressl" ,libressl)
-       ("libx11" ,libx11)
-       ("libxext" ,libxext)
-       ("libxrender" ,libxrender)
-       ("mesa" ,mesa)
-       ("ucl" ,ucl)
-       ("upx" ,upx)
-       ("zlib" ,zlib)
-       ))
+    (list alsa-lib curl libffi fontconfig freetype giflib libjpeg-turbo
+          ncurses libpng-1.2 sqlite libressl libx11 libxext libxrender
+          mesa ucl upx zlib))
    (synopsis "Software development kit with GUI, 2D/3D graphics, networking, and
 an IDE")
    (description "Ecere SDK provides an API for building apps targting desktop,
