@@ -144,6 +144,7 @@ editors, IDEs, etc.")
                (symlink bin link)))))))
     (inputs
      `(("granite" ,granite)
+       ("gsettings-desktop-schemas" ,gsettings-desktop-schemas)
        ("gtk" ,gtk+)
        ("vte" ,vte)))
     (native-inputs
