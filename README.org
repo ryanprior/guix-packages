@@ -73,3 +73,10 @@ argument in favor, so the /forbidden c compiler wrappers/ are lost to the
 living and now available only in these ominous grimoires.
 
 - Bug tracker :: https://issues.guix.gnu.org/41428
+* License and disclaimer
+
+This repository is Free Software under the terms of the GPLv3 or any later
+version. See [[COPYING]].
+
+Do not or rely upon these packages in production environments. They are likely
+incomplete, outdated, and insufficiently tested.
